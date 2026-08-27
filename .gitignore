@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Working files that should not be versioned
+*.tmp
+~$*
+.~lock.*
+
+# Large brand source files — keep these in Drive, not git.
+# Exported deliverables (PDF, PNG, SVG) belong in brand/assets/ and ARE tracked.
+brand/assets/**/*.ai
+brand/assets/**/*.psd
+brand/assets/**/*.indd
+brand/assets/**/*.sketch
+brand/assets/**/*.fig
