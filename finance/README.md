@@ -27,6 +27,11 @@ quoted across the rest of the repository.
 ## What the model does
 
 - 60 monthly periods across five channels plus a licensing line
+- An **artwork gate**: no purchase order can be placed before PJ Offner has
+  delivered production-ready packaging artwork and the label has cleared its
+  R146 review. That puts the first PO in month 3 and the first sale in month 7.
+  Assertions in `model.py` enforce it, so the timing cannot silently drift if
+  someone edits a date in `assumptions.py`.
 - Landed cost built properly: FOB → freight → insurance → **25% duty on the FOB
   customs value** → clearing, with a volume-based FOB curve and an LCL penalty
   on sub-container orders

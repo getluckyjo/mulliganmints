@@ -16,9 +16,19 @@ Horizon:  60 months. Month 1 = the month the company is capitalised.
 HORIZON_MONTHS = 60
 MONTH_ONE_LABEL = "2026-10"          # [EST] assumed funding close
 
-# First saleable stock lands in month 6. Months 1-5 are brand, samples,
-# artwork, trademark, first production order and shipping. [EST]
-FIRST_SALE_MONTH = 6
+# The artwork gate. Production cannot start before there is artwork to print,
+# so the first purchase order is gated on PJ Offner's delivery, not on the
+# funding date. Sequence:
+#   Month 1  funding closes, company registered, trademark filed, PJ kicks off,
+#            supplier dieline requested
+#   Month 2  PJ delivers production-ready packaging artwork (week 6 of 8);
+#            label content drafted and reviewed for R146 compliance alongside
+#   Month 3  approved artwork and label to the supplier, plates made,
+#            FIRST PURCHASE ORDER PLACED
+#   Month 7  goods land, clear Port Health, first sales
+ARTWORK_READY_MONTH = 2               # [EST] PJ's 8-week schedule, artwork at week 6
+EARLIEST_PO_MONTH = 3                 # [EST] no PO before artwork + label sign-off
+FIRST_SALE_MONTH = 7                  # = EARLIEST_PO_MONTH + order-to-shelf lead time
 
 # USD/ZAR. Spot was ~15.93 on 2026-08-25. [SOURCE: TradingEconomics]
 # We plan at 16.00 and depreciate 4%/yr — the rand's long-run drift against
@@ -228,6 +238,9 @@ OVERHEADS_START_MONTH = 4
 # ---------------------------------------------------------------------------
 # 4. One-off setup costs (pre-revenue, months 1-6)
 # ---------------------------------------------------------------------------
+# Ordered against the artwork gate above. Anything that has to be finished
+# before the first purchase order sits in months 1-3; anything that only has to
+# be ready for launch sits close to month 7.
 SETUP_COSTS = [
     # (month, item, ZAR)
     (1,  "Company setup, shareholders agreement, banking",       35_000),
@@ -236,12 +249,14 @@ SETUP_COSTS = [
     # instead of a fee, and carries his own costs — see
     # legal/term-sheet-pj-offner.md. There is no cash line for the brand at all.
     (2,  "Supplier samples, freight, tooling & plate charges",   45_000),
-    (3,  "Packaging artwork, dielines & production files",       40_000),
+    (2,  "Pre-press, dieline proofing & production files",       40_000),
+    # Must clear before the PO — printing 30,000 tins to an unreviewed label is
+    # not a risk worth taking to save a month.
+    (3,  "Lab analysis, nutritional panel & R146 label review",  32_000),
     (4,  "Product photography & launch content shoot",           55_000),
     (4,  "Website, Shopify build & brand film edit",             48_000),
-    (4,  "Lab analysis, nutritional panel & R146 label review",  32_000),
-    (5,  "POS kit — counter units, tin displays, branded stand", 65_000),
-    (6,  "Launch event at host club",                            60_000),
+    (6,  "POS kit — counter units, tin displays, branded stand", 65_000),
+    (7,  "Launch event at host club",                            60_000),
 ]
 
 # ---------------------------------------------------------------------------

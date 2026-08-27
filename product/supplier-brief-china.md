@@ -74,17 +74,26 @@ Replacing it with a real quote is the highest-value thing we can do this month.
 
 | PO | Placed | Arrives | Units | Notes |
 | --- | --- | --- | --- | --- |
-| 1 | Month 1 | Month 5 | 30,000 | MOQ floor. Launch stock. |
+| 1 | **Month 3** | Month 7 | 30,000 | MOQ floor. Launch stock. |
 | 2 | Month 6 | Month 10 | 30,000 | |
 | 3 | Month 9 | Month 13 | 30,000 | |
 | 4 | Month 11 | Month 15 | 30,000 | |
 
+**The first PO cannot be placed before month 3, and that gate is real.** Nothing
+can be printed until PJ Offner has delivered production-ready packaging artwork
+(month 2, week 6 of his 8-week schedule) and the label has been reviewed against
+R146. Printing 30,000 tins to an unreviewed label is not a risk worth taking to
+save a month. The model enforces this rather than assuming it away.
+
 Order-to-shelf lead time is modelled at **4 months**: 2 months production,
 1 month transit (18–28 days China to Durban/Cape Town), 0.5 months clearing and
-Port Health. Target forward cover is 3.5 months.
+Port Health. Target forward cover is 3.5 months. Month 3 plus four months is why
+the first sale is in **month 7**.
 
 That lead time is the reason working capital is tight in months 15–20. Every week
-we can take out of it is cash back on the balance sheet.
+we can take out of it is cash back on the balance sheet — and the two weeks most
+easily won are at the front, by having the dieline in hand before PJ starts so
+artwork and tooling can run in parallel.
 
 ## 5. Sample evaluation scorecard
 

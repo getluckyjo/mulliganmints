@@ -34,7 +34,7 @@ on a global media channel at South African cost.
 | Landed cost / tin | R9.58 |
 | Net price / tin (golf, bars) | R24.25 — RSP R45 incl VAT |
 | Gross margin | 60% direct, 67% blended by year 5 |
-| Break-even | ~14,000 tins/month, around month 21 |
+| Break-even | ~14,800 tins/month, around month 21 |
 | Year 5 (base) | 1.79m tins · R43.6m revenue · R13.4m EBITDA |
 | Capital | **R3.5m pre-seed**, then R12m at month 20 |
 

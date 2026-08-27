@@ -80,6 +80,21 @@ LEAD_MONTHS = int(round(
     A.PRODUCTION_LEAD_MONTHS + A.SHIPPING_TRANSIT_MONTHS + A.CLEARING_MONTHS
 ))  # 4
 
+# Guards. These encode the timing relationships that are easy to break by
+# editing one number in assumptions.py and forgetting its consequences.
+# The first sale cannot precede the first order plus the pipeline, and no
+# order can be placed before there is artwork to print.
+assert A.EARLIEST_PO_MONTH >= A.ARTWORK_READY_MONTH, (
+    f"First PO (month {A.EARLIEST_PO_MONTH}) cannot precede artwork "
+    f"(month {A.ARTWORK_READY_MONTH})"
+)
+assert A.FIRST_SALE_MONTH >= A.EARLIEST_PO_MONTH + LEAD_MONTHS, (
+    f"FIRST_SALE_MONTH is {A.FIRST_SALE_MONTH}, but the first PO cannot be "
+    f"placed before month {A.EARLIEST_PO_MONTH} and takes {LEAD_MONTHS} months "
+    f"to land — the earliest possible sale is month "
+    f"{A.EARLIEST_PO_MONTH + LEAD_MONTHS}"
+)
+
 
 @dataclass
 class PurchaseOrder:
@@ -233,6 +248,17 @@ def run(scenario: str = "base") -> Result:
         y = year_of(m)
         i = m - 1
 
+        # ---------------- goods arriving this month ----------------
+        # Arrivals are booked BEFORE sales. LEAD_MONTHS already rounds the true
+        # 3.5-month order-to-shelf time up to 4 and already contains the customs
+        # and Port Health allowance, so holding landed stock back for a further
+        # full month would charge the plan 5 months for a 3.5-month pipeline.
+        arriving = [po for po in open_orders if po.arrive_month == m]
+        for po in arriving:
+            stock_units += po.units * (1 - A.STOCK_WASTAGE_PCT)
+            stock_value += po.landed_zar_total
+            open_orders.remove(po)
+
         # ---------------- demand, capped by available stock ----------------
         demand = _unit_demand(m, vol_mult)
         wanted = sum(demand.values())
@@ -303,7 +329,7 @@ def run(scenario: str = "base") -> Result:
         )
         on_order = sum(po.units for po in open_orders)
         gap = future_need - (stock_units + on_order)
-        if gap > 0 and m <= N:
+        if gap > 0 and m <= N and m >= A.EARLIEST_PO_MONTH:
             units = max(A.MIN_ORDER_UNITS, gap)
             units = int(math.ceil(units / A.ORDER_ROUNDING_UNITS) * A.ORDER_ROUNDING_UNITS)
             po = cost_a_purchase_order(
@@ -311,14 +337,6 @@ def run(scenario: str = "base") -> Result:
             )
             open_orders.append(po)
             all_orders.append(po)
-
-        # ---------------- goods arriving this month ----------------
-        arriving = [po for po in open_orders if po.arrive_month == m]
-        for po in arriving:
-            net_units = po.units * (1 - A.STOCK_WASTAGE_PCT)
-            stock_units += net_units
-            stock_value += po.landed_zar_total
-            open_orders.remove(po)
 
         R.rows["stock_units"][i] = stock_units
         R.rows["stock_value"][i] = stock_value
@@ -439,6 +457,9 @@ def run(scenario: str = "base") -> Result:
 
         R.rows["debtors"][i] = sum(receivable_schedule[m + 1: m + 4])
 
+    assert all(po.order_month >= A.EARLIEST_PO_MONTH for po in all_orders), (
+        "a purchase order was placed before the artwork gate"
+    )
     R.purchase_orders = all_orders
     return R
 

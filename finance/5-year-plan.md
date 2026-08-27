@@ -9,14 +9,23 @@ All figures base case, ZAR, excluding VAT.*
 
 | | Y1 | Y2 | Y3 | Y4 | Y5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Tins sold | 28,080 | 183,100 | 554,640 | 1,136,725 | 1,790,588 |
-| Net revenue | R0.71m | R4.71m | R13.28m | R26.78m | R43.63m |
+| Tins sold | 24,520 | 183,100 | 554,640 | 1,136,725 | 1,790,588 |
+| Net revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 61% | 65% | 64% | 65% | 67% |
-| EBITDA | −R1.42m | −R0.33m | R0.77m | R5.92m | R13.35m |
+| EBITDA | −R1.47m | −R0.33m | R0.79m | R5.92m | R13.35m |
 | EBITDA margin | — | — | 6% | 22% | 31% |
-| Closing cash | R1.61m | R12.40m | R10.96m | R14.23m | R24.13m |
+| Closing cash | R1.52m | R12.39m | R10.88m | R14.16m | R24.07m |
 
 Cumulative five-year EBITDA: **R18.3m.**
+
+**First sale is month 7, not month 1.** Months 1–6 are brand, samples,
+trademark, artwork, the first production order and shipping. The model enforces
+the sequence rather than assuming it: no purchase order can be placed before PJ
+Offner has delivered production-ready packaging artwork (month 2) and the label
+has cleared its R146 review (month 3), and the order-to-shelf lead time is four
+months on top of that. An investor will ask why revenue starts in month 7 — the
+answer is that it cannot start earlier, and a plan that showed it starting
+earlier would be wrong.
 
 Three phases, and they are genuinely different businesses:
 
@@ -59,11 +68,11 @@ worth 25% more than it looks.
 At the month-12 cost base:
 
 - Fixed costs (salaries + overheads): **R122,500/month**
-- Marketing: **R54,286/month**
+- Marketing: **R63,333/month**
 - Contribution per direct tin: **R12.59**
 
-**Break-even is ~14,000 tins a month** including marketing, or ~9,700 excluding
-it. At 38 tins per outlet per month that is roughly **370 active outlets.**
+**Break-even is ~14,800 tins a month** including marketing, or ~9,700 excluding
+it. At 38 tins per outlet per month that is roughly **390 active outlets.**
 
 The year-1 plan exits with about 250. So break-even lands in **month 21** — early
 year 2, not year 1. The model agrees: first EBITDA-positive month is 21.
@@ -85,7 +94,7 @@ spend anything else.
 
 The model was first run with a R2.5m pre-seed. It went **cash-negative in month
 24** — the business ran out of money three months before the growth round could
-plausibly close. The unfunded peak cash deficit in the base case is **R4.79m in
+plausibly close. The unfunded peak cash deficit in the base case is **R4.87m in
 month 33.**
 
 R3.5m is what it takes to reach a fundable milestone without a bridge.
@@ -110,7 +119,7 @@ highest-leverage asset in the plan: it is what a licensee buys in year 4.
 
 ### The tightest point in the plan
 
-The base case's lowest cash balance is **R739,000 in month 19** — immediately
+The base case's lowest cash balance is **R674,000 in month 19** — immediately
 before the growth round lands. That is roughly three weeks of runway.
 
 **The growth round must be *closed* by month 19, which means started by month
@@ -124,9 +133,9 @@ before the growth round lands. That is roughly three weeks of runway.
 | Year 5 revenue | R17.70m | R43.63m | R68.59m |
 | Year 5 EBITDA | R0.21m | R13.35m | R26.82m |
 | Year 5 EBITDA margin | 1% | 31% | 39% |
-| Cumulative 5-yr EBITDA | −R5.09m | R18.30m | R46.17m |
+| Cumulative 5-yr EBITDA | −R5.12m | R18.25m | R46.11m |
 | First EBITDA-positive year | 5 | 3 | 2 |
-| Unfunded peak cash deficit | R7.72m | R4.79m | R2.70m |
+| Unfunded peak cash deficit | R7.75m | R4.87m | R2.80m |
 
 The scenarios flex volume, price, supplier cost **and the hiring plan** — in the
 bear case hires slip six months, marketing is cut 45% and overheads are held 20%
@@ -135,7 +144,7 @@ leaner, because that is what an operator would actually do.
 ### What the bear case is telling us
 
 Bear is not "a bit slower". It is **a different business**: EBITDA-negative for
-four years, cumulatively −R5.09m, needing R7.72m of capital that it cannot
+four years, cumulatively −R5.12m, needing R7.75m of capital that it cannot
 service.
 
 The honest reading: **if venue sell-through lands at half the plan, do not raise

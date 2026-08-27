@@ -1,6 +1,6 @@
 # The first 90 days of selling
 
-*Months 6–8 of the model — from first stock landing to the data that funds
+*Months 7–9 of the model — from first stock landing to the data that funds
 everything after it.*
 
 ---
@@ -14,11 +14,16 @@ The entire five-year plan scales off that one number, and no external benchmark
 for it exists anywhere in the world. We are going to find it out for about
 R30,000 of stock and one person's time.
 
-## Before day one (months 1–5)
+## Before day one (months 1–6)
 
 - [ ] Brand delivered by PJ Offner, artwork with the supplier
 - [ ] Trademark filed in South Africa
-- [ ] First PO placed (month 1), stock landed and cleared (month 5)
+- [ ] Production-ready packaging artwork delivered by PJ (month 2)
+- [ ] Label reviewed against R146 — **this gates the PO** (month 3)
+- [ ] First PO placed (month 3), stock landed and cleared (month 7)
+- [ ] Second PO placed (month 6) — note this goes out **before a single tin
+      has been sold**, on forecast alone. It is the most exposed order in the
+      plan and the strongest argument for keeping the first two runs small.
 - [ ] Label reviewed against R146; barcodes registered with GS1 SA
 - [ ] Webshop live
 - [ ] **Target list built: 40 clubs, named, with the pro's name and number**
@@ -81,7 +86,8 @@ Also due by day 90:
 - [ ] Reorder rate by channel, written down
 - [ ] Cost per new outlet acquired
 - [ ] Second and third supplier quotes in hand
-- [ ] Second PO placed (month 6, per the model)
+- [ ] **Third PO placed (month 9, per the model)** — the second went out in
+      month 6, before launch, on forecast rather than on evidence
 - [ ] Growth round narrative drafted off real data
 
 ## What would make this fail

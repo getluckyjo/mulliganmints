@@ -40,7 +40,7 @@ ops/           Risk register
 | Landed cost per tin | **R9.58** |
 | Net price per tin, golf & bars | **R24.25** (RSP R45 incl VAT) |
 | Gross margin, direct channels | **60%** |
-| Break-even | **~14,000 tins/month** — around month 21 |
+| Break-even | **~14,800 tins/month** — around month 21 |
 | Year 5 revenue | **R43.6m** on 1.79m tins |
 | Capital required | **R3.5m** pre-seed + **R12m** growth round |
 

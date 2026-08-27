@@ -56,7 +56,7 @@ global.
 | Net price, golf and bars | **R24.25** (RSP R45) |
 | Gross margin | **60%** |
 | A club buys a 12-tin box for R291 ex-VAT and makes **R178 (38%)** on it | |
-| Break-even | **~14,000 tins/month — around month 21** |
+| Break-even | **~14,800 tins/month — around month 21** |
 
 ### 6. The product is the proof. The brand is the asset.
 
@@ -73,10 +73,10 @@ across three territories.
 
 | Base case | Y1 | Y2 | Y3 | Y4 | Y5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Tins | 28k | 183k | 555k | 1.14m | 1.79m |
-| Revenue | R0.71m | R4.71m | R13.28m | R26.78m | R43.63m |
+| Tins | 25k | 183k | 555k | 1.14m | 1.79m |
+| Revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 61% | 65% | 64% | 65% | 67% |
-| EBITDA | −R1.42m | −R0.33m | R0.77m | R5.92m | R13.35m |
+| EBITDA | −R1.47m | −R0.33m | R0.79m | R5.92m | R13.35m |
 
 **Cumulative five-year EBITDA: R18.3m.** Full model in
 `finance/outputs/mulligan-mints-5yr-model.xlsx`.
@@ -123,7 +123,7 @@ gates are written down: below 20 tins a month and we stop and re-architect the
 product rather than spend into it.
 
 **The downside is not a slower version of the upside.** At half the modelled
-sell-through the business is EBITDA-negative for four years and needs R7.72m it
+sell-through the business is EBITDA-negative for four years and needs R7.75m it
 cannot service. If that happens, **the right answer is not to raise the growth
 round** — it is to hold headcount flat, stay in golf and DTC where margins are
 60–73%, and run it as a profitable niche brand at ~200,000 tins a year. We would
