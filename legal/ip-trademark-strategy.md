@@ -51,7 +51,7 @@ Run these before PJ Offner starts, not after:
 
 **"Mulligan" is a common Irish surname and a widely used golf term.** Expect prior
 registrations in some classes and territories. Better to find them now than after
-R150,000 of brand development.
+the brand development — which under the term sheet costs 10% of the company.
 
 ## 4. International — Madrid Protocol
 

@@ -15,7 +15,7 @@ taking the brand global by licence or by export.
 | Stage | Pre-launch. Research complete, brand not yet commissioned, no stock ordered. |
 | Product | 35g sugar-free pressed mints in a printed hinged tin (supplier spec in `product/`) |
 | Supplier | Suntak Foods Manufacturing Co., Ltd (China) — samples of tins and mints inbound |
-| Brand | PJ Offner engaged — brief in `brand/brand-brief-pj-offner.md` |
+| Brand | PJ Offner engaged for **10% equity, not a fee** — brief in `brand/brand-brief-pj-offner.md`, terms in `legal/term-sheet-pj-offner.md` |
 | Capital ask | R3.5m pre-seed, then R12m growth round by month 20 |
 | Next decisions | See `docs/decisions/` |
 
@@ -28,7 +28,7 @@ brand/         Creative brief for PJ Offner, verbal identity, asset store
 product/       Product & packaging spec, supplier brief and sample evaluation
 finance/       The 5-year model (Python) and its outputs (xlsx + markdown)
 gtm/           Go-to-market, 90-day launch plan, pricing and trade terms
-legal/         SA compliance checklist, IP and trademark strategy
+legal/         SA compliance checklist, IP strategy, PJ Offner term sheet
 pitch/         Investor narrative
 ops/           Risk register
 ```

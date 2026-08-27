@@ -143,11 +143,12 @@ copyright. Exports of every deliverable in print-ready and screen formats.
 | **Regulatory space** | The label must carry ingredients, nutritional table, sweetener declarations, allergens, net weight, country of origin, importer details, batch and best-before. That is more real estate than it sounds. Leave room for it, and plan for a possible front-of-pack warning logo under draft R3337. |
 | **Scalability** | Three flavours now, likely five within two years, and possibly a second format. The system has to extend without a redesign. |
 
-## 8. Budget and timing
+## 8. Consideration and timing
 
 | | |
 | --- | --- |
-| Budget | **R150,000** (R75,000 on commission, R75,000 on delivery of the brand book) |
+| Consideration | **10% of Mulligan Mints (Pty) Ltd**, not a fee. Vesting in four tranches against the deliverables in §6. Terms in `legal/term-sheet-pj-offner.md`. |
+| Disbursements | Reimbursed at cost up to R25,000 — typefaces, stock, proofs, printing |
 | Kick-off | On signature |
 | Concepts | 3 weeks — two or three distinct routes |
 | Refinement | 2 weeks |

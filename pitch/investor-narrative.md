@@ -76,9 +76,9 @@ across three territories.
 | Tins | 28k | 183k | 555k | 1.14m | 1.79m |
 | Revenue | R0.71m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 61% | 65% | 64% | 65% | 67% |
-| EBITDA | −R1.57m | −R0.33m | R0.77m | R5.92m | R13.35m |
+| EBITDA | −R1.45m | −R0.33m | R0.77m | R5.92m | R13.35m |
 
-**Cumulative five-year EBITDA: R18.1m.** Full model in
+**Cumulative five-year EBITDA: R18.3m.** Full model in
 `finance/outputs/mulligan-mints-5yr-model.xlsx`.
 
 ## The ask
@@ -92,7 +92,7 @@ across three territories.
 
 | | |
 | --- | --- |
-| Brand identity (PJ Offner), trademark, artwork, content, website, launch | R558k |
+| Trademark, artwork, content, website, launch (brand identity is equity, not cash) | R433k |
 | First three production runs and import costs | ~R900k |
 | Team — founder from month 4, first rep from month 7 | R522k |
 | Marketing — creator seeding, club activation, sampling | R380k |
@@ -123,7 +123,7 @@ gates are written down: below 20 tins a month and we stop and re-architect the
 product rather than spend into it.
 
 **The downside is not a slower version of the upside.** At half the modelled
-sell-through the business is EBITDA-negative for four years and needs R7.85m it
+sell-through the business is EBITDA-negative for four years and needs R7.74m it
 cannot service. If that happens, **the right answer is not to raise the growth
 round** — it is to hold headcount flat, stay in golf and DTC where margins are
 60–73%, and run it as a profitable niche brand at ~200,000 tins a year. We would
