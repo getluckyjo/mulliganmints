@@ -85,11 +85,11 @@ required at launch.
 | Stage | Working target |
 | --- | --- |
 | Kick-off | On signature |
-| Concept routes (2–3 distinct directions) | 3 weeks |
-| Refinement | 2 weeks |
-| Full identity and packaging artwork | 4 weeks |
+| Concept routes (2–3 distinct directions) | 2 weeks |
+| Refinement | 1 week |
+| Full identity and packaging artwork | 3 weeks |
 | Brand book | 2 weeks |
-| **Total** | **~11 weeks** |
+| **Total** | **8 weeks** |
 
 Production-ready packaging artwork must be with the supplier by **month 4 of the
 Company's plan** to hold the launch date. Both sides will work to that.

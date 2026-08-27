@@ -43,7 +43,7 @@ on a global media channel at South African cost.
 | | |
 | --- | --- |
 | Supplier | Suntak Foods (China) — samples of tins and mints inbound |
-| Brand | PJ Offner engaged — **10% equity, not a fee**, ~11 weeks |
+| Brand | PJ Offner engaged — **10% equity, not a fee**, 8 weeks |
 | Stock | None ordered |
 | Biggest unknown | **Tins sold per golf club per month.** No benchmark exists. 90-day pilot answers it. |
 

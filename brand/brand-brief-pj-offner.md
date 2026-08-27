@@ -150,11 +150,11 @@ copyright. Exports of every deliverable in print-ready and screen formats.
 | Consideration | **10% of Mulligan Mints (Pty) Ltd**, not a fee. Vesting in four tranches against the deliverables in §6. Terms in `legal/term-sheet-pj-offner.md`. |
 | Costs | PJ carries his own costs — typefaces, stock, proofs, printing are for his account |
 | Kick-off | On signature |
-| Concepts | 3 weeks — two or three distinct routes |
-| Refinement | 2 weeks |
-| Full identity + packaging artwork | 4 weeks |
+| Concepts | 2 weeks — two or three distinct routes |
+| Refinement | 1 week |
+| Full identity + packaging artwork | 3 weeks |
 | Brand book | 2 weeks |
-| **Total** | **~11 weeks** |
+| **Total** | **8 weeks** |
 
 Production artwork must be with the supplier by month 4 to hold the launch date.
 
