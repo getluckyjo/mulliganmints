@@ -148,7 +148,7 @@ copyright. Exports of every deliverable in print-ready and screen formats.
 | | |
 | --- | --- |
 | Consideration | **10% of Mulligan Mints (Pty) Ltd**, not a fee. Vesting in four tranches against the deliverables in §6. Terms in `legal/term-sheet-pj-offner.md`. |
-| Disbursements | Reimbursed at cost up to R25,000 — typefaces, stock, proofs, printing |
+| Costs | PJ carries his own costs — typefaces, stock, proofs, printing are for his account |
 | Kick-off | On signature |
 | Concepts | 3 weeks — two or three distinct routes |
 | Refinement | 2 weeks |

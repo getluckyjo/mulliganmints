@@ -233,9 +233,8 @@ SETUP_COSTS = [
     (1,  "Company setup, shareholders agreement, banking",       35_000),
     (1,  "Trademark filing — SA classes 30, 25, 32",             28_000),
     # PJ Offner takes 10% equity for the brand identity, packaging and guidelines
-    # instead of a fee — see legal/term-sheet-pj-offner.md. Only his third-party
-    # disbursements (typeface licences, stock, proofs, printing) are cash costs.
-    (1,  "Brand identity — PJ Offner disbursements allowance",   25_000),
+    # instead of a fee, and carries his own costs — see
+    # legal/term-sheet-pj-offner.md. There is no cash line for the brand at all.
     (2,  "Supplier samples, freight, tooling & plate charges",   45_000),
     (3,  "Packaging artwork, dielines & production files",       40_000),
     (4,  "Product photography & launch content shoot",           55_000),

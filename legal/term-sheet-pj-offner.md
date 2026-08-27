@@ -39,7 +39,7 @@ incorporation.
 | **What PJ receives** | Ordinary shares equal to **10% of the Company's issued share capital**, measured immediately after issue |
 | **What PJ gives** | The Deliverables in clause 3, and full assignment of all intellectual property in them |
 | **Cash fee** | **None.** The equity is the whole consideration for the Deliverables. |
-| **Disbursements** | The Company reimburses PJ, at cost and against invoice, for third-party costs properly incurred on the project — typeface licences, stock imagery, printing, proofs and couriers — up to **R25,000**. Anything above that needs written approval first. |
+| **Costs and expenses** | **PJ carries his own costs.** The Company does not reimburse disbursements — typeface licences, stock imagery, proofs, printing or couriers. Those are for PJ's account. |
 | **Subscription price** | Nominal — R100 in aggregate, or as the Company's accountants advise |
 | **Share class** | Ordinary shares, ranking equally with the Founder's shares in all respects |
 
@@ -151,8 +151,8 @@ interest.
    rights.
 2. **Every typeface, image, illustration and asset used is licensed for
    commercial use, for packaging and unlimited print runs, and that licence is
-   transferable to the Company.** Font licensing for packaging is a genuine trap
-   and this is where it gets caught.
+   transferable to the Company** — at PJ's cost. Font licensing for packaging is
+   a genuine trap and this is where it gets caught.
 3. He will **disclose in writing any material generated using AI tools**, and
    where such material forms part of a deliverable, will work with the Company to
    ensure the Company's ownership is not compromised. This is a disclosure

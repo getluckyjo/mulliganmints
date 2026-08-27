@@ -81,6 +81,7 @@ These cost almost nothing and matter a lot to a designer:
 | Shorter lock-up than 24 months | Negotiable. 12–18 months is fine if it matters to him. |
 | Narrower restraint | It is already narrow — pressed mints only. Hold it. |
 | A small cash component too | Reasonable to consider. See below. |
+| Reimbursement of font and stock licences | You have said no. Worth knowing these are real money — a typeface licensed for packaging and unlimited print runs can run several thousand rand. Expect him to raise it, and expect him to price it into how hard he pushes elsewhere. |
 
 ## If 10% feels like too much on reflection
 
@@ -102,10 +103,10 @@ asking him to take less.
 ## Consequences for the model
 
 `finance/model/assumptions.py` has been updated: the two R75,000 PJ Offner cash
-lines are removed and replaced with a R25,000 disbursements allowance for fonts,
-stock, proofs and printing.
+lines are removed entirely. There is no cash line for the brand at all — PJ
+carries his own costs.
 
-- Setup costs fall from **R558,000 to R433,000**
+- Setup costs fall from **R558,000 to R408,000**
 - The pre-seed requirement is unchanged at R3.5m — the saved cash goes into the
   working capital buffer, which is where the plan is tightest
 

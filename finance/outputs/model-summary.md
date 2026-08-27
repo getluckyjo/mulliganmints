@@ -47,12 +47,12 @@ Built 2026-08-27. All figures ZAR, excluding VAT unless stated.
 | Sales commission | R18,391 | R109,811 | R188,095 | R223,283 | R247,666 |
 | Product & export development | R0 | R70,655 | R419,422 | R937,540 | R1.61m |
 | Fixed overheads | R490,500 | R693,240 | R734,834 | R778,924 | R825,660 |
-| One-off setup | R433,000 | R0 | R0 | R0 | R0 |
-| **Total operating costs** | R1.88m | R3.37m | R7.76m | R11.57m | R15.97m |
-| **EBITDA** | R-1.45m | R-327,544 | R772,772 | R5.92m | R13.35m |
-| EBITDA margin | -203% | -7% | 6% | 22% | 31% |
+| One-off setup | R408,000 | R0 | R0 | R0 | R0 |
+| **Total operating costs** | R1.86m | R3.37m | R7.76m | R11.57m | R15.97m |
+| **EBITDA** | R-1.42m | R-327,544 | R772,772 | R5.92m | R13.35m |
+| EBITDA margin | -200% | -7% | 6% | 22% | 31% |
 | Tax charge | R0 | R4,534 | R76,327 | R1.25m | R3.61m |
-| **Net profit** | R-1.45m | R-332,078 | R696,446 | R4.67m | R9.75m |
+| **Net profit** | R-1.42m | R-332,078 | R696,446 | R4.67m | R9.75m |
 
 ## 3. Base case — cashflow
 
@@ -61,12 +61,12 @@ Built 2026-08-27. All figures ZAR, excluding VAT unless stated.
 | Receipts from customers (incl VAT) | R641,447 | R4.94m | R13.57m | R28.23m | R45.62m |
 | Payments to supplier | R710,754 | R2.14m | R5.59m | R9.13m | R11.81m |
 | Import duty & clearing | R122,475 | R510,242 | R1.24m | R2.23m | R3.07m |
-| Operating costs paid | R1.88m | R3.37m | R7.76m | R11.57m | R15.97m |
-| VAT settled | R159,970 | R-114,046 | R-342,600 | R-769,172 | R-1.26m |
+| Operating costs paid | R1.86m | R3.37m | R7.76m | R11.57m | R15.97m |
+| VAT settled | R156,595 | R-114,046 | R-342,600 | R-769,172 | R-1.26m |
 | Tax paid | R0 | R-4,534 | R-76,327 | R-1.25m | R-3.61m |
 | Funding received | R3.50m | R12.00m | R0 | R0 | R0 |
-| **Net cashflow** | R1.59m | R10.79m | R-1.44m | R3.27m | R9.91m |
-| **Closing cash** | R1.59m | R12.38m | R10.94m | R14.21m | R24.12m |
+| **Net cashflow** | R1.61m | R10.79m | R-1.44m | R3.27m | R9.91m |
+| **Closing cash** | R1.61m | R12.40m | R10.96m | R14.23m | R24.13m |
 | Stock on hand (units) | 30,720 | 112,220 | 253,380 | 420,055 | 462,068 |
 | Stock on hand (value) | R300,383 | R1.02m | R2.14m | R3.45m | R3.72m |
 
@@ -82,18 +82,18 @@ Built 2026-08-27. All figures ZAR, excluding VAT unless stated.
 | Year 5 revenue | R17.70m | R43.63m | R68.59m |
 | Year 5 EBITDA | R210,275 | R13.35m | R26.82m |
 | Year 5 EBITDA margin | 1% | 31% | 39% |
-| Cumulative 5-yr EBITDA | R-5.12m | R18.27m | R46.15m |
+| Cumulative 5-yr EBITDA | R-5.09m | R18.30m | R46.17m |
 | First EBITDA-positive year | 5 | 3 | 2 |
-| Unfunded peak cash deficit | R7.74m | R4.81m | R2.72m |
+| Unfunded peak cash deficit | R7.72m | R4.79m | R2.70m |
 | Month of peak deficit | M50 | M33 | M26 |
-| Lowest funded cash balance | R1.27m | R717,594 | R1.01m |
-| Year 5 closing cash | R8.72m | R24.12m | R41.25m |
+| Lowest funded cash balance | R1.30m | R739,219 | R1.04m |
+| Year 5 closing cash | R8.74m | R24.13m | R41.26m |
 
 ## 5. Capital requirement
 
 - **Month 1 — Pre-seed — brand, first production run, SA proof of concept: R3.50m**
 - **Month 20 — Seed — national retail rollout + export entry: R12.00m**
 
-The base case's *unfunded* peak cash deficit is R4.81m in month 33. With the two rounds above, the lowest cash balance is R717,594 in month 19 — which is the single tightest point in the plan and the deadline for closing the growth round.
+The base case's *unfunded* peak cash deficit is R4.79m in month 33. With the two rounds above, the lowest cash balance is R739,219 in month 19 — which is the single tightest point in the plan and the deadline for closing the growth round.
 
-The bear case needs R7.74m and never comfortably repays it inside five years. That is the honest downside: if venue sell-through lands at half the plan, this is a business that survives but does not earn a venture return, and the right response is to hold headcount flat and run it as a niche brand rather than raise the growth round.
+The bear case needs R7.72m and never comfortably repays it inside five years. That is the honest downside: if venue sell-through lands at half the plan, this is a business that survives but does not earn a venture return, and the right response is to hold headcount flat and run it as a niche brand rather than raise the growth round.
