@@ -1,11 +1,17 @@
 # 0005 — 35g tin as the launch format
 
-**Date:** August 2026 · **Status:** Provisional — confirm on samples
+**Date:** August 2026 · **Status:** Confirmed on spec and price by the Suntak quotation of 29 August 2026. Taste and feel still to be confirmed on samples.
 
 ## Context
 
 The supplier's standard specification is a 35g sugar-free mint in a regular
 hinged tin, 12 per display box, 96 per carton, 134,400 per 20ft container.
+
+**The quotation of 29 August 2026 confirms every line of that**, and adds the
+detail the plan was missing: the tin is **96 × 61.5 × 21 mm**, the mints are
+**1g round tablets, 13.5mm diameter — 35 to a tin** — and shelf life is
+**24 months**. FOB Shantou is **USD 0.465 per unit**, giving a landed cost of
+**R10.29** per tin including the wastage allowance.
 
 ## Comparison
 

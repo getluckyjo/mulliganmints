@@ -45,7 +45,7 @@ high on purpose.
 
 ### The single most important line: free stock
 
-A tin costs us R9.58. A tin in the hand of a golfer who then tells three people in
+A tin costs us R10.29. A tin in the hand of a golfer who then tells three people in
 his fourball is the cheapest customer acquisition available to us — better than
 any paid impression, at any price. **Budget generously for giving product away in
 year 1, and track it as marketing rather than as shrinkage.**
@@ -69,7 +69,7 @@ golf content.
 1. **South African creators first.** Cheaper, closer, and they can be at the
    launch. Build the playbook here.
 2. **Seed internationally, do not buy.** Send tins. No brief, no contract, no
-   expectation. A tin that costs us R9.58 landed in the hands of a US golf creator
+   expectation. A tin that costs us R10.29 landed in the hands of a US golf creator
    is the cheapest shot on goal in this business. Send hundreds.
 3. **Convert seeding into partnership, not sponsorship.** Do not try to buy a
    sponsorship from Good Good or Bob Does Sports — we cannot afford it and it

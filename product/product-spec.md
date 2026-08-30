@@ -1,7 +1,9 @@
 # Product specification
 
-*Working spec, v0.1. Confirm every "TBC" against the physical samples when they
-land. This document becomes the master spec attached to the supply agreement.*
+*Working spec, v0.2 — updated against the Suntak quotation of 29 August 2026
+(`quotes/suntak-quotation-2026-08-29.pdf`). Remaining "TBC" items are confirmed
+against the physical samples when they land. This document becomes the master
+spec attached to the supply agreement.*
 
 ---
 
@@ -13,10 +15,10 @@ land. This document becomes the master spec attached to the supply agreement.*
 | Net weight | **35g** per tin |
 | Format | Pressed tablet ("compressed mint") |
 | Sugar | Sugar-free — must test at **<0.5g/100g** to carry the claim under R146 |
-| Sweetener | **TBC — decision required.** See §5 |
-| Strength | Deliberately high menthol/peppermint oil loading. Fisherman's Friend end of the spectrum. |
-| Tablet count | TBC on samples — target 45–60 tablets per tin |
-| Shelf life | Target 24 months. Confirm with supplier. |
+| Sweetener | **TBC — decision required.** The quote says "sugar free" but does not name the sweetener. See §5 |
+| Strength | High menthol/peppermint oil loading. Quoted as "STRONG PEPPERMINT" — confirm on samples that their "strong" is our strong. |
+| Tablet | **1g per tablet, round, 13.5mm diameter → 35 tablets per tin** [SOURCE: quote] |
+| Shelf life | **24 months** [SOURCE: quote] |
 | Allergens | To be confirmed and declared. Confirm the line is free of nut cross-contamination. |
 
 ### Launch flavours
@@ -30,12 +32,16 @@ the most expensive mistake available to us.
 | 2 | **Spearmint** | The softer entry point; broadens the buyer base |
 | 3 | **TBC — third flavour** | Candidates: aniseed, liquorice, wintergreen, honey-lemon. Decide on samples. Aniseed and liquorice both index strongly in the heritage strong-mint category (Fisherman's Friend's SA range carries both). |
 
+**Suntak has quoted STRONG PEPPERMINT only.** Spearmint and the third flavour are
+not priced. A custom formula carries a USD 200 per-flavour sample charge, and each
+SKU may carry its own MOQ — which is the open question in §7.
+
 ## 2. Tin
 
 | | |
 | --- | --- |
-| Type | Hinged-lid rectangular tin, printed tinplate |
-| Dimensions | **TBC on samples** — required before PJ Offner can produce artwork |
+| Type | Hinged-lid rectangular tin, printed tinplate ("classic tin can") |
+| Dimensions | **96 × 61.5 × 21 mm** [SOURCE: quote] — **this unblocks PJ Offner's packaging artwork.** Still request the flat dieline with bleed and safe areas. |
 | Printing | Offset on tinplate. Confirm spot colour count, whether an emboss is available, and whether a matte or gloss varnish is offered. |
 | Finish | Decision required: matte reads more premium, gloss survives handling better |
 | Food contact | Interior lacquer must be food-grade and compliant with SA and EU food-contact requirements. **Obtain certification.** |
@@ -120,7 +126,7 @@ moment to change the product.
 
 | # | Decision | Blocks | Owner |
 | --- | --- | --- | --- |
-| 1 | Tin dimensions and dieline confirmed | PJ Offner artwork | Supplier |
+| 1 | ~~Tin dimensions~~ — **answered: 96 × 61.5 × 21 mm.** Flat dieline still needed | PJ Offner artwork | Supplier |
 | 2 | Third flavour | Artwork, first PO | Johannes |
 | 3 | Sweetener | Formula, label, cost, artwork | Johannes + supplier |
 | 4 | Matte vs gloss | Artwork | Johannes + PJ |

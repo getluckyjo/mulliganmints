@@ -11,12 +11,12 @@ All figures base case, ZAR, excluding VAT.*
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Tins sold | 24,520 | 183,100 | 554,640 | 1,136,725 | 1,790,588 |
 | Net revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
-| Gross margin | 61% | 65% | 64% | 65% | 67% |
-| EBITDA | −R1.47m | −R0.33m | R0.79m | R5.92m | R13.35m |
-| EBITDA margin | — | — | 6% | 22% | 31% |
-| Closing cash | R1.52m | R12.39m | R10.88m | R14.16m | R24.07m |
+| Gross margin | 59% | 63% | 63% | 63% | 65% |
+| EBITDA | −R1.48m | −R0.42m | R0.54m | R5.42m | R12.59m |
+| EBITDA margin | — | — | 4% | 20% | 29% |
+| Closing cash | R1.45m | R12.12m | R10.20m | R13.04m | R22.46m |
 
-Cumulative five-year EBITDA: **R18.3m.**
+Cumulative five-year EBITDA: **R16.7m.**
 
 **First sale is month 7, not month 1.** Months 1–6 are brand, samples,
 trademark, artwork, the first production order and shipping. The model enforces
@@ -42,26 +42,32 @@ Three phases, and they are genuinely different businesses:
 
 | ZAR per tin | |
 | --- | ---: |
-| FOB China (USD 0.44 @ 16.00) | 7.04 |
-| Sea freight | 0.35 |
+| **FOB Shantou (USD 0.465 @ 16.00)** — quoted | **7.44** |
+| Sea freight | 0.47 |
 | Marine insurance | 0.04 |
-| **Import duty — 25% of FOB customs value** | **1.76** |
-| Clearing and inland | 0.21 |
-| **Landed cost** | **9.39** |
-| Plus 2% wastage allowance | **9.58** |
+| **Import duty — 25% of FOB customs value** | **1.86** |
+| Clearing and inland | 0.28 |
+| **Landed cost** | **10.08** |
+| Plus 2% wastage allowance | **10.29** |
 | | |
 | Net price, golf & bars direct | **24.25** |
-| **Gross profit** | **14.67 (60%)** |
+| **Gross profit** | **13.96 (58%)** |
 | Less logistics and commission | (2.08) |
-| **Contribution per tin** | **12.59 (52%)** |
+| **Contribution per tin** | **11.88 (49%)** |
+
+The FOB line is now a real quote, not an estimate — Suntak Foods, 29 August
+2026, valid 30 days. It came in **5.7% above** the USD 0.44 we had modelled.
+Freight and clearing per tin are higher than the earlier table because the first
+order is a quarter-container and carries the LCL penalty.
 
 A club buys a 12-tin display box for **R291 ex-VAT** and sells it for **R540
 including VAT**. That is a clean, explainable proposition on a pro shop counter.
 
-**Note the duty line.** At 25% of FOB, import duty is R1.76 of a R9.58 landed
+**Note the duty line.** At 25% of FOB, import duty is R1.86 of a R10.08 landed
 cost — 18% of what the product costs us. Every US cent negotiated off the FOB
 price is worth 1.25 cents of landed cost. Negotiating the supplier price is
-worth 25% more than it looks.
+worth 25% more than it looks — which is exactly why the 2.5 US cents Suntak came
+in above our estimate cost R1.6m of cumulative EBITDA, not R1.3m.
 
 ## 3. Break-even — the number to argue about
 
@@ -69,10 +75,10 @@ At the month-12 cost base:
 
 - Fixed costs (salaries + overheads): **R122,500/month**
 - Marketing: **R63,333/month**
-- Contribution per direct tin: **R12.59**
+- Contribution per direct tin: **R11.88**
 
-**Break-even is ~14,800 tins a month** including marketing, or ~9,700 excluding
-it. At 38 tins per outlet per month that is roughly **390 active outlets.**
+**Break-even is ~15,600 tins a month** including marketing, or ~10,300 excluding
+it. At 38 tins per outlet per month that is roughly **410 active outlets.**
 
 The year-1 plan exits with about 250. So break-even lands in **month 21** — early
 year 2, not year 1. The model agrees: first EBITDA-positive month is 21.
@@ -94,7 +100,7 @@ spend anything else.
 
 The model was first run with a R2.5m pre-seed. It went **cash-negative in month
 24** — the business ran out of money three months before the growth round could
-plausibly close. The unfunded peak cash deficit in the base case is **R4.87m in
+plausibly close. The unfunded peak cash deficit in the base case is **R5.47m in
 month 33.**
 
 R3.5m is what it takes to reach a fundable milestone without a bridge.
@@ -119,7 +125,7 @@ highest-leverage asset in the plan: it is what a licensee buys in year 4.
 
 ### The tightest point in the plan
 
-The base case's lowest cash balance is **R674,000 in month 19** — immediately
+The base case's lowest cash balance is **R535,000 in month 19** — immediately
 before the growth round lands. That is roughly three weeks of runway.
 
 **The growth round must be *closed* by month 19, which means started by month
@@ -131,11 +137,11 @@ before the growth round lands. That is roughly three weeks of runway.
 | --- | ---: | ---: | ---: |
 | Volume vs base | 45% | 100% | 155% |
 | Year 5 revenue | R17.70m | R43.63m | R68.59m |
-| Year 5 EBITDA | R0.21m | R13.35m | R26.82m |
-| Year 5 EBITDA margin | 1% | 31% | 39% |
-| Cumulative 5-yr EBITDA | −R5.12m | R18.25m | R46.11m |
-| First EBITDA-positive year | 5 | 3 | 2 |
-| Unfunded peak cash deficit | R7.75m | R4.87m | R2.80m |
+| Year 5 EBITDA | −R0.19m | R12.59m | R25.70m |
+| Year 5 EBITDA margin | −1% | 29% | 37% |
+| Cumulative 5-yr EBITDA | −R5.95m | R16.65m | R43.82m |
+| First EBITDA-positive year | never | 3 | 2 |
+| Unfunded peak cash deficit | R8.52m | R5.47m | R3.32m |
 
 The scenarios flex volume, price, supplier cost **and the hiring plan** — in the
 bear case hires slip six months, marketing is cut 45% and overheads are held 20%
@@ -144,8 +150,9 @@ leaner, because that is what an operator would actually do.
 ### What the bear case is telling us
 
 Bear is not "a bit slower". It is **a different business**: EBITDA-negative for
-four years, cumulatively −R5.12m, needing R7.75m of capital that it cannot
-service.
+**all five years**, cumulatively −R5.95m, needing R8.52m of capital that it
+cannot service. On the quoted supplier price it no longer reaches break-even
+inside the plan at all.
 
 The honest reading: **if venue sell-through lands at half the plan, do not raise
 the growth round.** Hold headcount flat, stay in golf and DTC where margins are
@@ -160,8 +167,12 @@ Ranked by how much damage each one does:
 
 1. **Sell-through per outlet.** Everything scales off it. No external benchmark
    exists. **±50% here is ±R20m of year-5 revenue.**
-2. **FOB cost per tin.** Estimated at USD 0.44 and unverified. A 10c/tin miss is
-   ~R3m of year-5 gross profit.
+2. **MOQ.** Now the largest unquantified risk on the supply side. Suntak has not
+   stated it. If it is a full container per SKU, the launch order is R4.06m and
+   the pre-seed does not cover it — see `finance/model/sensitivity_moq.py`.
+   ~~FOB cost~~ is now quoted at USD 0.465 and no longer a guess, though the
+   volume breaks above 150,000 units a year are still extrapolated from that one
+   price point.
 3. **Rand.** Modelled at 16.00 depreciating 4% a year. We buy in dollars and sell
    in rand, so a sharp depreciation hits COGS immediately and price increases lag
    by a year. A move to R20/USD adds roughly R1.75 to landed cost — more than a

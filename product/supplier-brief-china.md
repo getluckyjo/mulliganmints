@@ -7,36 +7,94 @@ from them, what we ask for next, and how we score what arrives.*
 
 ## 1. Where we are
 
-Suntak has quoted a standard specification: 35g sugar-free mints in a regular
-hinged tin, 12 tins per display box, 8 boxes per carton, 1,400 cartons per 20ft
-container. Samples of both the tins and the mints are on their way.
+**We have a price.** Suntak quoted on 29 August 2026
+(`quotes/suntak-quotation-2026-08-29.pdf`), valid 30 days — so it lapses
+**28 September 2026**.
 
-**We do not yet have a price.** Everything financial in this repository uses an
-estimated FOB of **USD 0.44 per tin at launch volume**, derived from published
-OEM ranges. That number is the single largest uncontrolled variable in the plan.
-Replacing it with a real quote is the highest-value thing we can do this month.
+| | Quoted |
+| --- | --- |
+| **FOB Shantou** | **USD 0.465 per tin** |
+| Product | 35g sugar-free STRONG PEPPERMINT in a classic hinged tin |
+| Tin | **96 × 61.5 × 21 mm** |
+| Mints | 1g round tablets, 13.5mm dia — **35 per tin** |
+| Shelf life | 24 months |
+| Packing | 12 tins/display box, 8 boxes/carton = 96/carton |
+| Carton | 41.5 × 22.5 × 21.0 cm, 0.02 CBM, 7.6 kg gross |
+| Container | 1,400 cartons = **134,400 tins per 20GP** |
+| Production | **60 days** after artwork confirmed **and** deposit received |
+| Payment | **50% T/T deposit in advance, balance before shipment from factory** |
+| Samples | Tin USD 250/design · OEM formula USD 200/flavour |
+| Embossing | USD 300 mould charge **per embossed position** |
+| LCL | USD 200 handling charge if the order totals under USD 5,000 |
 
-## 2. What we need from Suntak — the RFQ
+### What that changed in the plan
 
-### Pricing
-1. **FOB price per tin** at 30,000 / 50,000 / 100,000 / 250,000 / 500,000 annual
-   units, per SKU and blended
-2. **MOQ per SKU** and total MOQ across three SKUs
-3. **Tooling, plate and setup charges** — and whether they are refunded against
-   volume
-4. Price impact of the sweetener options in `product-spec.md` §5
-5. Price impact of emboss, matte varnish, and additional spot colours
-6. Price validity period and the mechanism for raw material price movement
+**The packing spec matched our model exactly** — 96 per carton, 1,400 cartons
+per 20GP, 60-day production. Nothing to revise there.
+
+Two things moved against us:
+
+1. **FOB is USD 0.465, not the USD 0.44 we estimated** — 5.7% higher. Landed
+   cost per tin goes from R9.58 to **R10.29** including wastage.
+2. **Payment is 50/50, not the 30/70 we assumed**, and the balance falls due
+   *before the goods leave the factory* rather than against the bill of lading.
+   More cash out, earlier.
+
+Together those take cumulative five-year EBITDA from R18.25m to **R16.65m** and
+push the month-19 low point down to **R535,000**. The plan still works. It has
+less slack than it had.
+
+## 2. THE OPEN QUESTION — what is the MOQ?
+
+The quote says the price *"is based on the MOQ of one item"* and that below MOQ
+the unit price is *"slightly higher"*. **It never states the MOQ**, and it was
+priced against an inquiry of 134,400 units — a full container.
+
+That matters more than the price does. We sell 24,520 tins in year one:
+
+| If the MOQ is | First order | Cash out | Years of Y1 demand | Min cash | Verdict |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 3 SKUs × 10,000 *(assumed)* | 30,000 | R303k | 1.2x | R535k | Works |
+| 3 SKUs × 20,000 | 60,000 | R593k | 2.4x | R516k | Works, tight |
+| One full 20GP total | 140,000 | R1.38m | 5.7x | R261k | Survivable, no slack |
+| **One full 20GP per SKU** | **410,000** | **R4.06m** | **16.7x** | **−R1.34m** | **Insolvent on a R3.5m pre-seed** |
+
+*(Order sizes round up to the nearest 10,000. Reproduce with
+`python3 finance/model/sensitivity_moq.py`.)*
+
+**Ask Damita for the MOQ per SKU before anything else.** If it is a full
+container per flavour, the answer is not a bigger round — it is to launch with
+one flavour instead of three, or to find a supplier who will run smaller batches.
+
+## 3. What we still need from Suntak — the RFQ
+
+### Pricing — mostly still open
+1. **Volume breaks.** We have one price at one volume. Ask for FOB per tin at
+   30,000 / 60,000 / 134,400 / 250,000 / 500,000 annual units. Our model
+   extrapolates the higher tiers from this single quote and that is a guess.
+2. **MOQ per SKU and in total** — see §2. The most important question on the page.
+3. **Price for spearmint and the third flavour.** Only strong peppermint is quoted.
+4. ~~Tooling and plate charges~~ — answered: USD 250/tin design, USD 200/OEM
+   flavour, USD 300 per embossed position. Still ask whether these are refunded
+   against volume.
+5. Price impact of the sweetener options in `product-spec.md` §5
+6. Price impact of matte varnish and additional spot colours
+7. ~~Price validity~~ — answered: 30 days, so **this quote lapses 28 September
+   2026.** Ask what it takes to hold it, and what the mechanism is for raw
+   material price movement after that.
 
 ### Specification
-7. Full **tin dieline** with bleed and safe areas — this blocks the brand work
-8. Exact tin dimensions and weight
-9. Tablet count per tin and tablet dimensions
-10. Full ingredient declaration and nutritional data **per 100g and per serving**
-11. Confirmed shelf life and storage conditions
-12. Allergen statement and cross-contamination controls on the line
-13. Menthol / peppermint oil loading — and whether they can go stronger than
-    standard. **We want this genuinely strong.**
+8. Full **tin dieline** with bleed and safe areas — this still blocks the brand work
+9. ~~Tin dimensions~~ — answered: 96 × 61.5 × 21 mm
+10. ~~Tablet count~~ — answered: 1g tablets, 13.5mm dia, 35 per tin
+11. Full ingredient declaration and nutritional data **per 100g and per serving** —
+    including **which sweetener**, which the quote does not name and which we
+    need before the label can be drafted
+12. ~~Shelf life~~ — answered: 24 months. Confirm storage conditions.
+13. Allergen statement and cross-contamination controls on the line
+14. Menthol / peppermint oil loading — and whether they can go stronger than
+    their standard. **We want this genuinely strong**, and "STRONG PEPPERMINT"
+    on a quote sheet is not a specification.
 
 ### Compliance — non-negotiable
 14. **Certificate of Analysis** for the production batch
@@ -47,20 +105,29 @@ Replacing it with a real quote is the highest-value thing we can do this month.
 18. Health certificate / free sale certificate for export to South Africa
 
 ### Commercial
-19. Payment terms — we have modelled 30% deposit, 70% against bill of lading
-20. Production lead time from artwork approval to goods ready
-21. Nominated port and whether they quote FOB or CIF
-22. Whether they will hold safety stock of tins against a rolling forecast
+20. **Payment terms — push back.** They want 50% deposit and the balance before
+    the goods leave the factory. Ask for 30/70 with the balance against the bill
+    of lading. That single change is worth roughly R60,000 of working capital on
+    a 30,000-unit order and considerably more later.
+21. ~~Production lead time~~ — answered: 60 days after artwork **and** deposit.
+    Note it starts on the deposit, so a slow payment is a slow delivery.
+22. ~~Port~~ — answered: FOB **Shantou** (not Shanghai or Shenzhen, which is
+    what our freight estimate was based on). Confirm sailing schedules and
+    whether Shantou needs transhipment to Durban or Cape Town.
+23. Whether they will hold safety stock of tins against a rolling forecast — this
+    is how we get the 60-day production window down.
 
-## 3. What we should be careful about
+## 4. What we should be careful about
 
 - **Do not let the supplier's reference artwork influence the brand.** The
   quotation sheet's "Always Fresh" design is a spec illustration. It is not a
   design reference and PJ Offner should not see it as one.
-- **Get a second quote.** One supplier is not a supply chain. Quote at least two
-  other manufacturers on the same specification before committing to tooling.
-  The published OEM landscape has hundreds of capable Chinese suppliers, several
-  with MOQs low enough for a pilot.
+- **Get a second quote.** One supplier is not a supply chain, and we now have a
+  real specification to quote against — 35g, 96 × 61.5 × 21 mm tin, 1g tablets,
+  96 per carton. Put it to at least two other manufacturers before committing to
+  tooling. The published OEM landscape has hundreds of capable Chinese suppliers,
+  several with MOQs low enough for a pilot. Do this **before 28 September**, so
+  the comparison is live while the Suntak quote still stands.
 - **Duty is levied on the FOB customs value**, so every dollar saved on FOB saves
   us 1.25 rand-equivalents of landed cost, not 1.00. Negotiating FOB is worth
   25% more than it looks.
@@ -70,7 +137,7 @@ Replacing it with a real quote is the highest-value thing we can do this month.
   Worth asking whether consolidating the first two orders into one shipment is
   cheaper overall.
 
-## 4. Ordering plan (base case)
+## 5. Ordering plan (base case)
 
 | PO | Placed | Arrives | Units | Notes |
 | --- | --- | --- | --- | --- |
@@ -79,7 +146,9 @@ Replacing it with a real quote is the highest-value thing we can do this month.
 | 3 | Month 9 | Month 13 | 30,000 | |
 | 4 | Month 11 | Month 15 | 30,000 | |
 
-**The first PO cannot be placed before month 3, and that gate is real.** Nothing
+**The first PO cannot be placed before month 3, and that gate is real.**
+Suntak's 60-day clock starts on artwork confirmation *and* deposit, which is
+exactly the gate the model enforces. Nothing
 can be printed until PJ Offner has delivered production-ready packaging artwork
 (month 2, week 6 of his 8-week schedule) and the label has been reviewed against
 R146. Printing 30,000 tins to an unreviewed label is not a risk worth taking to
@@ -95,7 +164,7 @@ we can take out of it is cash back on the balance sheet — and the two weeks mo
 easily won are at the front, by having the dieline in hand before PJ starts so
 artwork and tooling can run in parallel.
 
-## 5. Sample evaluation scorecard
+## 6. Sample evaluation scorecard
 
 Score every sample 1–5. Do it with at least three people, at least one of whom
 plays golf regularly and at least one of whom does not.
@@ -133,7 +202,7 @@ plays golf regularly and at least one of whom does not.
 - [ ] Re-sample
 - [ ] Find another supplier
 
-## 6. Before any money moves
+## 7. Before any money moves
 
 - [ ] Second and third supplier quotes obtained on the same spec
 - [ ] Factory certifications received and verified

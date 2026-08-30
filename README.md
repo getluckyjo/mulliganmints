@@ -14,7 +14,7 @@ taking the brand global by licence or by export.
 | --- | --- |
 | Stage | Pre-launch. Research complete, brand not yet commissioned, no stock ordered. |
 | Product | 35g sugar-free pressed mints in a printed hinged tin (supplier spec in `product/`) |
-| Supplier | Suntak Foods Manufacturing Co., Ltd (China) — samples of tins and mints inbound |
+| Supplier | Suntak Foods (Shantou, China) — **quoted USD 0.465/tin FOB, 29 Aug 2026, valid 30 days**. Samples inbound. |
 | Brand | PJ Offner engaged for **10% equity, not a fee** — brief in `brand/brand-brief-pj-offner.md`, terms in `legal/term-sheet-pj-offner.md` |
 | Capital ask | R3.5m pre-seed, then R12m growth round by month 20 |
 | Next decisions | See `docs/decisions/` |
@@ -37,10 +37,10 @@ ops/           Risk register
 
 | | |
 | --- | --- |
-| Landed cost per tin | **R9.58** |
+| Landed cost per tin | **R10.29** (Suntak quote, 29 Aug 2026) |
 | Net price per tin, golf & bars | **R24.25** (RSP R45 incl VAT) |
-| Gross margin, direct channels | **60%** |
-| Break-even | **~14,800 tins/month** — around month 21 |
+| Gross margin, direct channels | **58%** |
+| Break-even | **~15,600 tins/month** — around month 21 |
 | Year 5 revenue | **R43.6m** on 1.79m tins |
 | Capital required | **R3.5m** pre-seed + **R12m** growth round |
 
@@ -59,9 +59,14 @@ never in the spreadsheet.
 
 ## The two numbers that decide everything
 
-1. **Supplier FOB price per tin.** Modelled at $0.44 at launch volume. Unverified.
-   The Suntak quote replaces it.
-2. **Sell-through per venue per month.** Modelled at 32 tins in year 1 rising to 55.
-   Unverified. The first 90 days of real venue data replaces it.
+1. ~~Supplier FOB price per tin.~~ **Answered: USD 0.465 FOB Shantou**, 5.7%
+   above the USD 0.44 we had modelled. Re-costed through the whole plan.
+2. **Sell-through per venue per month.** Modelled at 32 tins in year 1 rising to
+   55. Still unverified — no benchmark for it exists anywhere. The first 90 days
+   of real venue data replaces it.
 
-Everything else in this repository is downstream of those two.
+And one new one, which arrived with the quote:
+
+3. **The minimum order quantity.** Suntak priced against a full container and
+   never stated an MOQ. At a container per flavour the launch order is R4.06m
+   against a R3.5m pre-seed. Run `finance/model/sensitivity_moq.py`.

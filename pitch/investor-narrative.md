@@ -52,11 +52,11 @@ global.
 
 | | |
 | --- | --- |
-| Landed cost per tin | **R9.58** |
+| Landed cost per tin | **R10.29** — on a real supplier quote |
 | Net price, golf and bars | **R24.25** (RSP R45) |
-| Gross margin | **60%** |
+| Gross margin | **58%** |
 | A club buys a 12-tin box for R291 ex-VAT and makes **R178 (38%)** on it | |
-| Break-even | **~14,800 tins/month — around month 21** |
+| Break-even | **~15,600 tins/month — around month 21** |
 
 ### 6. The product is the proof. The brand is the asset.
 
@@ -75,10 +75,10 @@ across three territories.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Tins | 25k | 183k | 555k | 1.14m | 1.79m |
 | Revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
-| Gross margin | 61% | 65% | 64% | 65% | 67% |
-| EBITDA | −R1.47m | −R0.33m | R0.79m | R5.92m | R13.35m |
+| Gross margin | 59% | 63% | 63% | 63% | 65% |
+| EBITDA | −R1.48m | −R0.42m | R0.54m | R5.42m | R12.59m |
 
-**Cumulative five-year EBITDA: R18.3m.** Full model in
+**Cumulative five-year EBITDA: R16.7m.** Full model in
 `finance/outputs/mulligan-mints-5yr-model.xlsx`.
 
 ## The ask
@@ -123,15 +123,22 @@ gates are written down: below 20 tins a month and we stop and re-architect the
 product rather than spend into it.
 
 **The downside is not a slower version of the upside.** At half the modelled
-sell-through the business is EBITDA-negative for four years and needs R7.75m it
+sell-through the business is EBITDA-negative for all five years and needs R8.52m it
 cannot service. If that happens, **the right answer is not to raise the growth
 round** — it is to hold headcount flat, stay in golf and DTC where margins are
 60–73%, and run it as a profitable niche brand at ~200,000 tins a year. We would
 rather have that conversation now than in month 20.
 
-**We do not yet have a supplier price.** Everything uses an estimated FOB of
-USD 0.44 per tin. Samples are inbound; a quote is days away. A 10c/tin miss moves
-year-5 gross profit by ~R3m.
+**We now have a supplier price, and it came in above our estimate.** Suntak
+Foods quoted USD 0.465 FOB Shantou on 29 August 2026 against the USD 0.44 we had
+modelled — 5.7% higher — and wants a 50% deposit rather than 30%. That is already
+in the numbers above: it cost about R1.6m of cumulative five-year EBITDA. We
+would rather show you the re-costed plan than one built on our own guess.
+
+**The minimum order quantity is still not known**, and it is the one open item
+that could change the ask. Suntak priced against a full container without stating
+an MOQ. If it turns out to be a container per flavour, we launch with one flavour
+rather than three — not with a bigger round.
 
 **Year 4–5 EBITDA margins of 26–31% are at the top of the range** for branded
 confectionery. They depend on the distributor transition working and the

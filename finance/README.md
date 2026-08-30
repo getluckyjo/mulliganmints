@@ -50,12 +50,15 @@ monthly cashflow, the purchase order schedule, and a funding sheet.
 
 ## Health warnings
 
-1. **FOB cost is an estimate** (USD 0.44/tin at launch volume). The Suntak quote
-   replaces it. A 10c/tin miss moves year-5 gross profit by roughly R3m.
+1. ~~FOB cost is an estimate~~ — **now quoted**: USD 0.465/tin FOB Shantou
+   (Suntak, 29 Aug 2026). The volume tiers above 150,000 units a year are still
+   extrapolated from that one price point and should be quoted directly.
+   Separately, **the MOQ is unknown and is the largest open supply risk** — run
+   `python3 sensitivity_moq.py` for what a container-per-SKU minimum would do.
 2. **Sell-through per venue is an estimate** (32 tins/club/month rising to 55).
    No external benchmark exists. The 90-day pilot replaces it.
-3. **Year 4–5 EBITDA margins of 26–31% are at the top of what a branded
+3. **Year 4–5 EBITDA margins of 20–29% are at the top of what a branded
    confectionery business earns.** They depend on the distributor transition
    working and on the licensing line arriving. A more conservative read of years
-   4 and 5 is 20–25%. Treat the difference as the value of the licensing thesis,
+   4 and 5 is 18–22%. Treat the difference as the value of the licensing thesis,
    not as an operating assumption.

@@ -47,6 +47,7 @@ unless stated. **Add to this file whenever you bring a new external number in.**
 | SA import duty on HS 1704 sugar confectionery = **25%**, levied on FOB customs value; VAT 15% on ATV (customs value + 10% uplift + duty) | [JLog — HS 1704.10 import duty South Africa](https://jlog.co.za/hs-code/hs-1704-10-sugar-confectionery-including-white-chocolate-not-containing-cocoa-chewing-gum-whether-or-not-sugar-coated-south-africa-import-export/) · [Trade Logistics import duty directory](https://tradelogistics.co.za/tools-and-calculators/import-duty-directory/) |
 | Sea freight 20ft China → Durban/Cape Town **USD 2,403–2,937** (Jul 2026), up 12–25% on June; transit 18–24 days Shanghai, 22–28 days Shenzhen | [Sino Shipping — China to South Africa freight](https://www.sino-shipping.com/freight-china-south-africa/) · [DTFU Logistics](https://www.dtfulogistics.com/news/how-much-to-ship-a-container-from-china-to-south-africa/) |
 | Private-label mint OEM landscape, China: MOQs from 500–2,000 units at some suppliers, 50,000+ for bottled formats; paid samples USD 10–30, 3–14 day lead | [Alibaba — private label mints suppliers](https://www.alibaba.com/private-label-mints-suppliers.html) · [DO'S FARM](https://www.dosfarmfoods.com/private-label-mints/) |
+| **FOB Shantou USD 0.465/tin**; 35g sugar-free strong peppermint; tin 96 × 61.5 × 21 mm; 1g tablets, 13.5mm dia (35/tin); 24-month shelf life; 96 tins/carton, 1,400 cartons = 134,400 tins per 20GP; carton 0.02 CBM, 7.6 kg; 60-day production after artwork + deposit; 50% T/T deposit, balance before shipment; tin sample USD 250/design, OEM formula USD 200/flavour, embossing mould USD 300/position; USD 200 LCL charge under USD 5,000; **quote valid 30 days from 29 Aug 2026** | **Suntak Foods Manufacturing Co., Ltd — quotation, 29 August 2026.** Held at `product/quotes/suntak-quotation-2026-08-29.pdf` |
 | USD/ZAR ~15.93 (25 Aug 2026); rand +4.94% on the month, +9.60% on the year | [Trading Economics — South African Rand](https://tradingeconomics.com/south-africa/currency) |
 
 ## Regulatory
@@ -80,8 +81,13 @@ here so nobody mistakes them for research:
    a weak proxy.
 3. **Golf-course retail sell-through.** No benchmark exists anywhere. Must be
    measured in our own pilot.
-4. **Supplier FOB cost per tin.** Modelled from published OEM ranges. **Replace
-   with the Suntak quote.**
-5. **SA confectionery trade margins by channel.** Only Indian FMCG comparators
+4. ~~Supplier FOB cost per tin.~~ **Answered** by the Suntak quotation above:
+   USD 0.465 FOB Shantou. What remains estimated is the *volume curve* — every
+   price tier above 150,000 units a year is extrapolated from that single
+   observation and should be quoted directly.
+5. **Suntak's minimum order quantity.** The quote states that pricing is based
+   on "the MOQ of one item" but never says what it is. Material enough to change
+   the funding requirement — see `finance/model/sensitivity_moq.py`.
+6. **SA confectionery trade margins by channel.** Only Indian FMCG comparators
    were findable (distributor 10–20%, retailer 20–30%). Our channel margins are
    estimates built from RSP working backwards.

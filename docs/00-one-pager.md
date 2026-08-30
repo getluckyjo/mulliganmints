@@ -31,21 +31,21 @@ on a global media channel at South African cost.
 
 | | |
 | --- | --- |
-| Landed cost / tin | R9.58 |
+| Landed cost / tin | R10.29 (quoted, not estimated) |
 | Net price / tin (golf, bars) | R24.25 — RSP R45 incl VAT |
-| Gross margin | 60% direct, 67% blended by year 5 |
-| Break-even | ~14,800 tins/month, around month 21 |
-| Year 5 (base) | 1.79m tins · R43.6m revenue · R13.4m EBITDA |
+| Gross margin | 58% direct, 65% blended by year 5 |
+| Break-even | ~15,600 tins/month, around month 21 |
+| Year 5 (base) | 1.79m tins · R43.6m revenue · R12.6m EBITDA |
 | Capital | **R3.5m pre-seed**, then R12m at month 20 |
 
 ## The state of play
 
 | | |
 | --- | --- |
-| Supplier | Suntak Foods (China) — samples of tins and mints inbound |
+| Supplier | Suntak Foods (Shantou) — quoted USD 0.465/tin FOB, 29 Aug 2026 |
 | Brand | PJ Offner engaged — **10% equity, not a fee**, 8 weeks |
 | Stock | None ordered |
-| Biggest unknown | **Tins sold per golf club per month.** No benchmark exists. 90-day pilot answers it. |
+| Biggest unknowns | **Tins sold per golf club per month** — no benchmark exists, 90-day pilot answers it. And **the supplier's MOQ**, which one email answers. |
 
 ## The bet
 

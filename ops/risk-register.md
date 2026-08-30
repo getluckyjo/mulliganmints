@@ -7,13 +7,14 @@
 | # | Risk | L | I | Score | Mitigation |
 | --- | --- | ---: | ---: | ---: | --- |
 | **R-01** | **Sell-through per venue is below plan.** The whole model scales off 32 tins/club/month, a number with no external benchmark anywhere. | 3 | 5 | **15** | Measure it in the 90-day pilot before spending anything else. Decision gates written into `gtm/launch-plan-90-day.md`. If below 20/month, stop and diagnose price, placement or format — do not spend into it. |
-| **R-02** | **Supplier FOB price comes in materially above USD 0.44.** Unverified estimate; drives the entire cost stack, and duty at 25% of FOB amplifies every cent. | 3 | 4 | **12** | Get the Suntak quote before committing. Quote two alternative suppliers on the same spec. If landed cost exceeds ~R12, revisit RSP or tin size before revisiting margin. |
+| **R-02** | ~~Supplier FOB price~~ **RESOLVED, at a cost.** Suntak quoted USD 0.465 on 29 Aug 2026 against USD 0.44 modelled, with 50% deposit rather than 30%. Landed cost R9.58 → R10.29; cumulative 5-yr EBITDA −R1.6m. Residual risk is the volume breaks above 150k units/yr, still extrapolated from one price point. | 2 | 3 | **6** | Re-costed and in the model. Ask Damita to quote the volume breaks directly. Quote two alternative suppliers on the now-real spec before committing to tooling. |
 | **R-03** | **Rand depreciation.** We buy in USD and sell in ZAR. Price increases lag COGS by up to a year. | 4 | 3 | **12** | 4%/yr depreciation modelled. Annual 5% price increase on a fixed date. Consider forward cover on large POs. A move to R20/USD adds ~R1.75 to landed cost. |
 | **R-04** | **Draft R3337 front-of-pack warning labels.** A warning logo for artificial sweeteners would require artwork changes and hurt a premium positioning. | 3 | 3 | **9** | Choose xylitol or a natural sweetener over aspartame/ace-K. Leave physical space in the tin artwork for a FOPL logo from the first design. |
 | **R-05** | **A golf creator launches a competing mint.** Good Good and Bob Does Sports already launch consumer products; either could do this with an audience we cannot match. | 3 | 4 | **12** | Move fast. Approach them as partners, not competitors — seed early, aim for collaboration or a licence. File trademarks in the US early. |
 | **R-06** | **Irish origin claim challenged.** Made in China, company in SA, Irish-styled brand. R146 prohibits misleading origin claims; UK/EU rules are stricter — and those are licensing targets. | 2 | 4 | **8** | Brief PJ Offner explicitly: Irish reference is character and homage, never provenance. No "Product of Ireland", no origin-mark lockups. Country of origin stated plainly. Compliance review of artwork before print. |
 | **R-07** | **"Like it never happened" read as alcohol masking.** Funny in a bar, and a liability with pharmacy buyers and licensee brand-safety reviews. | 3 | 3 | **9** | Anchor the tagline in golf — the bad shot, never the drink. Written into `brand/naming-and-verbal-identity.md`. Never use the drinking reading in owned content. |
-| **R-08** | **Working capital squeeze in months 15–20.** 4-month order-to-shelf lead time, 30/70 supplier terms, growing debtors. Modelled low point: R674k in month 19. | 4 | 4 | **16** | **Start the growth round at month 14, close by month 19.** Explore import finance against confirmed orders. Strict 30-day terms on direct venues; first order paid on delivery. |
+| **R-16** | **MOQ unknown, and it could break the funding plan.** Suntak priced against a full 20GP without stating a minimum. If the MOQ is one container per SKU, the launch order is R4.06m against a R3.5m pre-seed — insolvent before the first sale. | 3 | 5 | **15** | **Ask Damita for the per-SKU MOQ before anything else.** If it is a container per flavour, launch with one flavour, not a bigger round. Quantified in `finance/model/sensitivity_moq.py`. |
+| **R-08** | **Working capital squeeze in months 15–20.** 4-month order-to-shelf lead time, 30/70 supplier terms, growing debtors. Modelled low point: R535k in month 19, tighter since the quote. | 4 | 4 | **16** | **Start the growth round at month 14, close by month 19.** Explore import finance against confirmed orders. Strict 30-day terms on direct venues; first order paid on delivery. |
 | **R-09** | **Retail entry costs more than modelled.** R1.4m of listing fees assumed; national grocers can demand more, plus promo grids and returns. | 3 | 3 | **9** | Do not enter retail before month 19 or before golf sell-through data exists. No listing without an agreed promo plan and review date. Enter via pharmacy (Clicks/Dis-Chem) first — they already sell Fisherman's Friend at R28.99 and understand a premium mint. |
 | **R-10** | **Mondelēz responds.** Wilson's XXX already owns "extra strong" and "heritage" in SA, with national distribution and a third of our price. | 2 | 4 | **8** | Do not compete on strength or heritage alone — compete on occasion and community, which they cannot replicate quickly. Stay in channels too small for them to prioritise. Build the audience before they notice. |
 | **R-11** | **Single-supplier dependency.** One factory, one country, one shipping lane. | 3 | 4 | **12** | Qualify a second supplier before volume grows. Model contract manufacture in SA once volume passes ~500,000 tins/year — it removes 25% duty entirely. |
@@ -27,14 +28,18 @@
 ## The four that actually matter
 
 **R-08 (working capital)** — highest score, and the most mechanical. It is a
-calendar problem: start the growth round at month 14.
+calendar problem: start the growth round at month 14. Tighter since the quote
+came in: the month-19 low point is now R535,000.
 
 **R-01 (sell-through)** — the assumption everything else rests on, and the
 cheapest to test. R30,000 of stock and 90 days answers it.
 
-**R-02 (FOB cost)** — one email to the supplier resolves it. It has been open
-too long already.
+**R-16 (MOQ)** — new, and the one that could break the funding plan outright.
+One email to Damita resolves it. Ask before anything else.
 
 **R-05 (creator competition)** — the one we cannot control, and the one that
 argues most strongly for moving quickly and for treating US golf creators as
 partners rather than rivals.
+
+*R-02 (supplier price) has dropped off this list — the quote arrived and it is
+now a known number rather than a guess.*

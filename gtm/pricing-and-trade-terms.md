@@ -64,7 +64,7 @@ margin overstates it. Do not do that in a sell sheet; buyers notice.)*
 ## 3. Rules
 
 **Never discount the RSP to win a door.** A club that needs a discount to stock it
-will not sell it. Give free sampling stock instead — a tin costs us R9.58 and
+will not sell it. Give free sampling stock instead — a tin costs us R10.29 and
 buys a trial; a R10 discount costs the same and buys nothing.
 
 **One price for all direct venues.** Golf clubs and bars pay the same R24.25. The

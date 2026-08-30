@@ -55,19 +55,26 @@ CORPORATE_TAX_RATE = 0.27             # [SOURCE] SARS company rate
 UNITS_PER_DISPLAY_BOX = 12
 BOXES_PER_CARTON = 8
 UNITS_PER_CARTON = UNITS_PER_DISPLAY_BOX * BOXES_PER_CARTON       # 96
-CARTONS_PER_20FT = 1400                                           # [SOURCE] supplier spec
+CARTONS_PER_20FT = 1400                                           # [SOURCE] Suntak quotation
 UNITS_PER_20FT = UNITS_PER_CARTON * CARTONS_PER_20FT              # 134,400
 
-# FOB China per tin, USD. Tin + print + 35g sugar-free centre + display box.
-# [EST] from published OEM ranges; MUST be replaced by the Suntak quote.
-# Volume curve: price improves as annual order volume rises.
+# FOB Shantou per tin, USD. Tin + print + 35g sugar-free centre + display box.
+#
+# Tier 1 is the REAL QUOTE: Suntak Foods, 29 Aug 2026, USD 0.465/unit FOB
+# Shantou against an inquiry of 134,400 units (1x20GP), valid 30 days.
+# [SOURCE: product/quotes/suntak-quotation-2026-08-29.pdf]
+#
+# Tiers 2-5 are still [EST]. We have exactly one price point, so they are the
+# original volume curve rescaled by the same 5.7% the quote came in above our
+# estimate. Treat them as an extrapolation from a single observation, not as
+# quoted prices — and ask Damita to quote the volume breaks directly.
 FOB_USD_CURVE = [
     #  (annual units up to, USD FOB per tin)
-    (150_000,   0.44),
-    (400_000,   0.39),
-    (800_000,   0.355),
-    (1_500_000, 0.330),
-    (10_000_000, 0.310),
+    (150_000,   0.465),   # [SOURCE] quoted
+    (400_000,   0.412),   # [EST]
+    (800_000,   0.375),   # [EST]
+    (1_500_000, 0.349),   # [EST]
+    (10_000_000, 0.328),  # [EST]
 ]
 
 # Sea freight, 20ft China -> Durban/Cape Town.
@@ -248,6 +255,8 @@ SETUP_COSTS = [
     # PJ Offner takes 10% equity for the brand identity, packaging and guidelines
     # instead of a fee, and carries his own costs — see
     # legal/term-sheet-pj-offner.md. There is no cash line for the brand at all.
+    # Grounded in the quote: tin sample USD 250/design x3, OEM formula sample
+    # USD 200/flavour x3, embossing mould USD 300 per position, plus courier.
     (2,  "Supplier samples, freight, tooling & plate charges",   45_000),
     (2,  "Pre-press, dieline proofing & production files",       40_000),
     # Must clear before the PO — printing 30,000 tins to an unreviewed label is
@@ -262,11 +271,22 @@ SETUP_COSTS = [
 # ---------------------------------------------------------------------------
 # 5. Inventory and supplier payment terms
 # ---------------------------------------------------------------------------
-MIN_ORDER_UNITS = 30_000              # [EST] per-SKU MOQ x 3 flavours
+# [EST] 3 flavours at an assumed 10,000-unit per-SKU MOQ.
+# ** THE BIGGEST OPEN QUESTION ON THE QUOTE. ** Suntak priced against an inquiry
+# of 134,400 units (a full 20GP) and noted only that the price "is based on the
+# MOQ of one item" and that below MOQ the unit price is "slightly higher" — the
+# MOQ itself is never stated. If it turns out to be a full container per SKU,
+# the launch order is 4.5x this and the pre-seed does not cover it.
+# See finance/model/sensitivity_moq.py for what that scenario costs.
+MIN_ORDER_UNITS = 30_000
 ORDER_ROUNDING_UNITS = 10_000
 TARGET_FORWARD_COVER_MONTHS = 3.5     # [EST] lead time + safety stock
 
-SUPPLIER_DEPOSIT_PCT = 0.30           # paid when PO placed
+# Suntak's stated terms: 50% T/T deposit in advance, balance before shipment
+# from the factory. [SOURCE: quotation 2026-08-29] Worse for us than the 30/70
+# we had assumed, and the balance falls due before the goods leave China rather
+# than against the bill of lading.
+SUPPLIER_DEPOSIT_PCT = 0.50           # paid when PO placed
 PRODUCTION_LEAD_MONTHS = 2            # PO -> goods on the water
 SHIPPING_TRANSIT_MONTHS = 1           # [SOURCE] 18-28 days Shanghai/Shenzhen -> Durban
 CLEARING_MONTHS = 0.5                 # port health + customs release
