@@ -12,4 +12,5 @@ more useful than one that was quietly removed.
 | [0002](0002-golf-channel-first.md) | Enter through golf clubs, not retail | Accepted |
 | [0003](0003-export-then-licence.md) | Export to two or three markets first, then licence | Accepted |
 | [0004](0004-sweetener.md) | Which sweetener | **Open** |
-| [0005](0005-tin-format.md) | 35g tin as the launch format | Provisional |
+| [0005](0005-tin-format.md) | 35g tin as the launch format | Confirmed by quote |
+| [0006](0006-launch-single-flavour.md) | Launch with strong peppermint only | Accepted |

@@ -168,5 +168,8 @@ conservative — it is a lever we can pull harder if content lands.
 - **No airline, hotel or hospitality amenity channel in the first three years.**
   It is a real opportunity for a tin brand, and it is a distraction until the
   core works.
-- **No SKU proliferation.** Three flavours at launch. The temptation to add a
-  fourth before the third is selling is the most expensive mistake available to us.
+- **No SKU proliferation.** **One flavour at launch** — strong peppermint. Each
+  additional flavour is a separate 800 kg batch: 22,944 tins and R231,000 of
+  stock against a 24-month shelf life. Flavour two gets chosen on 90-day
+  sell-through, not on instinct. The temptation to add a second before the first
+  is selling is the most expensive mistake available to us.

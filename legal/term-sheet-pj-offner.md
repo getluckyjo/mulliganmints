@@ -49,12 +49,17 @@ The scope is the creative brief at `brand/brand-brief-pj-offner.md`, which is
 attached to this term sheet and forms part of it. In summary:
 
 **Core identity** — primary wordmark and secondary lockup; a brand mark that
-works standalone at 8mm; colour palette including a flavour-coding system for
-three SKUs with room for two more; typography; illustration style with one fully
-worked hero illustration plus supporting assets.
+works standalone at 8mm; colour palette including a flavour-coding system
+covering five SKUs; typography; illustration style with one fully worked hero
+illustration plus supporting assets.
 
-**Packaging** — tin artwork (lid, base, sides) for three flavours to the
-supplier's dieline; display box artwork; shipper carton markings.
+**Packaging** — tin artwork (lid, base, sides) for the launch flavour, strong
+peppermint, to the supplier's dieline (96 × 61.5 × 21 mm); display box artwork;
+shipper carton markings. The Company launches with one flavour, so the
+deliverable is one set of tin artwork **plus a flavour-coding system that lets
+further flavours be applied without redesigning the identity**. Artwork for
+additional flavours, when the Company adds them, is separate paid work under
+clause 9.
 
 **Applications** — pro-shop counter display and sampling kit; social templates;
 merchandise starters (cap, tee bag, ball marker, towel); digital logo suite and

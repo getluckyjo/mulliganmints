@@ -40,8 +40,8 @@ Two things moved against us:
    *before the goods leave the factory* rather than against the bill of lading.
    More cash out, earlier.
 
-Together those take cumulative five-year EBITDA from R18.25m to **R16.72m** and
-push the month-19 low point down to **R449,000**. The plan still works. It has
+Together those take cumulative five-year EBITDA from R18.25m to **R16.65m** and
+push the month-19 low point down to **R574,000**. The plan still works. It has
 less slack than it had.
 
 ## 2. The MOQ — answered, and it sets the launch decision
@@ -66,15 +66,21 @@ another 22,944 tins bought before a single one has been sold:
 
 | | First order | Cash out | Years of Y1 demand | Min cash | Verdict |
 | --- | ---: | ---: | ---: | ---: | --- |
-| **1 flavour — peppermint only** | 22,944 | R231k | 0.9x | R556k | Cleanest |
+| **1 flavour — peppermint only (chosen)** | 22,944 | **R231k** | **0.9x** | R574k | **Chosen** |
 | 2 flavours | 45,888 | R463k | 1.9x | R574k | Fine |
-| **3 flavours — the current plan** | 68,832 | **R681k** | **2.8x** | R449k | Affordable |
+| 3 flavours — the earlier plan | 68,832 | R681k | 2.8x | R449k | Affordable |
 | *For reference: a full 20GP* | 134,400 | R1.33m | 5.5x | −R57k | Insolvent |
 
 *(Reproduce with `python3 finance/model/sensitivity_moq.py`.)*
 
 **The good news: the pre-seed covers all three flavours.** This is not the crisis
 it looked like before the MOQ was known.
+
+> **Decided: we launch with strong peppermint only** (decision 0006). One flavour
+> buys almost exactly one year of demand for R231,000 instead of nearly three
+> years for R681,000, and it is the only flavour Suntak has actually quoted.
+> Flavours two and three get chosen on 90-day sell-through and added at a reorder
+> around month 9.
 
 **The judgement call is how many untested bets to place at once.** Three flavours
 means committing R681,000 to three flavour guesses before we have a single day of
@@ -92,8 +98,8 @@ Against that: three flavours gives a golf club a proper display, makes the range
 look like a brand rather than a trial, and a single-SKU display box is a weaker
 proposition on a pro shop counter. It is a real trade-off, not an obvious call.
 
-**The model currently assumes three flavours** (`LAUNCH_FLAVOURS = 3` in
-`assumptions.py`). Change that one number to re-run the plan on a narrower launch.
+**The model is set to a single launch flavour** (`LAUNCH_FLAVOURS = 1` in
+`assumptions.py`). Change that one number to re-run the plan on a wider launch.
 
 ## 3. What we still need from Suntak — the RFQ
 
@@ -169,17 +175,24 @@ proposition on a pro shop counter. It is a real trade-off, not an obvious call.
 
 ## 5. Ordering plan (base case)
 
-On the plan of record — three flavours, one 800 kg batch each:
+Single-flavour launch — one 800 kg batch per order:
 
 | PO | Placed | Arrives | Units | Notes |
 | --- | --- | --- | --- | --- |
-| 1 | **Month 3** | Month 7 | 68,832 | 3 × MOQ. Launch stock. |
-| 2 | Month 9 | Month 13 | 68,832 | Placed on ~2 months of real sell-through |
-| 3 | Month 14 | Month 18 | 68,832 | |
-| 4 | Month 17 | Month 21 | 68,832 | |
+| 1 | **Month 3** | Month 7 | 22,944 | 1 × MOQ. Launch stock, ~1 year of Y1 demand. |
+| 2 | Month 5 | Month 9 | 22,944 | Still on forecast — placed before launch |
+| 3 | Month 8 | Month 12 | 22,944 | First order placed on real sell-through |
+| 4 | Month 10 | Month 14 | 22,944 | Candidate slot for flavour two |
 
 Order sizes are whole multiples of the 22,944-tin batch, because you cannot buy
 1.4 batches of candy.
+
+**Note the freight consequence.** A single-flavour order is 17% of a container,
+so early shipments carry the LCL penalty — the model applies roughly 35% on
+freight and clearing until order sizes pass 60,000 units around month 24. That is
+about R100,000 across the plan, and it is the real cost of the single-SKU launch.
+Worth asking Suntak whether consolidating two batches into one shipment is
+cheaper than two quarter-container sailings.
 
 **The first PO cannot be placed before month 3, and that gate is real.**
 Suntak's 60-day clock starts on artwork confirmation *and* deposit, which is

@@ -32,12 +32,13 @@ the most expensive mistake available to us.
 | 2 | **Spearmint** | The softer entry point; broadens the buyer base |
 | 3 | **TBC — third flavour** | Candidates: aniseed, liquorice, wintergreen, honey-lemon. Decide on samples. Aniseed and liquorice both index strongly in the heritage strong-mint category (Fisherman's Friend's SA range carries both). |
 
-**Suntak has quoted STRONG PEPPERMINT only.** Spearmint and the third flavour are
-not priced, and each carries a USD 200 sample charge plus its own 800 kg minimum
-batch — **22,944 tins per flavour**. Three flavours is therefore a 68,832-tin
-launch order costing R681,000 before a single tin is sold, against year-one
-demand of 24,520. Whether to launch with one flavour or three is now a live
-decision — see `product/supplier-brief-china.md` §2.
+**We launch with SKU 1, strong peppermint, only** — see
+`docs/decisions/0006-launch-single-flavour.md`. Each flavour is its own 800 kg
+batch: **22,944 tins, about R231,000**. Three at launch would have been R681,000
+of stock against year-one demand of 24,520, with a 24-month shelf life. Spearmint
+and the third flavour stay on this spec as planned line extensions, chosen on
+90-day sell-through and added at a reorder around month 9. Suntak has in any case
+only quoted strong peppermint.
 
 ## 2. Tin
 
@@ -130,7 +131,7 @@ moment to change the product.
 | # | Decision | Blocks | Owner |
 | --- | --- | --- | --- |
 | 1 | ~~Tin dimensions~~ — **answered: 96 × 61.5 × 21 mm.** Flat dieline still needed | PJ Offner artwork | Supplier |
-| 2 | **How many flavours to launch with** — each is a separate 800 kg batch, 22,944 tins, R231k. Then which ones. | Artwork, first PO, brand brief | Johannes |
+| 2 | ~~How many flavours at launch~~ — **decided: peppermint only** (0006). Which flavour comes second is now a month-9 decision, made on sell-through. | Reorder at ~month 9 | Johannes |
 | 3 | Sweetener | Formula, label, cost, artwork | Johannes + supplier |
 | 4 | Matte vs gloss | Artwork | Johannes + PJ |
 | 5 | 35g vs a smaller premium format | Price architecture, everything | Johannes |

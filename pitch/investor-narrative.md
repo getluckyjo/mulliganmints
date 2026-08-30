@@ -76,7 +76,7 @@ across three territories.
 | Tins | 25k | 183k | 555k | 1.14m | 1.79m |
 | Revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 59% | 63% | 63% | 63% | 65% |
-| EBITDA | −R1.48m | −R0.38m | R0.56m | R5.42m | R12.59m |
+| EBITDA | −R1.46m | −R0.43m | R0.53m | R5.41m | R12.59m |
 
 **Cumulative five-year EBITDA: R16.7m.** Full model in
 `finance/outputs/mulligan-mints-5yr-model.xlsx`.
@@ -92,7 +92,7 @@ across three territories.
 
 | | |
 | --- | --- |
-| Trademark, artwork, content, website, launch (brand identity is equity, not cash) | R408k |
+| Trademark, artwork, content, website, launch (brand identity is equity, not cash) | R388k |
 | First three production runs and import costs | ~R900k |
 | Team — founder from month 4, first rep from month 7 | R522k |
 | Marketing — creator seeding, club activation, sampling | R380k |
@@ -135,11 +135,13 @@ modelled — 5.7% higher — and wants a 50% deposit rather than 30%. That is al
 in the numbers above: it cost about R1.6m of cumulative five-year EBITDA. We
 would rather show you the re-costed plan than one built on our own guess.
 
-**The minimum order quantity is 800 kg of candy per recipe — 22,944 tins per
-flavour.** Launching three flavours costs R681,000 in stock before a single tin
-is sold, which the pre-seed covers. Launching one costs R231,000. That is a live
-decision, and it is about how many untested flavour bets we place at once rather
-than about affordability.
+**We are launching with one flavour, not three.** The minimum order is 800 kg of
+candy per recipe — 22,944 tins, R231,000 a flavour. Three flavours would have
+tied up R681,000 of stock in three untested bets before a single tin was sold,
+against year-one demand of 24,500 and a 24-month shelf life. Strong peppermint is
+the hero and the only flavour quoted; flavours two and three get chosen on real
+sell-through. We would rather buy one year of the right stock than three years of
+a guess.
 
 **Year 4–5 EBITDA margins of 26–31% are at the top of the range** for branded
 confectionery. They depend on the distributor transition working and the

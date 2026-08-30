@@ -255,9 +255,11 @@ SETUP_COSTS = [
     # PJ Offner takes 10% equity for the brand identity, packaging and guidelines
     # instead of a fee, and carries his own costs — see
     # legal/term-sheet-pj-offner.md. There is no cash line for the brand at all.
-    # Grounded in the quote: tin sample USD 250/design x3, OEM formula sample
-    # USD 200/flavour x3, embossing mould USD 300 per position, plus courier.
-    (2,  "Supplier samples, freight, tooling & plate charges",   45_000),
+    # Grounded in the quote, for a single launch SKU: tin sample USD 250,
+    # OEM formula sample USD 200, embossing mould USD 300 per position, courier,
+    # plus samples from a second supplier for comparison. One flavour instead of
+    # three takes roughly R20,000 out of this line.
+    (2,  "Supplier samples, freight, tooling & plate charges",   25_000),
     (2,  "Pre-press, dieline proofing & production files",       40_000),
     # Must clear before the PO — printing 30,000 tins to an unreviewed label is
     # not a risk worth taking to save a month.
@@ -277,7 +279,12 @@ SETUP_COSTS = [
 # FLAVOUR — confirm with Damita, it is the difference between a R231k and a
 # R681k launch order.
 MOQ_TINS_PER_FLAVOUR = 22_944
-LAUNCH_FLAVOURS = 3                   # the plan of record; see sensitivity_moq.py
+# Launch with strong peppermint only. Each flavour is a separate 800 kg batch,
+# so three flavours would tie up R681,000 of stock in three untested bets before
+# a single tin has been sold — against year-one demand of ~24,500 tins and a
+# 24-month shelf life. Flavours two and three get chosen on real sell-through,
+# at a reorder around month 9. See docs/decisions/0006-launch-single-flavour.md.
+LAUNCH_FLAVOURS = 1
 
 MIN_ORDER_UNITS = MOQ_TINS_PER_FLAVOUR * LAUNCH_FLAVOURS
 

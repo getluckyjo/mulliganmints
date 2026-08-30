@@ -13,8 +13,8 @@
 | **R-05** | **A golf creator launches a competing mint.** Good Good and Bob Does Sports already launch consumer products; either could do this with an audience we cannot match. | 3 | 4 | **12** | Move fast. Approach them as partners, not competitors — seed early, aim for collaboration or a licence. File trademarks in the US early. |
 | **R-06** | **Irish origin claim challenged.** Made in China, company in SA, Irish-styled brand. R146 prohibits misleading origin claims; UK/EU rules are stricter — and those are licensing targets. | 2 | 4 | **8** | Brief PJ Offner explicitly: Irish reference is character and homage, never provenance. No "Product of Ireland", no origin-mark lockups. Country of origin stated plainly. Compliance review of artwork before print. |
 | **R-07** | **"Like it never happened" read as alcohol masking.** Funny in a bar, and a liability with pharmacy buyers and licensee brand-safety reviews. | 3 | 3 | **9** | Anchor the tagline in golf — the bad shot, never the drink. Written into `brand/naming-and-verbal-identity.md`. Never use the drinking reading in owned content. |
-| **R-16** | **Launch SKU count ties up stock.** MOQ is 800 kg of candy per recipe = **22,944 tins per flavour**. Three flavours = R681k and 2.8 years of year-one demand bought before any evidence of which flavour sells; with a 24-month shelf life, a dud SKU is ~R236k of stock that expires. | 3 | 3 | **9** | Affordable either way — the pre-seed covers three. The question is how many untested flavour bets to place at once. Consider launching peppermint only and adding flavours off real sell-through. Confirm with Damita that 800 kg is **per flavour**, not total. |
-| **R-08** | **Working capital squeeze in months 15–20.** 4-month order-to-shelf lead time, 30/70 supplier terms, growing debtors. Modelled low point: R449k in month 19, tighter since the quote and the MOQ. | 4 | 4 | **16** | **Start the growth round at month 14, close by month 19.** Explore import finance against confirmed orders. Strict 30-day terms on direct venues; first order paid on delivery. |
+| **R-16** | **Single-SKU launch weakens the counter proposition.** We launch with strong peppermint only (decision 0006), which halves stock risk but means a 12-tin display of identical tins rather than a range. A club counter may read it as a trial rather than a brand. | 3 | 2 | **6** | Design the display box as a hero unit, not a thinned-out range. PJ still builds the full five-SKU flavour-coding system so flavour two drops in without redesign. Choose it on 90-day sell-through and add it at a reorder around month 9. Confirm with Damita that 800 kg is **per flavour**, not total. |
+| **R-08** | **Working capital squeeze in months 15–20.** 4-month order-to-shelf lead time, 30/70 supplier terms, growing debtors. Modelled low point: R574k in month 19. | 4 | 4 | **16** | **Start the growth round at month 14, close by month 19.** Explore import finance against confirmed orders. Strict 30-day terms on direct venues; first order paid on delivery. |
 | **R-09** | **Retail entry costs more than modelled.** R1.4m of listing fees assumed; national grocers can demand more, plus promo grids and returns. | 3 | 3 | **9** | Do not enter retail before month 19 or before golf sell-through data exists. No listing without an agreed promo plan and review date. Enter via pharmacy (Clicks/Dis-Chem) first — they already sell Fisherman's Friend at R28.99 and understand a premium mint. |
 | **R-10** | **Mondelēz responds.** Wilson's XXX already owns "extra strong" and "heritage" in SA, with national distribution and a third of our price. | 2 | 4 | **8** | Do not compete on strength or heritage alone — compete on occasion and community, which they cannot replicate quickly. Stay in channels too small for them to prioritise. Build the audience before they notice. |
 | **R-11** | **Single-supplier dependency.** One factory, one country, one shipping lane. | 3 | 4 | **12** | Qualify a second supplier before volume grows. Model contract manufacture in SA once volume passes ~500,000 tins/year — it removes 25% duty entirely. |
@@ -29,15 +29,14 @@
 
 **R-08 (working capital)** — highest score, and the most mechanical. It is a
 calendar problem: start the growth round at month 14. Tighter since the quote
-came in: the month-19 low point is now R449,000.
+came in: the month-19 low point is now R574,000.
 
 **R-01 (sell-through)** — the assumption everything else rests on, and the
 cheapest to test. R30,000 of stock and 90 days answers it.
 
-**R-16 (launch SKU count)** — the MOQ came back at 800 kg per recipe, which is
-affordable. What is left is a judgement call: three flavours ties up R681k of
-stock in three untested bets, one ties up R231k in the flavour we are most sure
-of.
+**R-11 (single-supplier dependency)** — still open, and more exposed now that a
+single flavour from a single factory is the entire launch. Get the second
+supplier quoted on the real spec.
 
 **R-05 (creator competition)** — the one we cannot control, and the one that
 argues most strongly for moving quickly and for treating US golf creators as

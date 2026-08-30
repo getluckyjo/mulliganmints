@@ -17,7 +17,8 @@ A strong pressed mint, sold in a tin, for the shot you'd rather forget.
 ## 2. What we are actually making
 
 A 35g tin of sugar-free pressed mints. Genuinely strong — the Fisherman's Friend
-end of the spectrum, not the Mentos end. Three flavours at launch. Sold in golf
+end of the spectrum, not the Mentos end. **One flavour at launch — strong
+peppermint** — with the identity built so further flavours drop in later. Sold in golf
 club pro shops and bars across South Africa, then taken global.
 
 The tin is not packaging. **The tin is the product.** It lives in a golf bag, on
@@ -103,16 +104,19 @@ This costs us nothing creatively and removes a real risk to the licensing plan.
 1. Primary wordmark, plus a secondary/stacked lockup
 2. Brand mark or emblem that works standalone at 8mm (embossed on a tin lid,
    stamped on a ball marker, as a favicon)
-3. Colour palette — primary, secondary, and a flavour-coding system for three
-   SKUs plus room for a fourth and fifth
+3. Colour palette — primary, secondary, and a **flavour-coding system covering
+   five SKUs**. We launch with one flavour; the system has to let flavours two
+   through five drop in later without a redesign.
 4. Typography — display face for the wordmark, plus text faces for pack copy
    and digital, all properly licensed for commercial and packaging use
 5. Illustration style: one fully worked hero illustration plus enough supporting
    assets to extend the system
 
 ### Packaging
-6. **Tin artwork** — lid, base and sides, for three flavours, to the supplier
-   dieline (dimensions to follow with the samples)
+6. **Tin artwork** — lid, base and sides, for **strong peppermint**, to the
+   supplier dieline. The tin is **96 × 61.5 × 21 mm** (Suntak, confirmed); the
+   flat dieline follows. Additional flavours are artwork applications of the
+   system above, commissioned when we add them.
 7. **Display box artwork** — the 12-tin counter unit. This is the most important
    piece of retail collateral we have; it does the selling in a pro shop.
 8. **Shipper carton** markings

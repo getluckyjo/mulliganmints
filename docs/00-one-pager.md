@@ -5,7 +5,8 @@
 ---
 
 **What.** A genuinely strong sugar-free pressed mint in a 35g tin worth keeping.
-Irish-inflected heritage design with a modern edge. Three flavours at launch.
+Irish-inflected heritage design with a modern edge. **Strong peppermint at
+launch**; further flavours chosen on real sell-through.
 
 **Why it exists.** Strong mints are an old, unbranded category owned by
 multinationals who do not defend it. No mint has an occasion. This one does: the

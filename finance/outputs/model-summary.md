@@ -38,37 +38,37 @@ Built 2026-08-30. All figures ZAR, excluding VAT unless stated.
 | Revenue — export | R0 | R0 | R1.54m | R5.74m | R12.25m |
 | Revenue — brand licensing | R0 | R0 | R0 | R400,000 | R1.80m |
 | **Net revenue** | R620,410 | R4.71m | R13.28m | R26.78m | R43.63m |
-| Cost of goods sold | R247,471 | R1.72m | R4.95m | R9.79m | R15.08m |
-| **Gross profit** | R372,939 | R2.99m | R8.33m | R16.99m | R28.56m |
-| Gross margin | 60% | 63% | 63% | 63% | 65% |
+| Cost of goods sold | R252,319 | R1.77m | R4.99m | R9.80m | R15.08m |
+| **Gross profit** | R368,091 | R2.95m | R8.29m | R16.98m | R28.56m |
+| Gross margin | 59% | 63% | 62% | 63% | 65% |
 | Salaries | R522,000 | R1.41m | R3.14m | R4.90m | R6.65m |
 | Marketing, trade & listings | R380,000 | R839,443 | R2.63m | R3.53m | R4.80m |
 | Logistics & warehousing | R33,102 | R250,384 | R655,591 | R1.20m | R1.83m |
 | Sales commission | R16,092 | R109,811 | R188,095 | R223,283 | R247,666 |
 | Product & export development | R0 | R70,655 | R419,422 | R937,540 | R1.61m |
 | Fixed overheads | R490,500 | R693,240 | R734,834 | R778,924 | R825,660 |
-| One-off setup | R408,000 | R0 | R0 | R0 | R0 |
-| **Total operating costs** | R1.85m | R3.37m | R7.76m | R11.57m | R15.97m |
-| **EBITDA** | R-1.48m | R-381,027 | R564,854 | R5.42m | R12.59m |
-| EBITDA margin | -238% | -8% | 4% | 20% | 29% |
-| Tax charge | R0 | R3,450 | R66,689 | R1.04m | R3.40m |
-| **Net profit** | R-1.48m | R-384,477 | R498,165 | R4.37m | R9.19m |
+| One-off setup | R388,000 | R0 | R0 | R0 | R0 |
+| **Total operating costs** | R1.83m | R3.37m | R7.76m | R11.57m | R15.97m |
+| **EBITDA** | R-1.46m | R-426,117 | R530,186 | R5.41m | R12.59m |
+| EBITDA margin | -236% | -9% | 4% | 20% | 29% |
+| Tax charge | R0 | R2,778 | R65,290 | R1.03m | R3.40m |
+| **Net profit** | R-1.46m | R-428,895 | R464,896 | R4.39m | R9.19m |
 
 ## 3. Base case — cashflow
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Receipts from customers (incl VAT) | R537,222 | R4.94m | R13.57m | R28.23m | R45.62m |
-| Payments to supplier | R1.02m | R2.17m | R5.93m | R9.77m | R12.48m |
-| Import duty & clearing | R142,368 | R524,713 | R1.29m | R2.30m | R3.24m |
-| Operating costs paid | R1.85m | R3.37m | R7.76m | R11.57m | R15.97m |
-| VAT settled | R187,707 | R-87,276 | R-291,436 | R-705,682 | R-1.12m |
-| Tax paid | R0 | R-3,450 | R-66,689 | R-1.04m | R-3.40m |
+| Payments to supplier | R785,071 | R2.36m | R6.03m | R9.77m | R12.48m |
+| Import duty & clearing | R147,387 | R500,524 | R1.35m | R2.30m | R3.24m |
+| Operating costs paid | R1.83m | R3.37m | R7.76m | R11.57m | R15.97m |
+| VAT settled | R185,007 | R-117,904 | R-262,444 | R-705,682 | R-1.12m |
+| Tax paid | R0 | R-2,778 | R-65,290 | R-1.03m | R-3.40m |
 | Funding received | R3.50m | R12.00m | R0 | R0 | R0 |
-| **Net cashflow** | R1.21m | R10.78m | R-1.78m | R2.84m | R9.41m |
-| **Closing cash** | R1.21m | R12.00m | R10.22m | R13.05m | R22.47m |
-| Stock on hand (units) | 42,935 | 129,657 | 272,056 | 416,982 | 470,175 |
-| Stock on hand (value) | R433,330 | R1.21m | R2.42m | R3.60m | R3.98m |
+| **Net cashflow** | R1.46m | R10.58m | R-1.90m | R2.85m | R9.41m |
+| **Closing cash** | R1.46m | R12.04m | R10.15m | R13.00m | R22.41m |
+| Stock on hand (units) | 42,935 | 107,172 | 272,056 | 416,982 | 470,175 |
+| Stock on hand (value) | R441,819 | R1.03m | R2.43m | R3.60m | R3.98m |
 
 ## 4. Scenarios
 
@@ -80,20 +80,20 @@ Built 2026-08-30. All figures ZAR, excluding VAT unless stated.
 | Year 1 revenue | R262,433 | R620,410 | R990,485 |
 | Year 3 revenue | R5.62m | R13.28m | R21.20m |
 | Year 5 revenue | R17.70m | R43.63m | R68.59m |
-| Year 5 EBITDA | R-179,822 | R12.59m | R25.70m |
+| Year 5 EBITDA | R-189,443 | R12.59m | R25.70m |
 | Year 5 EBITDA margin | -1% | 29% | 37% |
-| Cumulative 5-yr EBITDA | R-5.74m | R16.72m | R43.88m |
+| Cumulative 5-yr EBITDA | R-5.92m | R16.65m | R43.82m |
 | First EBITDA-positive year | 0 | 3 | 2 |
-| Unfunded peak cash deficit | R8.60m | R5.52m | R3.34m |
-| Month of peak deficit | M50 | M33 | M26 |
-| Lowest funded cash balance | R1.00m | R448,904 | R553,890 |
-| Year 5 closing cash | R7.82m | R22.47m | R38.89m |
+| Unfunded peak cash deficit | R8.60m | R5.57m | R3.36m |
+| Month of peak deficit | M50 | M33 | M33 |
+| Lowest funded cash balance | R1.21m | R573,601 | R629,994 |
+| Year 5 closing cash | R7.64m | R22.41m | R38.84m |
 
 ## 5. Capital requirement
 
 - **Month 1 — Pre-seed — brand, first production run, SA proof of concept: R3.50m**
 - **Month 20 — Seed — national retail rollout + export entry: R12.00m**
 
-The base case's *unfunded* peak cash deficit is R5.52m in month 33. With the two rounds above, the lowest cash balance is R448,904 in month 19 — which is the single tightest point in the plan and the deadline for closing the growth round.
+The base case's *unfunded* peak cash deficit is R5.57m in month 33. With the two rounds above, the lowest cash balance is R573,601 in month 19 — which is the single tightest point in the plan and the deadline for closing the growth round.
 
 The bear case needs R8.60m and never comfortably repays it inside five years. That is the honest downside: if venue sell-through lands at half the plan, this is a business that survives but does not earn a venture return, and the right response is to hold headcount flat and run it as a niche brand rather than raise the growth round.

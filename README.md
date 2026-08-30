@@ -67,7 +67,8 @@ never in the spreadsheet.
 
 And one new one, which arrived with the quote:
 
-3. **How many flavours to launch with.** The MOQ is 800 kg of candy per
-   recipe — 22,944 tins per flavour. Three flavours is a R681,000 launch order
-   and 2.8 years of year-one demand; one flavour is R231,000 and 0.9 years.
-   Both affordable. Run `finance/model/sensitivity_moq.py`.
+3. ~~How many flavours to launch with.~~ **Decided: strong peppermint only**
+   (decision 0006). The MOQ is 800 kg of candy per recipe — 22,944 tins,
+   R231,000 a flavour — so a single-SKU launch buys almost exactly one year of
+   demand instead of nearly three. Flavours two and three get chosen on real
+   sell-through.
