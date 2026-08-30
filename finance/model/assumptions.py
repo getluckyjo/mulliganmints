@@ -273,11 +273,10 @@ SETUP_COSTS = [
 # ---------------------------------------------------------------------------
 # 5. Inventory and supplier payment terms
 # ---------------------------------------------------------------------------
-# Suntak's MOQ is 800 kg of candy [SOURCE: Damita, Aug 2026]. At 35 g of candy
-# per tin that is 22,857 tins, or 22,944 rounded up to whole 96-tin cartons
-# (239 cartons, 803 kg). It is a batch minimum on a recipe, so it applies PER
-# FLAVOUR — confirm with Damita, it is the difference between a R231k and a
-# R681k launch order.
+# Suntak's MOQ is 800 kg of candy PER FLAVOUR — a batch minimum on a recipe,
+# confirmed by Damita. [SOURCE: Suntak (Damita), Aug 2026] At 35 g of candy per
+# tin that is 22,857 tins, or 22,944 rounded up to whole 96-tin cartons
+# (239 cartons, 803 kg).
 MOQ_TINS_PER_FLAVOUR = 22_944
 # Launch with strong peppermint only. Each flavour is a separate 800 kg batch,
 # so three flavours would tie up R681,000 of stock in three untested bets before

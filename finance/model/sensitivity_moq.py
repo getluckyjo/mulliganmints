@@ -1,13 +1,18 @@
 """
-MOQ sensitivity — the biggest unknown left on the Suntak quote.
+How many flavours can we afford to launch with?
 
-Suntak priced USD 0.465/unit against an inquiry of 134,400 units (one 20GP) and
-noted only that the quote "is based on the MOQ of one item" and that below MOQ
-the price is "slightly higher". The MOQ is never stated.
+Suntak's MOQ is 800 kg of candy PER FLAVOUR — a batch minimum on a recipe,
+confirmed by Damita. At 35 g of candy per tin that is 22,857 tins, or 22,944
+rounded up to whole 96-tin cartons.
 
-That matters enormously. The plan sells 24,520 tins in year 1. If the minimum
-order is a full container we buy five and a half years of year-one demand before
-we have sold a single tin.
+The plan sells 24,520 tins in the whole of year one. So the question is not
+whether we can afford the minimum — the pre-seed covers three flavours — but how
+many untested flavour bets to place before a single tin has been sold. Mints
+carry a 24-month shelf life, so a flavour that does not move is stock that
+expires.
+
+Answered: one. Strong peppermint.
+See docs/decisions/0006-launch-single-flavour.md.
 
     python3 sensitivity_moq.py
 """
@@ -16,16 +21,14 @@ import importlib
 
 import assumptions as A
 
-# Suntak's MOQ is 800 kg of candy. At 35 g of candy per tin that is 22,857
-# tins, or 22,944 rounded up to whole 96-tin cartons (239 cartons, 803 kg).
-# Candy MOQs are batch minimums on a recipe, so it is almost certainly PER
-# FLAVOUR — confirm that with Damita, because it is the whole decision.
+# 800 kg of candy per flavour / 35 g per tin = 22,857 tins, or 22,944 rounded
+# up to whole 96-tin cartons (239 cartons, 803 kg).
 MOQ_TINS_PER_FLAVOUR = 22_944
 
 CASES = [
-    (MOQ_TINS_PER_FLAVOUR,     "Launch with 1 flavour (peppermint only)"),
+    (MOQ_TINS_PER_FLAVOUR,     "Launch with 1 flavour (peppermint) — CHOSEN"),
     (MOQ_TINS_PER_FLAVOUR * 2, "Launch with 2 flavours"),
-    (MOQ_TINS_PER_FLAVOUR * 3, "Launch with 3 flavours (the current plan)"),
+    (MOQ_TINS_PER_FLAVOUR * 3, "Launch with 3 flavours (the earlier plan)"),
     (134_400,                  "For reference: one full 20GP"),
 ]
 
