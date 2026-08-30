@@ -319,6 +319,84 @@ FUNDING_ROUNDS = [
 # 7. Scenarios — volume multipliers applied to every unit-driven channel
 # ---------------------------------------------------------------------------
 SCENARIOS = {
+    # -----------------------------------------------------------------------
+    # BOOTSTRAP — a different business, not a slower version of the same one.
+    #
+    # No growth round, so no national retail (listing fees alone are R1.4m) and
+    # no export inventory. That leaves the three channels that need no capital
+    # and carry the best margin: golf clubs, bars and DTC, all sold direct.
+    # No distributor either — bootstrapping needs margin, not reach.
+    #
+    # The route to market is Johannes himself. Get Lucky Golf Club already runs
+    # 600+ golf days a year across 30+ premium courses, so the founder is
+    # standing on the target customer's premises most weeks. That is the only
+    # reason the outlet plan below is credible without a sales team.
+    # -----------------------------------------------------------------------
+    "bootstrap": {
+        "label": "Bootstrap — founder-funded, golf and bars only, no growth round",
+        "volume_multiplier": 1.00,
+        "net_price_multiplier": 1.00,
+        "fob_multiplier": 1.00,
+
+        "channels_off": ["retail", "export"],
+        "outlets_override": {
+            "golf": [40, 90, 140, 180, 210],
+            "bars": [30, 90, 180, 280, 380],
+        },
+        "rate_override": {
+            # Lower than the funded plan: less marketing, less merchandising
+            # support, fewer visits per outlet per quarter.
+            "golf": [28, 34, 38, 42, 45],
+            "bars": [16, 18, 20, 22, 24],
+        },
+        "dtc_override": [200, 500, 900, 1_200, 1_500],
+        "distributor_share": [0.0, 0.0, 0.0, 0.0, 0.0],
+        "no_listing_fees": True,
+
+        # Founder draws nothing in year 1 — Get Lucky pays the bills — then a
+        # modest draw. First and only rep in month 30, a second in month 48.
+        "headcount": [
+            (13, "Founder draw (part-time)",        15_000),
+            (25, "Founder draw",                    25_000),
+            (30, "Brand & trade rep — Gauteng",     25_000),
+            (37, "Founder draw (full)",             35_000),
+            (48, "Brand & trade rep — Cape",        28_000),
+        ],
+        "headcount_is_cumulative_draw": True,
+
+        "marketing_y1_total": 60_000,
+        "marketing_pct": [None, 0.08, 0.08, 0.07, 0.07],
+        "overhead_multiplier": 0.40,
+        "npd_pct": [0.0, 0.0, 0.01, 0.015, 0.015],
+
+        # One licence, late and small. The brand is real but there is no
+        # marketing budget behind it, so this is an option rather than a plan.
+        "licensing": {5: {"signing_fees": 400_000, "licensee_net_sales": 0}},
+
+        # Sized off the model's own unfunded peak deficit of ~R671k. Two
+        # tranches so the founder does not have to find it all at once, with
+        # the second landing in month 6 — before the production balance, duty
+        # and clearing all hit in the same quarter.
+        # The model's unfunded peak deficit is ~R671k, so R750k is the
+        # arithmetic floor — but it leaves only R79k of headroom at the tightest
+        # month, which is one late-paying golf club away from trouble. R850k is
+        # the number to actually raise: ~R159k of headroom for the same plan.
+        "funding_rounds": [
+            (1, "Founder capital", 500_000),
+            (6, "Founder top-up or small friends & family round", 350_000),
+        ],
+        "setup_costs": [
+            (1, "Company setup and banking",                     18_000),
+            (1, "Trademark filing — SA classes 30 and 25",       22_000),
+            (2, "Supplier samples, freight, tooling & plates",   25_000),
+            (2, "Pre-press, proofing & barcode registration",    15_000),
+            (3, "Lab analysis, nutrition panel & R146 review",   32_000),
+            (4, "Website and Shopify — built lean",              15_000),
+            (4, "Product photography — shot in-house",           10_000),
+            (6, "POS kit — counter units and display boxes",     20_000),
+        ],
+    },
+
     "bear": {
         "label": "Bear — slow venue adoption, retail delayed, no export scale",
         "volume_multiplier": 0.45,

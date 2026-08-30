@@ -16,7 +16,7 @@ taking the brand global by licence or by export.
 | Product | 35g sugar-free pressed mints in a printed hinged tin (supplier spec in `product/`) |
 | Supplier | Suntak Foods (Shantou, China) — **quoted USD 0.465/tin FOB, 29 Aug 2026, valid 30 days**. Samples inbound. |
 | Brand | PJ Offner engaged for **10% equity, not a fee** — brief in `brand/brand-brief-pj-offner.md`, terms in `legal/term-sheet-pj-offner.md` |
-| Capital ask | R3.5m pre-seed, then R12m growth round by month 20 |
+| Capital ask | **Two routes.** Funded: R3.5m pre-seed then R12m by month 20. Bootstrap: **R850k, founder-funded, no growth round** — see `finance/bootstrap-plan.md` |
 | Next decisions | See `docs/decisions/` |
 
 ## Repository map
@@ -46,6 +46,12 @@ ops/           Risk register
 
 Full detail: [`finance/outputs/model-summary.md`](finance/outputs/model-summary.md)
 and the workbook at `finance/outputs/mulligan-mints-5yr-model.xlsx`.
+
+**There is a second route.** [`finance/bootstrap-plan.md`](finance/bootstrap-plan.md)
+models a founder-funded business on R850,000: golf and bars only, no retail, no
+export, EBITDA-positive in year 2, R7.1m of revenue and R2.0m of EBITDA by year 5
+with ~90% of the company retained. The two plans are identical for the first 12
+months, so the choice does not have to be made yet.
 
 ## Rebuilding the numbers
 

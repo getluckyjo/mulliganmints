@@ -10,7 +10,8 @@ model/
 outputs/
   mulligan-mints-5yr-model.xlsx    ← 9-sheet workbook (generated)
   model-summary.md                 ← the same numbers in markdown (generated)
-5-year-plan.md       ← the narrative: what the numbers mean and where they break
+5-year-plan.md       ← the funded plan: what the numbers mean and where they break
+bootstrap-plan.md    ← the second route: R850k founder-funded, no growth round
 ```
 
 ## Rebuilding
@@ -40,8 +41,11 @@ quoted across the rest of the repository.
 - Supplier payments split 30% on order / 70% against bill of lading
 - Debtor days by channel; VAT accrued and settled two-monthly; company tax with
   assessed-loss carry-forward capped at 80% of taxable income
-- Three scenarios that flex volume, price, FOB cost **and the hiring plan** —
-  because a bear case that hires the base-case headcount is not a forecast
+- Four scenarios. `bear`/`base`/`bull` flex volume, price, FOB cost **and the
+  hiring plan** — because a bear case that hires the base-case headcount is not a
+  forecast. `bootstrap` is a different business rather than a dial: it switches
+  retail and export off entirely, overrides the outlet plan, headcount, setup
+  costs and funding, and keeps everything direct. See `../bootstrap-plan.md`.
 
 ## Reading the outputs
 

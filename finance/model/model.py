@@ -165,38 +165,54 @@ class Result:
         return [s[y * 12 - 1] for y in range(1, 6)]
 
 
-def _unit_demand(month: int, mult: float) -> dict[str, float]:
+def _unit_demand(month: int, mult: float, sc: dict | None = None) -> dict[str, float]:
     """
     Units demanded per channel in a given month, before the stock constraint.
 
     Callable past the horizon: replenishment has to look ~8 months ahead, so
     beyond month 60 we hold year-5 run-rates flat rather than dropping to zero.
     """
+    sc = sc or {}
+    off = set(sc.get("channels_off", []))
+    outlets_ov = sc.get("outlets_override", {})
+    rate_ov = sc.get("rate_override", {})
+
     y = min(year_of(month), 5)
     out: dict[str, float] = {}
 
     for name in ("golf", "bars"):
         c = A.CHANNELS[name]
-        outlets = ramp(min(month, A.HORIZON_MONTHS), A.FIRST_SALE_MONTH, c["outlets_end_of_year"])
+        if name in off:
+            out[name] = 0.0
+            continue
+        plan = outlets_ov.get(name, c["outlets_end_of_year"])
+        rates = rate_ov.get(name, c["units_per_outlet_month"])
+        outlets = ramp(min(month, A.HORIZON_MONTHS), A.FIRST_SALE_MONTH, plan)
         outlets = min(outlets, c["universe"])
-        out[name] = outlets * c["units_per_outlet_month"][y - 1] * mult
+        out[name] = outlets * rates[y - 1] * mult
 
     d = A.CHANNELS["dtc"]
-    out["dtc"] = (d["units_per_month_by_year"][y - 1] * mult
-                  if month >= A.FIRST_SALE_MONTH else 0.0)
+    dtc_plan = sc.get("dtc_override", d["units_per_month_by_year"])
+    out["dtc"] = (dtc_plan[y - 1] * mult
+                  if month >= A.FIRST_SALE_MONTH and "dtc" not in off else 0.0)
 
     r = A.CHANNELS["retail"]
-    outlets = ramp(min(month, A.HORIZON_MONTHS), r["start_month"], r["outlets_end_of_year"])
-    out["retail"] = outlets * r["units_per_outlet_month"][y - 1] * mult
+    if "retail" in off:
+        out["retail"] = 0.0
+    else:
+        plan = outlets_ov.get("retail", r["outlets_end_of_year"])
+        rates = rate_ov.get("retail", r["units_per_outlet_month"])
+        outlets = ramp(min(month, A.HORIZON_MONTHS), r["start_month"], plan)
+        out["retail"] = outlets * rates[y - 1] * mult
 
     e = A.CHANNELS["export"]
-    if month >= e["start_month"]:
-        annual = e["units_by_year"][y - 1] * mult
+    if "export" in off or month < e["start_month"]:
+        out["export"] = 0.0
+    else:
+        annual = sc.get("export_override", e["units_by_year"])[y - 1] * mult
         # spread over the months of that year in which we actually export
         active = 12 - (month_in_year(e["start_month"]) - 1) if y == year_of(e["start_month"]) else 12
         out["export"] = annual / active
-    else:
-        out["export"] = 0.0
 
     return out
 
@@ -230,7 +246,7 @@ def run(scenario: str = "base") -> Result:
     # forecast total annual units up-front (drives the FOB volume curve)
     annual_units_forecast = [0.0] * 6
     for m in range(1, N + 1):
-        annual_units_forecast[year_of(m)] += sum(_unit_demand(m, vol_mult).values())
+        annual_units_forecast[year_of(m)] += sum(_unit_demand(m, vol_mult, sc).values())
 
     stock_units = 0.0
     stock_value = 0.0
@@ -260,7 +276,7 @@ def run(scenario: str = "base") -> Result:
             open_orders.remove(po)
 
         # ---------------- demand, capped by available stock ----------------
-        demand = _unit_demand(m, vol_mult)
+        demand = _unit_demand(m, vol_mult, sc)
         wanted = sum(demand.values())
         available = stock_units
         fill = 1.0 if wanted <= available else (available / wanted if wanted else 0.0)
@@ -273,7 +289,7 @@ def run(scenario: str = "base") -> Result:
 
         # ---------------- revenue ----------------
         pf = annual_price_factor(m) * price_mult
-        dist_share = A.DISTRIBUTOR_SHARE_OF_BARS_BY_YEAR[y - 1]
+        dist_share = sc.get("distributor_share", A.DISTRIBUTOR_SHARE_OF_BARS_BY_YEAR)[y - 1]
         revenue = 0.0
         domestic_revenue = 0.0
         for k in ("golf", "bars", "dtc", "retail", "export"):
@@ -299,8 +315,13 @@ def run(scenario: str = "base") -> Result:
 
         # licensing income
         lic = 0.0
-        if sc["licensing"] and y in A.LICENSING:
-            spec = A.LICENSING[y]
+        lic_table = sc.get("licensing")
+        if lic_table is True:
+            lic_table = A.LICENSING
+        elif lic_table is False or lic_table is None:
+            lic_table = {}
+        if y in lic_table:
+            spec = lic_table[y]
             lic = (spec["signing_fees"]
                    + spec["licensee_net_sales"] * A.LICENSING_ROYALTY_PCT) / 12.0
             receivable_schedule[m + 2] += lic          # royalties settle quarterly-ish
@@ -324,7 +345,7 @@ def run(scenario: str = "base") -> Result:
         arrive = m + LEAD_MONTHS
         cover_end = arrive + int(math.ceil(A.TARGET_FORWARD_COVER_MONTHS))
         future_need = sum(
-            sum(_unit_demand(mm, vol_mult).values())
+            sum(_unit_demand(mm, vol_mult, sc).values())
             for mm in range(m + 1, cover_end)
         )
         on_order = sum(po.units for po in open_orders)
@@ -346,20 +367,30 @@ def run(scenario: str = "base") -> Result:
         # ones -- a plan that hires the base case into a bear market is not a
         # forecast, it is a fantasy.
         delay = sc.get("hire_delay_months", 0)
-        salaries = sum(
-            inflate(cost, A.OPEX_INFLATION_PA, m)
-            for start, _role, cost in A.HEADCOUNT if m >= start + delay
-        )
-        R.rows["headcount"][i] = sum(1 for start, _r, _c in A.HEADCOUNT if m >= start + delay)
+        plan = sc.get("headcount", A.HEADCOUNT)
+        active = [(start, role, cost) for start, role, cost in plan if m >= start + delay]
+        if sc.get("headcount_is_cumulative_draw"):
+            # Rows whose role starts with the same prefix before " (" are the
+            # same person's pay stepping up — take the latest, do not stack.
+            latest: dict[str, tuple[int, str, float]] = {}
+            for start, role, cost in active:
+                key = role.split(" (")[0]
+                if key not in latest or start > latest[key][0]:
+                    latest[key] = (start, role, cost)
+            active = list(latest.values())
+        salaries = sum(inflate(cost, A.OPEX_INFLATION_PA, m) for _s, _r, cost in active)
+        R.rows["headcount"][i] = len(active)
         R.rows["opex_salaries"][i] = salaries
 
         if y == 1:
             months_live = 12 - A.FIRST_SALE_MONTH + 1
-            marketing = (A.MARKETING_Y1_TOTAL * sc.get("marketing_multiplier", 1.0)
+            y1_total = sc.get("marketing_y1_total", A.MARKETING_Y1_TOTAL)
+            marketing = (y1_total * sc.get("marketing_multiplier", 1.0)
                          / months_live) if m >= A.FIRST_SALE_MONTH else 0.0
         else:
-            marketing = revenue * A.MARKETING_PCT_OF_REVENUE[y - 1]
-        listing = sum(fee for mm, _lbl, fee in A.RETAIL_LISTING_FEES if mm == m)
+            marketing = revenue * sc.get("marketing_pct", A.MARKETING_PCT_OF_REVENUE)[y - 1]
+        listing = (0.0 if sc.get("no_listing_fees") else
+                   sum(fee for mm, _lbl, fee in A.RETAIL_LISTING_FEES if mm == m))
         marketing += listing
         R.rows["opex_marketing"][i] = marketing
 
@@ -374,7 +405,7 @@ def run(scenario: str = "base") -> Result:
         commission = direct_venue_rev * A.SALES_COMMISSION_PCT
         R.rows["opex_commission"][i] = commission
 
-        npd = revenue * A.NPD_PCT_OF_REVENUE[y - 1]
+        npd = revenue * sc.get("npd_pct", A.NPD_PCT_OF_REVENUE)[y - 1]
         export_dev = R.rows["rev_export"][i] * A.EXPORT_DEV_PCT_OF_EXPORT_REVENUE[y - 1]
         R.rows["opex_npd"][i] = npd + export_dev
 
@@ -383,7 +414,7 @@ def run(scenario: str = "base") -> Result:
                      if m >= A.OVERHEADS_START_MONTH else 0.0)
         R.rows["opex_overheads"][i] = overheads
 
-        setup = sum(cost for mm, _item, cost in A.SETUP_COSTS if mm == m)
+        setup = sum(cost for mm, _item, cost in sc.get("setup_costs", A.SETUP_COSTS) if mm == m)
         R.rows["opex_setup"][i] = setup
 
         opex = (salaries + marketing + logistics + commission + overheads
@@ -446,7 +477,7 @@ def run(scenario: str = "base") -> Result:
             tax_accrued_unpaid = 0.0
         R.rows["cash_tax"][i] = -tax_payment
 
-        funding = sum(amt for mm, _lbl, amt in A.FUNDING_ROUNDS if mm == m)
+        funding = sum(amt for mm, _lbl, amt in sc.get("funding_rounds", A.FUNDING_ROUNDS) if mm == m)
         R.rows["cash_funding"][i] = funding
 
         net_cf = (cash_in - supplier_out - duty_clearing - opex_cash

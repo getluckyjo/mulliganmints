@@ -118,8 +118,8 @@ def unit_economics(scenario="base", year=1):
 
 def build_workbook():
     wb = Workbook()
-    results = {s: M.run(s) for s in ("bear", "base", "bull")}
-    needs = {s: M.funding_need(s) for s in ("bear", "base", "bull")}
+    results = {s: M.run(s) for s in ("bootstrap", "bear", "base", "bull")}
+    needs = {s: M.funding_need(s) for s in ("bootstrap", "bear", "base", "bull")}
     base = results["base"]
 
     # ---------------- cover ----------------
@@ -289,7 +289,7 @@ def build_workbook():
         ("Tax charge", "tax_charge", MONEY),
         ("NET PROFIT", "net_profit", MONEY),
     ]
-    for scen in ("base", "bear", "bull"):
+    for scen in ("base", "bootstrap", "bear", "bull"):
         res = results[scen]
         c = ws.cell(row=r, column=1, value=f"{scen.upper()} — {A.SCENARIOS[scen]['label']}")
         c.font = BOLD
@@ -376,13 +376,14 @@ def build_workbook():
 
     # ---------------- scenarios ----------------
     ws = wb.create_sheet("Scenarios")
-    sheet_title(ws, "SCENARIO COMPARISON", 7)
-    widths(ws, {"A": 40, "B": 18, "C": 18, "D": 18})
+    sheet_title(ws, "SCENARIO COMPARISON", 5)
+    widths(ws, {"A": 40, "B": 18, "C": 18, "D": 18, "E": 18})
     r = 3
-    header_row(ws, r, ["", "BEAR", "BASE", "BULL"])
+    header_row(ws, r, ["", "BOOTSTRAP", "BEAR", "BASE", "BULL"])
     r += 1
     comps = [
-        ("Volume multiplier", lambda s: A.SCENARIOS[s]["volume_multiplier"], '0.00"x"'),
+        ("Year 5 units vs base", lambda s: (results[s].annual("units_total")[4]
+                                            / results["base"].annual("units_total")[4]), PCT),
         ("Year 1 units", lambda s: results[s].annual("units_total")[0], UNITS),
         ("Year 3 units", lambda s: results[s].annual("units_total")[2], UNITS),
         ("Year 5 units", lambda s: results[s].annual("units_total")[4], UNITS),
@@ -393,7 +394,9 @@ def build_workbook():
         ("Year 5 EBITDA", lambda s: results[s].annual("ebitda")[4], MONEY),
         ("Year 5 EBITDA margin", lambda s: results[s].annual("ebitda")[4] / results[s].annual("revenue")[4], PCT),
         ("Cumulative 5-year EBITDA", lambda s: sum(results[s].annual("ebitda")), MONEY),
-        ("First EBITDA-positive year", lambda s: next((i + 1 for i, v in enumerate(results[s].annual("ebitda")) if v > 0), 0), '0'),
+        ("First EBITDA-positive year", lambda s: next(
+            (i + 1 for i, v in enumerate(results[s].annual("ebitda")) if v > 0), 0),
+         '0;;"never"'),
         ("Unfunded peak cash deficit", lambda s: needs[s]["peak_deficit"], MONEY),
         ("Month of peak deficit", lambda s: needs[s]["peak_month"], '0'),
         ("Lowest funded cash balance", lambda s: needs[s]["min_closing_cash"], MONEY),
@@ -401,7 +404,7 @@ def build_workbook():
     ]
     for label, fn, fmt in comps:
         ws.cell(row=r, column=1, value=label).font = BOLD
-        for j, s in enumerate(("bear", "base", "bull"), start=2):
+        for j, s in enumerate(("bootstrap", "bear", "base", "bull"), start=2):
             c = ws.cell(row=r, column=j, value=round(fn(s), 4))
             c.number_format = fmt
         r += 1
@@ -570,10 +573,10 @@ def build_markdown(results, needs):
     w("")
 
     w("## 4. Scenarios\n")
-    w("| | Bear | Base | Bull |")
-    w("| --- | ---: | ---: | ---: |")
+    w("| | Bootstrap | Bear | Base | Bull |")
+    w("| --- | ---: | ---: | ---: | ---: |")
     rows = [
-        ("Volume vs base", lambda s: f"{A.SCENARIOS[s]['volume_multiplier']:.0%}"),
+        ("Year 5 units vs base", lambda s: f"{results[s].annual('units_total')[4]/results['base'].annual('units_total')[4]:.0%}"),
         ("Year 1 units", lambda s: f"{results[s].annual('units_total')[0]:,.0f}"),
         ("Year 5 units", lambda s: f"{results[s].annual('units_total')[4]:,.0f}"),
         ("Year 1 revenue", lambda s: rands(results[s].annual("revenue")[0])),
@@ -582,14 +585,16 @@ def build_markdown(results, needs):
         ("Year 5 EBITDA", lambda s: rands(results[s].annual("ebitda")[4])),
         ("Year 5 EBITDA margin", lambda s: f"{results[s].annual('ebitda')[4]/results[s].annual('revenue')[4]*100:.0f}%"),
         ("Cumulative 5-yr EBITDA", lambda s: rands(sum(results[s].annual("ebitda")))),
-        ("First EBITDA-positive year", lambda s: str(next((i+1 for i, v in enumerate(results[s].annual("ebitda")) if v > 0), 0)) or "—"),
+        ("First EBITDA-positive year", lambda s: (
+            lambda y: str(y) if y else "never")(
+            next((i+1 for i, v in enumerate(results[s].annual("ebitda")) if v > 0), 0))),
         ("Unfunded peak cash deficit", lambda s: rands(needs[s]["peak_deficit"])),
         ("Month of peak deficit", lambda s: f"M{needs[s]['peak_month']}"),
         ("Lowest funded cash balance", lambda s: rands(needs[s]["min_closing_cash"])),
         ("Year 5 closing cash", lambda s: rands(results[s].annual_last("closing_cash")[4])),
     ]
     for label, fn in rows:
-        w(f"| {label} | " + " | ".join(fn(s) for s in ("bear", "base", "bull")) + " |")
+        w(f"| {label} | " + " | ".join(fn(s) for s in ("bootstrap", "bear", "base", "bull")) + " |")
     w("")
 
     w("## 5. Capital requirement\n")
