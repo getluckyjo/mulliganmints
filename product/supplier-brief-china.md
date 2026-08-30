@@ -40,31 +40,60 @@ Two things moved against us:
    *before the goods leave the factory* rather than against the bill of lading.
    More cash out, earlier.
 
-Together those take cumulative five-year EBITDA from R18.25m to **R16.65m** and
-push the month-19 low point down to **R535,000**. The plan still works. It has
+Together those take cumulative five-year EBITDA from R18.25m to **R16.72m** and
+push the month-19 low point down to **R449,000**. The plan still works. It has
 less slack than it had.
 
-## 2. THE OPEN QUESTION — what is the MOQ?
+## 2. The MOQ — answered, and it sets the launch decision
 
-The quote says the price *"is based on the MOQ of one item"* and that below MOQ
-the unit price is *"slightly higher"*. **It never states the MOQ**, and it was
-priced against an inquiry of 134,400 units — a full container.
+**Suntak's MOQ is 800 kg of candy per recipe.** At 35 g of candy per tin:
 
-That matters more than the price does. We sell 24,520 tins in year one:
+| | |
+| --- | --- |
+| 800 kg ÷ 35 g | **22,857 tins** |
+| Rounded to whole 96-tin cartons | **22,944 tins** (239 cartons, 803 kg) |
+| As a share of a 20GP | 17% per flavour |
+| FOB cost per flavour | USD 10,669 ≈ **R170,700** |
 
-| If the MOQ is | First order | Cash out | Years of Y1 demand | Min cash | Verdict |
+It is a batch minimum on a recipe, so it applies **per flavour**. Worth confirming
+with Damita in one line, because it is the difference between a R231,000 and a
+R681,000 launch order.
+
+### What that means for the launch
+
+We sell 24,520 tins in the whole of year one. Each flavour we launch with is
+another 22,944 tins bought before a single one has been sold:
+
+| | First order | Cash out | Years of Y1 demand | Min cash | Verdict |
 | --- | ---: | ---: | ---: | ---: | --- |
-| 3 SKUs × 10,000 *(assumed)* | 30,000 | R303k | 1.2x | R535k | Works |
-| 3 SKUs × 20,000 | 60,000 | R593k | 2.4x | R516k | Works, tight |
-| One full 20GP total | 140,000 | R1.38m | 5.7x | R261k | Survivable, no slack |
-| **One full 20GP per SKU** | **410,000** | **R4.06m** | **16.7x** | **−R1.34m** | **Insolvent on a R3.5m pre-seed** |
+| **1 flavour — peppermint only** | 22,944 | R231k | 0.9x | R556k | Cleanest |
+| 2 flavours | 45,888 | R463k | 1.9x | R574k | Fine |
+| **3 flavours — the current plan** | 68,832 | **R681k** | **2.8x** | R449k | Affordable |
+| *For reference: a full 20GP* | 134,400 | R1.33m | 5.5x | −R57k | Insolvent |
 
-*(Order sizes round up to the nearest 10,000. Reproduce with
-`python3 finance/model/sensitivity_moq.py`.)*
+*(Reproduce with `python3 finance/model/sensitivity_moq.py`.)*
 
-**Ask Damita for the MOQ per SKU before anything else.** If it is a full
-container per flavour, the answer is not a bigger round — it is to launch with
-one flavour instead of three, or to find a supplier who will run smaller batches.
+**The good news: the pre-seed covers all three flavours.** This is not the crisis
+it looked like before the MOQ was known.
+
+**The judgement call is how many untested bets to place at once.** Three flavours
+means committing R681,000 to three flavour guesses before we have a single day of
+sell-through data. Mints carry a 24-month shelf life, so a flavour that does not
+move is roughly **R236,000 of stock that expires** — and we would not find out
+which one until month 12 or later.
+
+Launching with strong peppermint only is the conservative read: it is the hero
+product, it is the only flavour Suntak has actually quoted, it ties up R231,000
+instead of R681,000, and it buys almost exactly one year of demand. Flavours two
+and three can then be chosen on evidence rather than instinct, at a second order
+placed around month 9.
+
+Against that: three flavours gives a golf club a proper display, makes the range
+look like a brand rather than a trial, and a single-SKU display box is a weaker
+proposition on a pro shop counter. It is a real trade-off, not an obvious call.
+
+**The model currently assumes three flavours** (`LAUNCH_FLAVOURS = 3` in
+`assumptions.py`). Change that one number to re-run the plan on a narrower launch.
 
 ## 3. What we still need from Suntak — the RFQ
 
@@ -72,7 +101,8 @@ one flavour instead of three, or to find a supplier who will run smaller batches
 1. **Volume breaks.** We have one price at one volume. Ask for FOB per tin at
    30,000 / 60,000 / 134,400 / 250,000 / 500,000 annual units. Our model
    extrapolates the higher tiers from this single quote and that is a guess.
-2. **MOQ per SKU and in total** — see §2. The most important question on the page.
+2. ~~MOQ~~ — answered: **800 kg of candy per recipe = 22,944 tins per flavour.**
+   Confirm in writing that it is per flavour and not a total across the order.
 3. **Price for spearmint and the third flavour.** Only strong peppermint is quoted.
 4. ~~Tooling and plate charges~~ — answered: USD 250/tin design, USD 200/OEM
    flavour, USD 300 per embossed position. Still ask whether these are refunded
@@ -139,12 +169,17 @@ one flavour instead of three, or to find a supplier who will run smaller batches
 
 ## 5. Ordering plan (base case)
 
+On the plan of record — three flavours, one 800 kg batch each:
+
 | PO | Placed | Arrives | Units | Notes |
 | --- | --- | --- | --- | --- |
-| 1 | **Month 3** | Month 7 | 30,000 | MOQ floor. Launch stock. |
-| 2 | Month 6 | Month 10 | 30,000 | |
-| 3 | Month 9 | Month 13 | 30,000 | |
-| 4 | Month 11 | Month 15 | 30,000 | |
+| 1 | **Month 3** | Month 7 | 68,832 | 3 × MOQ. Launch stock. |
+| 2 | Month 9 | Month 13 | 68,832 | Placed on ~2 months of real sell-through |
+| 3 | Month 14 | Month 18 | 68,832 | |
+| 4 | Month 17 | Month 21 | 68,832 | |
+
+Order sizes are whole multiples of the 22,944-tin batch, because you cannot buy
+1.4 batches of candy.
 
 **The first PO cannot be placed before month 3, and that gate is real.**
 Suntak's 60-day clock starts on artwork confirmation *and* deposit, which is

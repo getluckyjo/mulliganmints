@@ -76,7 +76,7 @@ across three territories.
 | Tins | 25k | 183k | 555k | 1.14m | 1.79m |
 | Revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 59% | 63% | 63% | 63% | 65% |
-| EBITDA | −R1.48m | −R0.42m | R0.54m | R5.42m | R12.59m |
+| EBITDA | −R1.48m | −R0.38m | R0.56m | R5.42m | R12.59m |
 
 **Cumulative five-year EBITDA: R16.7m.** Full model in
 `finance/outputs/mulligan-mints-5yr-model.xlsx`.
@@ -123,7 +123,7 @@ gates are written down: below 20 tins a month and we stop and re-architect the
 product rather than spend into it.
 
 **The downside is not a slower version of the upside.** At half the modelled
-sell-through the business is EBITDA-negative for all five years and needs R8.52m it
+sell-through the business is EBITDA-negative for all five years and needs R8.60m it
 cannot service. If that happens, **the right answer is not to raise the growth
 round** — it is to hold headcount flat, stay in golf and DTC where margins are
 60–73%, and run it as a profitable niche brand at ~200,000 tins a year. We would
@@ -135,10 +135,11 @@ modelled — 5.7% higher — and wants a 50% deposit rather than 30%. That is al
 in the numbers above: it cost about R1.6m of cumulative five-year EBITDA. We
 would rather show you the re-costed plan than one built on our own guess.
 
-**The minimum order quantity is still not known**, and it is the one open item
-that could change the ask. Suntak priced against a full container without stating
-an MOQ. If it turns out to be a container per flavour, we launch with one flavour
-rather than three — not with a bigger round.
+**The minimum order quantity is 800 kg of candy per recipe — 22,944 tins per
+flavour.** Launching three flavours costs R681,000 in stock before a single tin
+is sold, which the pre-seed covers. Launching one costs R231,000. That is a live
+decision, and it is about how many untested flavour bets we place at once rather
+than about affordability.
 
 **Year 4–5 EBITDA margins of 26–31% are at the top of the range** for branded
 confectionery. They depend on the distributor transition working and the

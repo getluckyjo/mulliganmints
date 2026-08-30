@@ -33,8 +33,11 @@ the most expensive mistake available to us.
 | 3 | **TBC — third flavour** | Candidates: aniseed, liquorice, wintergreen, honey-lemon. Decide on samples. Aniseed and liquorice both index strongly in the heritage strong-mint category (Fisherman's Friend's SA range carries both). |
 
 **Suntak has quoted STRONG PEPPERMINT only.** Spearmint and the third flavour are
-not priced. A custom formula carries a USD 200 per-flavour sample charge, and each
-SKU may carry its own MOQ — which is the open question in §7.
+not priced, and each carries a USD 200 sample charge plus its own 800 kg minimum
+batch — **22,944 tins per flavour**. Three flavours is therefore a 68,832-tin
+launch order costing R681,000 before a single tin is sold, against year-one
+demand of 24,520. Whether to launch with one flavour or three is now a live
+decision — see `product/supplier-brief-china.md` §2.
 
 ## 2. Tin
 
@@ -127,7 +130,7 @@ moment to change the product.
 | # | Decision | Blocks | Owner |
 | --- | --- | --- | --- |
 | 1 | ~~Tin dimensions~~ — **answered: 96 × 61.5 × 21 mm.** Flat dieline still needed | PJ Offner artwork | Supplier |
-| 2 | Third flavour | Artwork, first PO | Johannes |
+| 2 | **How many flavours to launch with** — each is a separate 800 kg batch, 22,944 tins, R231k. Then which ones. | Artwork, first PO, brand brief | Johannes |
 | 3 | Sweetener | Formula, label, cost, artwork | Johannes + supplier |
 | 4 | Matte vs gloss | Artwork | Johannes + PJ |
 | 5 | 35g vs a smaller premium format | Price architecture, everything | Johannes |

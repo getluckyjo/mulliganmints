@@ -271,15 +271,19 @@ SETUP_COSTS = [
 # ---------------------------------------------------------------------------
 # 5. Inventory and supplier payment terms
 # ---------------------------------------------------------------------------
-# [EST] 3 flavours at an assumed 10,000-unit per-SKU MOQ.
-# ** THE BIGGEST OPEN QUESTION ON THE QUOTE. ** Suntak priced against an inquiry
-# of 134,400 units (a full 20GP) and noted only that the price "is based on the
-# MOQ of one item" and that below MOQ the unit price is "slightly higher" — the
-# MOQ itself is never stated. If it turns out to be a full container per SKU,
-# the launch order is 4.5x this and the pre-seed does not cover it.
-# See finance/model/sensitivity_moq.py for what that scenario costs.
-MIN_ORDER_UNITS = 30_000
-ORDER_ROUNDING_UNITS = 10_000
+# Suntak's MOQ is 800 kg of candy [SOURCE: Damita, Aug 2026]. At 35 g of candy
+# per tin that is 22,857 tins, or 22,944 rounded up to whole 96-tin cartons
+# (239 cartons, 803 kg). It is a batch minimum on a recipe, so it applies PER
+# FLAVOUR — confirm with Damita, it is the difference between a R231k and a
+# R681k launch order.
+MOQ_TINS_PER_FLAVOUR = 22_944
+LAUNCH_FLAVOURS = 3                   # the plan of record; see sensitivity_moq.py
+
+MIN_ORDER_UNITS = MOQ_TINS_PER_FLAVOUR * LAUNCH_FLAVOURS
+
+# You cannot buy 1.4 batches of candy. Reorders come in whole per-flavour
+# batches, so the rounding increment is the batch, not a round number.
+ORDER_ROUNDING_UNITS = MOQ_TINS_PER_FLAVOUR
 TARGET_FORWARD_COVER_MONTHS = 3.5     # [EST] lead time + safety stock
 
 # Suntak's stated terms: 50% T/T deposit in advance, balance before shipment

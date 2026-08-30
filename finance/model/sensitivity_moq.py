@@ -16,16 +16,26 @@ import importlib
 
 import assumptions as A
 
+# Suntak's MOQ is 800 kg of candy. At 35 g of candy per tin that is 22,857
+# tins, or 22,944 rounded up to whole 96-tin cartons (239 cartons, 803 kg).
+# Candy MOQs are batch minimums on a recipe, so it is almost certainly PER
+# FLAVOUR — confirm that with Damita, because it is the whole decision.
+MOQ_TINS_PER_FLAVOUR = 22_944
+
 CASES = [
-    (30_000,  "Assumed: 3 SKUs x 10,000 per-SKU MOQ"),
-    (60_000,  "3 SKUs x 20,000 per-SKU MOQ"),
-    (134_400, "One full 20GP in total"),
-    (403_200, "One full 20GP per SKU x 3 flavours"),
+    (MOQ_TINS_PER_FLAVOUR,     "Launch with 1 flavour (peppermint only)"),
+    (MOQ_TINS_PER_FLAVOUR * 2, "Launch with 2 flavours"),
+    (MOQ_TINS_PER_FLAVOUR * 3, "Launch with 3 flavours (the current plan)"),
+    (134_400,                  "For reference: one full 20GP"),
 ]
 
 
 def run_case(moq):
     A.MIN_ORDER_UNITS = moq
+    # You cannot buy 1.4 batches of candy. Orders come in whole multiples of the
+    # batch minimum, so the reorder rounding IS the MOQ — leaving it at the
+    # generic 10,000 rounds 22,944 up to 30,000 and hides the thing we are testing.
+    A.ORDER_ROUNDING_UNITS = moq
     import model
     importlib.reload(model)
     r = model.run("base")
@@ -49,11 +59,11 @@ def run_case(moq):
 
 
 if __name__ == "__main__":
-    original = A.MIN_ORDER_UNITS
+    original = (A.MIN_ORDER_UNITS, A.ORDER_ROUNDING_UNITS)
     rows = []
     for moq, label in CASES:
         rows.append((label, run_case(moq)))
-    A.MIN_ORDER_UNITS = original
+    A.MIN_ORDER_UNITS, A.ORDER_ROUNDING_UNITS = original
 
     print(f"{'Scenario':<42} {'1st PO':>9} {'Cash out':>11} {'x Y1 demand':>12} "
           f"{'Min cash':>11} {'Peak deficit':>13}")
@@ -67,7 +77,8 @@ if __name__ == "__main__":
     print()
     print("Read: 'x Y1 demand' is how many years of year-one sales the first")
     print("order buys. Anything above ~2x means the pre-seed is funding dead")
-    print("stock rather than the business.")
+    print("stock rather than the business — and mints have a 24-month shelf")
+    print("life, so stock bought in month 3 expires in month 27.")
     print()
     print("The pre-seed is R{:,.0f}. Any row with a negative or near-zero minimum".format(
         A.FUNDING_ROUNDS[0][2]))

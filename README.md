@@ -67,6 +67,7 @@ never in the spreadsheet.
 
 And one new one, which arrived with the quote:
 
-3. **The minimum order quantity.** Suntak priced against a full container and
-   never stated an MOQ. At a container per flavour the launch order is R4.06m
-   against a R3.5m pre-seed. Run `finance/model/sensitivity_moq.py`.
+3. **How many flavours to launch with.** The MOQ is 800 kg of candy per
+   recipe — 22,944 tins per flavour. Three flavours is a R681,000 launch order
+   and 2.8 years of year-one demand; one flavour is R231,000 and 0.9 years.
+   Both affordable. Run `finance/model/sensitivity_moq.py`.

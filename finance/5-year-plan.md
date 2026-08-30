@@ -12,9 +12,9 @@ All figures base case, ZAR, excluding VAT.*
 | Tins sold | 24,520 | 183,100 | 554,640 | 1,136,725 | 1,790,588 |
 | Net revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
 | Gross margin | 59% | 63% | 63% | 63% | 65% |
-| EBITDA | −R1.48m | −R0.42m | R0.54m | R5.42m | R12.59m |
+| EBITDA | −R1.48m | −R0.38m | R0.56m | R5.42m | R12.59m |
 | EBITDA margin | — | — | 4% | 20% | 29% |
-| Closing cash | R1.45m | R12.12m | R10.20m | R13.04m | R22.46m |
+| Closing cash | R1.21m | R12.00m | R10.22m | R13.05m | R22.47m |
 
 Cumulative five-year EBITDA: **R16.7m.**
 
@@ -100,7 +100,7 @@ spend anything else.
 
 The model was first run with a R2.5m pre-seed. It went **cash-negative in month
 24** — the business ran out of money three months before the growth round could
-plausibly close. The unfunded peak cash deficit in the base case is **R5.47m in
+plausibly close. The unfunded peak cash deficit in the base case is **R5.52m in
 month 33.**
 
 R3.5m is what it takes to reach a fundable milestone without a bridge.
@@ -125,7 +125,7 @@ highest-leverage asset in the plan: it is what a licensee buys in year 4.
 
 ### The tightest point in the plan
 
-The base case's lowest cash balance is **R535,000 in month 19** — immediately
+The base case's lowest cash balance is **R449,000 in month 19** — immediately
 before the growth round lands. That is roughly three weeks of runway.
 
 **The growth round must be *closed* by month 19, which means started by month
@@ -139,9 +139,9 @@ before the growth round lands. That is roughly three weeks of runway.
 | Year 5 revenue | R17.70m | R43.63m | R68.59m |
 | Year 5 EBITDA | −R0.19m | R12.59m | R25.70m |
 | Year 5 EBITDA margin | −1% | 29% | 37% |
-| Cumulative 5-yr EBITDA | −R5.95m | R16.65m | R43.82m |
+| Cumulative 5-yr EBITDA | −R5.74m | R16.72m | R43.88m |
 | First EBITDA-positive year | never | 3 | 2 |
-| Unfunded peak cash deficit | R8.52m | R5.47m | R3.32m |
+| Unfunded peak cash deficit | R8.60m | R5.52m | R3.34m |
 
 The scenarios flex volume, price, supplier cost **and the hiring plan** — in the
 bear case hires slip six months, marketing is cut 45% and overheads are held 20%
@@ -150,7 +150,7 @@ leaner, because that is what an operator would actually do.
 ### What the bear case is telling us
 
 Bear is not "a bit slower". It is **a different business**: EBITDA-negative for
-**all five years**, cumulatively −R5.95m, needing R8.52m of capital that it
+**all five years**, cumulatively −R5.74m, needing R8.60m of capital that it
 cannot service. On the quoted supplier price it no longer reaches break-even
 inside the plan at all.
 
@@ -167,9 +167,12 @@ Ranked by how much damage each one does:
 
 1. **Sell-through per outlet.** Everything scales off it. No external benchmark
    exists. **±50% here is ±R20m of year-5 revenue.**
-2. **MOQ.** Now the largest unquantified risk on the supply side. Suntak has not
-   stated it. If it is a full container per SKU, the launch order is R4.06m and
-   the pre-seed does not cover it — see `finance/model/sensitivity_moq.py`.
+2. **How many flavours we launch with.** The MOQ is 800 kg of candy per
+   recipe — **22,944 tins per flavour**. Three flavours means a R681,000 launch
+   order and 2.8 years of year-one demand bought before a single tin is sold.
+   One flavour means R231,000 and 0.9 years. Both are affordable; the difference
+   is how much of the pre-seed is tied up in stock and how many untested flavour
+   bets we place at once. See `finance/model/sensitivity_moq.py`.
    ~~FOB cost~~ is now quoted at USD 0.465 and no longer a guess, though the
    volume breaks above 150,000 units a year are still extrapolated from that one
    price point.
