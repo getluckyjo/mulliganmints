@@ -233,6 +233,91 @@ The agreed policy is the right one for the company. It is simply worth walking
 the investor through what it means for them before they sign it rather than
 after.
 
+## The exit — what a sale at year 5 is worth
+
+Modelled in `finance/model/exit_analysis.py`. Run it with
+`cd finance/model && python3 exit_analysis.py`.
+
+### What is being sold
+
+| | ZAR |
+| --- | ---: |
+| Year-5 EBITDA | 4,474,774 |
+| Year-5 revenue | 11,915,683 |
+| *of which brand licensing* | *2,280,000 (19%)* |
+| Cash at bank | 5,358,198 |
+| *less working capital left in the business (2 months of opex)* | *(692,103)* |
+| **Surplus cash to sellers** | **4,666,094** |
+| Trade finance owed | (905,496) |
+| Investor capital still owed | (229,495) |
+
+A sale is priced **cash-free and debt-free with normal working capital**. The
+buyer will not hand over the whole bank balance — they peg what the business
+needs to keep trading, and only the excess accrues to the sellers.
+
+### The waterfall
+
+**Equity value = enterprise value + surplus cash − trade finance − investor
+capital owed.**
+
+| Multiple | Enterprise value | Equity value | Founders (80%) | After CGT | PJ (10%) | Investor at exit | Investor IRR |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **4x** | 17,899,096 | 21,430,199 | 17,144,159 | **14,058,211** | 2,143,020 | 2,372,515 | 29% |
+| **6x** | 26,848,644 | 30,379,747 | 24,303,798 | **19,929,114** | 3,037,975 | 3,267,470 | 36% |
+| **8x** | 35,798,192 | 39,329,295 | 31,463,436 | **25,800,018** | 3,932,930 | 4,162,425 | 42% |
+| **10x** | 44,747,740 | 48,278,843 | 38,623,075 | **31,670,921** | 4,827,884 | 5,057,379 | 46% |
+
+Founders' CGT at **18% effective** — 40% inclusion rate on 45% marginal, for
+individuals holding the shares directly. Worth taking advice on whether to hold
+through a trust or company before the shares are issued rather than after; the
+structure is very hard to change once there is value in it.
+
+### The investor's all-in return
+
+They are also repaid **R770,505** of capital at R1 a tin across the five years:
+
+| Multiple | Repaid over plan | At exit | **Total on R1,000,000** |
+| --- | ---: | ---: | ---: |
+| 4x | 770,505 | 2,372,515 | **3,143,020** |
+| 6x | 770,505 | 3,267,470 | **4,037,975** |
+| 8x | 770,505 | 4,162,425 | **4,932,930** |
+| 10x | 770,505 | 5,057,379 | **5,827,884** |
+
+**Three to nearly six times their money in five years, at a 29–46% IRR.** Even at
+a pessimistic 4x the deal works for them. That is the answer to the dividend
+question above: this is a capital-growth deal, and the exit is where the return
+lives.
+
+### Which multiple is realistic
+
+| | |
+| --- | --- |
+| South African SME, owner-managed | **4–6x EBITDA** |
+| Branded consumer business, growing, with a management team | **6–8x** |
+| A strategic buyer who wants the brand and the licence network | **8–10x+** |
+
+**The licensing line is what moves us up that range.** By year 5 it is R2.28m of
+revenue at roughly 95% margin, recurring, requiring no inventory and no working
+capital. A buyer values that as an annuity, not as distribution profit.
+
+Two cross-checks on the EBITDA approach:
+
+- **1.0–1.5x revenue** gives R11.9m–R17.9m, which brackets the 4x EBITDA case
+- **10x the licensing royalty alone** gives R22.8m — a brand-only valuation, close
+  to the 4–6x EBITDA range, and a useful floor if a buyer wants the brand and
+  not the South African trading business
+
+### Two things to be honest about
+
+**Every multiple here is an estimate and nobody has offered anything.** The exit
+table is arithmetic on top of a plan whose volumes are still assumptions. Treat
+it as a way of understanding how value is shared, not as a valuation.
+
+**The five-year exit is an option, not the plan.** Nothing in the operating model
+depends on it. If no buyer appears, the business carries on throwing off R3m+ a
+year of net profit — which is a perfectly good outcome and, for a founder who
+wants an income rather than a windfall, arguably the better one.
+
 ### The trade finance facility
 
 Modelled as an import facility advancing **70% of each landed-stock payment**,

@@ -7,6 +7,8 @@ model/
   assumptions.py     ← every number lives here. Change this, not the spreadsheet.
   model.py           ← the 60-month engine: P&L, cashflow, inventory, VAT, tax
   build_outputs.py   ← renders the workbook and the markdown summary
+  sensitivity_moq.py ← how many flavours the MOQ lets us launch with
+  exit_analysis.py   ← the year-5 sale waterfall: who gets what, at what multiple
 outputs/
   mulligan-mints-5yr-model.xlsx    ← 9-sheet workbook (generated)
   model-summary.md                 ← the same numbers in markdown (generated)

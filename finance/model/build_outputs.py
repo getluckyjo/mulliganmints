@@ -488,6 +488,60 @@ def build_workbook():
             c.number_format = MONEY2 if j == 10 else (UNITS if j in (1, 2, 3) else MONEY)
         r += 1
 
+    # ---------------- exit ----------------
+    try:
+        import exit_analysis as EX
+        ws = wb.create_sheet("Exit")
+        sheet_title(ws, "POTENTIAL EXIT AT MONTH 60 — BOOTSTRAP SCENARIO", 8)
+        widths(ws, {"A": 40, "B": 16, "C": 16, "D": 16, "E": 16, "F": 16})
+        bs = results["bootstrap"]
+        r_ = 3
+        ws.cell(row=r_, column=1, value="WHAT IS BEING SOLD").font = BOLD
+        r_ += 1
+        w0 = EX.waterfall(EX.EBITDA_MULTIPLES[0])
+        for label, val in [
+            ("Year-5 EBITDA", bs.annual("ebitda")[4]),
+            ("Year-5 revenue", bs.annual("revenue")[4]),
+            ("  of which brand licensing", bs.annual("rev_licensing")[4]),
+            ("Cash at bank", bs.annual_last("closing_cash")[4]),
+            (f"  less working capital left in ({EX.WORKING_CAPITAL_PEG_MONTHS} months opex)", -w0["wc_peg"]),
+            ("  surplus cash to sellers", w0["surplus_cash"]),
+            ("Trade finance owed", -w0["trade_finance"]),
+            ("Investor capital still owed", -w0["investor_residual"]),
+        ]:
+            ws.cell(row=r_, column=1, value=label)
+            ws.cell(row=r_, column=2, value=round(val)).number_format = MONEY
+            r_ += 1
+        r_ += 1
+        header_row(ws, r_, ["EBITDA multiple", "Enterprise value", "Equity value",
+                            "Founders 80%", "Founders after CGT", "PJ Offner 10%",
+                            "Investor at exit", "Investor IRR"])
+        r_ += 1
+        for mult in EX.EBITDA_MULTIPLES:
+            w = EX.waterfall(mult)
+            vals = [f"{mult}x", w["enterprise_value"], w["equity_value"], w["founders_gross"],
+                    w["founders_net"], w["pj_gross"], w["investor_total_at_exit"],
+                    EX.investor_irr(mult)]
+            for j, v in enumerate(vals, start=1):
+                c = ws.cell(row=r_, column=j, value=v if j == 1 else round(v, 4))
+                c.number_format = PCT if j == 8 else (MONEY if j > 1 else '@')
+            r_ += 1
+        r_ += 2
+        for note in [
+            "Equity value = enterprise value + surplus cash - trade finance - investor capital owed.",
+            "Founders' CGT at 18% effective (40% inclusion x 45% marginal, individuals holding shares).",
+            "The investor is also repaid R{:,.0f} of capital at R1 a tin across the five years,".format(
+                w0["investor_repaid_over_plan"]),
+            "so their all-in return runs from R{:,.0f} at 4x to R{:,.0f} at 10x, on R1,000,000.".format(
+                EX.waterfall(4)["investor_all_in"], EX.waterfall(10)["investor_all_in"]),
+            "",
+            "Every multiple here is an estimate. Nobody has offered anything.",
+        ]:
+            ws.cell(row=r_, column=1, value=note)
+            r_ += 1
+    except Exception as exc:      # never let the exit sheet break the build
+        print("exit sheet skipped:", exc)
+
     path = os.path.join(OUT, "mulligan-mints-5yr-model.xlsx")
     wb.save(path)
     return path, results, needs
