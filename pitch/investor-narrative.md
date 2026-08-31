@@ -18,7 +18,7 @@ should be written through the `johannes-voice` skill.*
 | Cash in | R1,000,000, once, at the start |
 | Equity | 10% — permanent |
 | Repayment | R1 per tin sold until R1m is returned |
-| Cap table after | Founders 80% · PJ Offner 10% · Investor 10% |
+| Cap table after | Founders 81% · PJ Offner 9% · Investor 10% |
 | Investor all-in over 5 years | **R5.8m – R9.6m** on R1m — a **49–65% IRR** |
 
 No second round. **A distributor with a sales team covers golf clubs and bars
@@ -88,13 +88,13 @@ The supplier has quoted. Suntak Foods, 29 August 2026:
 | Price to the distributor | **R20.00** — they sell at R24.25, retails at R45 |
 | Gross margin | **55%** in year 1, rising to 71% |
 | Minimum order | 800 kg of candy = 22,944 tins per flavour |
-| **Break-even** | **~3,800 tins a month** |
+| **Break-even** | **~3,750 tins a month** |
 
-**Break-even is about 3,800 tins a month**, and the model turns EBITDA-positive
-in **month 10**.
+**Break-even is about 3,750 tins a month**, and the model turns EBITDA-positive
+in **month 9**.
 
 That number is the whole argument for this structure. A business that breaks even
-on 3,800 tins does not need R15m; it needs enough to buy stock and survive its
+on 3,750 tins does not need R15m; it needs enough to buy stock and survive its
 first year — and trade finance from the third order covers most of even that.
 
 ### 6. Licensing is the actual business
@@ -151,6 +151,37 @@ distributor has been selling since month 7 and two shipments have landed.
 people buy them from us. From year 2 the bank funds that at 17% and the equity
 stays in the business.
 
+## If we are wrong about sell-through
+
+The fair question on a plan like this is not "what if it works" but "what if the
+central assumption is half right". The model answers it on this plan's own
+structure, not on a different one.
+
+At **55% of planned sell-through**, with worse FOB pricing on smaller orders, the
+distributor pushing us on price, hires slipped a year and marketing cut:
+
+| | Plan | At 55% sell-through |
+| --- | ---: | ---: |
+| Year 5 revenue | R20.64m | **R9.70m** |
+| Year 5 EBITDA | R9.49m | **R2.78m** |
+| Cumulative 5-year EBITDA | R18.66m | **R6.09m** |
+| Lowest cash balance | R300,273 (m14) | **R453,865 (m15)** |
+| EBITDA-positive | month 9 | **month 12** |
+| Capital repaid by month 60 | Yes, month 50 | **No — R143,845 outstanding** |
+| Dividend in year 5 | R3.35m declared | **None** |
+
+**It still does not need a second round.** A slower business buys less stock, so
+the cash low point is actually higher than the plan's. The R1m is enough in both
+cases.
+
+**What you lose in that case is the licence, not the company.** Nobody licenses a
+brand that has not proved it moves, so licensing revenue — 24% of year-5 EBITDA
+in the plan — goes to zero. You are repaid later, you do not get the dividend,
+and the global story waits for proof it did not get in year 2.
+
+We would rather show you that case than have you construct it yourself from a
+plan that only contains good news.
+
 ## What we would rather tell you up front
 
 **The riskiest number is one nobody in the world has.** Tins sold per golf club
@@ -200,7 +231,7 @@ before signing anything.
 ## The one-line version
 
 > A strong mint in a tin, built for golf, proved in South Africa for R1m — and
-> licensed to the world. **Break-even is 3,800 tins a month. A distributor's
+> licensed to the world. **Break-even is 3,750 tins a month. A distributor's
 > sales team sells it and warehouses it from day 1, and we already stand on 30
 > golf courses.**
 

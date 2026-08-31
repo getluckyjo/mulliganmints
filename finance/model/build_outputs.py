@@ -19,6 +19,21 @@ from openpyxl.utils import get_column_letter
 import assumptions as A
 import model as M
 
+# The plan of record. Every headline sheet and every headline table in the
+# summary is built from this scenario; "base" is the funded-scale comparator and
+# appears only in the Scenarios table. See docs/decisions/0008-bootstrap-route.md.
+PLAN = "bootstrap"
+COMPARATOR = "base"
+
+# Order the scenario tables read in. The plan of record first, its own downside
+# next to it, then the funded-scale family as comparators.
+SCENARIO_ORDER = ("bootstrap", "bootstrap_bear", "base", "bear", "bull")
+
+
+def plan_funding_rounds():
+    """The funding rounds of the plan of record, not the global funded default."""
+    return A.SCENARIOS[PLAN].get("funding_rounds", A.FUNDING_ROUNDS)
+
 OUT = os.path.join(os.path.dirname(__file__), "..", "outputs")
 os.makedirs(OUT, exist_ok=True)
 
@@ -85,12 +100,27 @@ def unit_economics(scenario="base", year=1):
     landed_w = landed / (1 - A.STOCK_WASTAGE_PCT)
 
     pf = M.annual_price_factor(m) * sc["net_price_multiplier"]
+
+    # Mirror the scenario's own channel economics, not the funded default: the
+    # plan of record sells to one distributor at an overridden price, ships in
+    # bulk to their DC, and pays no commission because it has no sales team.
+    off = set(sc.get("channels_off", []))
+    price_ov = sc.get("net_price_override", {})
+    bulk = set(sc.get("bulk_logistics_channels", []))
+    bulk_rate = sc.get("logistics_bulk_per_unit", A.LOGISTICS_ZAR_PER_UNIT_EXPORT)
+    comm_pct = sc.get("commission_pct", A.SALES_COMMISSION_PCT)
+
     rows = []
     for k in ("golf", "bars", "dtc", "retail", "export"):
-        net = A.CHANNELS[k]["net_price_y1"] * pf
-        logi = (A.LOGISTICS_ZAR_PER_UNIT_EXPORT if k == "export" else A.LOGISTICS_ZAR_PER_UNIT)
+        if k in off:
+            continue
+        net = price_ov.get(k, A.CHANNELS[k]["net_price_y1"]) * pf
+        if k == "export" or k in bulk:
+            logi = bulk_rate
+        else:
+            logi = A.LOGISTICS_ZAR_PER_UNIT
         logi = M.inflate(logi, A.OPEX_INFLATION_PA, m)
-        comm = net * A.SALES_COMMISSION_PCT if k in ("golf", "bars") else 0.0
+        comm = net * comm_pct if (k in ("golf", "bars") and k not in bulk) else 0.0
         contrib = net - landed_w - logi - comm
         rows.append({
             "channel": A.CHANNELS[k]["label"],
@@ -118,9 +148,9 @@ def unit_economics(scenario="base", year=1):
 
 def build_workbook():
     wb = Workbook()
-    results = {s: M.run(s) for s in ("bootstrap", "bear", "base", "bull")}
-    needs = {s: M.funding_need(s) for s in ("bootstrap", "bear", "base", "bull")}
-    base = results["base"]
+    results = {s: M.run(s) for s in SCENARIO_ORDER}
+    needs = {s: M.funding_need(s) for s in SCENARIO_ORDER}
+    base = results[PLAN]
 
     # ---------------- cover ----------------
     ws = wb.active
@@ -139,7 +169,8 @@ def build_workbook():
                            "per venue per month. Replace both with real numbers as soon as the Suntak "
                            "quote and the first 90 days of venue data land."),
         ("", ""),
-        ("Scenarios", "bear / base / bull — see the Scenarios sheet"),
+        ("Plan of record", "bootstrap — the funded 'base' case is a comparator only"),
+        ("Scenarios", "bootstrap / bear / base / bull — see the Scenarios sheet"),
     ]
     r = 3
     for k, v in lines:
@@ -205,9 +236,9 @@ def build_workbook():
 
     # ---------------- unit economics ----------------
     ws = wb.create_sheet("Unit economics")
-    sheet_title(ws, "UNIT ECONOMICS PER 35g TIN  (base case, year 1)", 9)
+    sheet_title(ws, "UNIT ECONOMICS PER 35g TIN  (plan of record, year 1)", 9)
     widths(ws, {"A": 44, "B": 14, "C": 14, "D": 14, "E": 14, "F": 14, "G": 14, "H": 14})
-    stack, rows = unit_economics("base", 1)
+    stack, rows = unit_economics(PLAN, 1)
     r = 3
     ws.cell(row=r, column=1, value="LANDED COST BUILD-UP (ZAR per tin)").font = BOLD
     r += 1
@@ -236,22 +267,35 @@ def build_workbook():
     r += 2
     ws.cell(row=r, column=1, value="THE NUMBERS THAT MATTER").font = BOLD
     r += 1
-    b = M.run("base")
+    b = base
     fixed_m12 = b.rows["opex_salaries"][11] + b.rows["opex_overheads"][11]
     mktg_m12 = b.rows["opex_marketing"][11]
     contrib = rows[0]["contribution"]
     be_all = (fixed_m12 + mktg_m12) / contrib
     be_fixed = fixed_m12 / contrib
+    sc_plan = A.SCENARIOS[PLAN]
+    ovr = sc_plan.get("rate_override", {})
+    golf_rate = ovr.get("golf", A.CHANNELS["golf"]["units_per_outlet_month"])[0]
+    outl = sc_plan.get("outlets_override", {})
+    y1_outlets = sum(v[0] for k, v in outl.items() if k in ("golf", "bars")) or 0
+    ebitda_pos_month = next(
+        (i + 1 for i, v in enumerate(base.rows["ebitda"]) if v > 0), 0)
+    club_buy = A.CHANNELS["golf"]["net_price_y1"] * 12          # what the club pays the distributor
+    club_sell_ex = A.TARGET_RSP_INCL_VAT / (1 + A.VAT_RATE) * 12  # what the club banks, ex-VAT
     for note in [
-        f"A golf club buying a 12-tin display box pays ~R{rows[0]['net_price']*12:,.0f} ex-VAT "
-        f"and sells it for ~R{A.TARGET_RSP_INCL_VAT*12:,.0f} incl VAT.",
+        f"The chain per tin: we bank R{rows[0]['net_price']:.2f} from the distributor, they sell "
+        f"to the venue at R{A.CHANNELS['golf']['net_price_y1']:.2f}, it retails at "
+        f"R{A.TARGET_RSP_INCL_VAT:.2f} incl VAT.",
+        f"A golf club buying a 12-tin display box pays ~R{club_buy:,.0f} ex-VAT and banks "
+        f"~R{club_sell_ex:,.0f} ex-VAT on it — R{club_sell_ex - club_buy:,.2f} of margin, "
+        f"{(club_sell_ex - club_buy) / club_sell_ex * 100:.0f}%. Compare VAT-exclusive to "
+        "VAT-exclusive: against the R45 shelf price incl VAT the margin looks bigger than it is.",
         f"Contribution per direct tin: R{contrib:,.2f}.",
         f"At the month-12 cost base, break-even is {be_all:,.0f} tins/month including marketing "
         f"({be_fixed:,.0f} excluding it).",
-        f"At {A.CHANNELS['golf']['units_per_outlet_month'][1]} tins per outlet per month that is "
-        f"~{be_all/A.CHANNELS['golf']['units_per_outlet_month'][1]:,.0f} active outlets. "
-        "The year-1 plan exits with ~250. Break-even therefore lands early in year 2, not in year 1 —",
-        "and the model agrees: first EBITDA-positive month is month 21.",
+        f"At {golf_rate} tins per outlet per month that is ~{be_all/golf_rate:,.0f} active "
+        f"outlets. The year-1 plan exits with ~{y1_outlets:,.0f}.",
+        f"The model turns EBITDA-positive in month {ebitda_pos_month}.",
         "This is the single most important sanity check in the plan. If venues sell through at half",
         "this rate, break-even needs twice the outlets, and no amount of marketing spend fixes it.",
     ]:
@@ -290,7 +334,7 @@ def build_workbook():
         ("Tax charge", "tax_charge", MONEY),
         ("NET PROFIT", "net_profit", MONEY),
     ]
-    for scen in ("base", "bootstrap", "bear", "bull"):
+    for scen in SCENARIO_ORDER:
         res = results[scen]
         c = ws.cell(row=r, column=1, value=f"{scen.upper()} — {A.SCENARIOS[scen]['label']}")
         c.font = BOLD
@@ -384,14 +428,15 @@ def build_workbook():
 
     # ---------------- scenarios ----------------
     ws = wb.create_sheet("Scenarios")
-    sheet_title(ws, "SCENARIO COMPARISON", 5)
-    widths(ws, {"A": 40, "B": 18, "C": 18, "D": 18, "E": 18})
+    sheet_title(ws, "SCENARIO COMPARISON", 6)
+    widths(ws, {"A": 40, "B": 18, "C": 18, "D": 18, "E": 18, "F": 18})
     r = 3
-    header_row(ws, r, ["", "BOOTSTRAP", "BEAR", "BASE", "BULL"])
+    header_row(ws, r, ["", "PLAN OF RECORD", "BOOTSTRAP BEAR",
+                       "FUNDED BASE", "FUNDED BEAR", "FUNDED BULL"])
     r += 1
     comps = [
-        ("Year 5 units vs base", lambda s: (results[s].annual("units_total")[4]
-                                            / results["base"].annual("units_total")[4]), PCT),
+        ("Year 5 units vs the plan", lambda s: (results[s].annual("units_total")[4]
+                                                / results[PLAN].annual("units_total")[4]), PCT),
         ("Year 1 units", lambda s: results[s].annual("units_total")[0], UNITS),
         ("Year 3 units", lambda s: results[s].annual("units_total")[2], UNITS),
         ("Year 5 units", lambda s: results[s].annual("units_total")[4], UNITS),
@@ -412,9 +457,24 @@ def build_workbook():
     ]
     for label, fn, fmt in comps:
         ws.cell(row=r, column=1, value=label).font = BOLD
-        for j, s in enumerate(("bootstrap", "bear", "base", "bull"), start=2):
+        for j, s in enumerate(SCENARIO_ORDER, start=2):
             c = ws.cell(row=r, column=j, value=round(fn(s), 4))
             c.number_format = fmt
+        r += 1
+
+    r += 1
+    for note in [
+        "READ THIS BEFORE COMPARING THE COLUMNS",
+        "The first two columns are the plan of record and its own downside: one distributor, "
+        "golf and bars and DTC only, R1m raised once.",
+        "The last three are the FUNDED-SCALE family. They carry grocery and export channels "
+        "the bootstrap route deliberately switches off, and they assume a second round.",
+        "So 'funded bear' is not the downside of this plan -- 'bootstrap bear' is. Compare "
+        "column B against column C, not against column E.",
+    ]:
+        c = ws.cell(row=r, column=1, value=note)
+        if note.isupper():
+            c.font = BOLD
         r += 1
 
     # ---------------- funding ----------------
@@ -426,14 +486,14 @@ def build_workbook():
     r += 1
     header_row(ws, r, ["Round", "Amount (ZAR)", "Month"])
     r += 1
-    for m, label, amt in A.FUNDING_ROUNDS:
+    for m, label, amt in plan_funding_rounds():
         ws.cell(row=r, column=1, value=label)
         ws.cell(row=r, column=2, value=amt).number_format = MONEY
         ws.cell(row=r, column=3, value=f"Month {m}")
         r += 1
     r += 1
 
-    ws.cell(row=r, column=1, value="USE OF THE PRE-SEED (first 12 months, base case)").font = BOLD
+    ws.cell(row=r, column=1, value="USE OF FUNDS (first 12 months, plan of record)").font = BOLD
     r += 1
     header_row(ws, r, ["Line", "ZAR", "Note"])
     r += 1
@@ -449,7 +509,8 @@ def build_workbook():
         ("Import duty & clearing on first order",
          (first_po.duty_zar + first_po.clearing_zar) if first_po else 0,
          "25% duty on FOB customs value plus port costs"),
-        ("Salaries, months 1-12", sum(y1.rows["opex_salaries"][:12]), "Founder from month 4, first rep from month 7"),
+        ("Salaries, months 1-12", sum(y1.rows["opex_salaries"][:12]),
+         "Neither founder draws anything in year 1 under the plan of record"),
         ("Marketing, months 1-12", sum(y1.rows["opex_marketing"][:12]), "Creator seeding, club days, sampling, POS"),
         ("Overheads & logistics, months 1-12",
          sum(y1.rows["opex_overheads"][:12]) + sum(y1.rows["opex_logistics"][:12]), ""),
@@ -464,16 +525,16 @@ def build_workbook():
     ws.cell(row=r, column=1, value="Sub-total, year 1 committed").font = BOLD
     c = ws.cell(row=r, column=2, value=round(total_use)); c.number_format = MONEY; c.font = BOLD
     r += 1
-    ws.cell(row=r, column=1, value="Second production order + working capital buffer").font = BOLD
-    c = ws.cell(row=r, column=2, value=round(A.FUNDING_ROUNDS[0][2] - total_use)); c.number_format = MONEY; c.font = BOLD
+    ws.cell(row=r, column=1, value="Later production orders + working capital buffer").font = BOLD
+    c = ws.cell(row=r, column=2, value=round(plan_funding_rounds()[0][2] - total_use)); c.number_format = MONEY; c.font = BOLD
     r += 2
-    ws.cell(row=r, column=1, value="Note: the base case dips to its lowest cash balance in month "
-            f"{needs['base']['min_closing_month']} at R{needs['base']['min_closing_cash']:,.0f}. "
-            "The growth round must be closed before then, not started then.")
+    ws.cell(row=r, column=1, value="Note: the plan of record dips to its lowest cash balance in month "
+            f"{needs[PLAN]['min_closing_month']} at R{needs[PLAN]['min_closing_cash']:,.0f}. "
+            "There is no second round in the plan — trade finance from the third order carries it from there.")
 
     # ---------------- purchase orders ----------------
     ws = wb.create_sheet("Purchase orders")
-    sheet_title(ws, "PURCHASE ORDER SCHEDULE — BASE CASE", 10)
+    sheet_title(ws, "PURCHASE ORDER SCHEDULE — PLAN OF RECORD", 10)
     widths(ws, {c: 16 for c in "ABCDEFGHIJ"})
     header_row(ws, 3, ["PO month", "Arrives", "Units", "20ft equiv", "FOB ZAR",
                        "Freight", "Insurance", "Duty", "Clearing", "Landed/tin"])
@@ -514,7 +575,7 @@ def build_workbook():
             r_ += 1
         r_ += 1
         header_row(ws, r_, ["EBITDA multiple", "Enterprise value", "Equity value",
-                            "Founders 80%", "Founders after CGT", "PJ Offner 10%",
+                            "Founders 81%", "Founders after CGT", "PJ Offner 9%",
                             "Investor at exit", "Investor IRR"])
         r_ += 1
         for mult in EX.EBITDA_MULTIPLES:
@@ -530,6 +591,7 @@ def build_workbook():
         for note in [
             "Equity value = enterprise value + surplus cash - trade finance - investor capital owed.",
             "Founders' CGT at 18% effective (40% inclusion x 45% marginal, individuals holding shares).",
+            "Splits: founders 81%, PJ Offner 9%, investor 10% -- PJ dilutes pro rata with the founders.",
             "The investor is also repaid R{:,.0f} of capital at R1 a tin across the five years,".format(
                 w0["investor_repaid_over_plan"]),
             "so their all-in return runs from R{:,.0f} at 4x to R{:,.0f} at 10x, on R1,000,000.".format(
@@ -558,8 +620,8 @@ def rands(v):
 
 
 def build_markdown(results, needs):
-    base = results["base"]
-    stack, ue = unit_economics("base", 1)
+    base = results[PLAN]
+    stack, ue = unit_economics(PLAN, 1)
     L = []
     w = L.append
 
@@ -582,7 +644,7 @@ def build_markdown(results, needs):
           f"{row['contribution']:.2f} | {row['contribution_margin']*100:.0f}% |")
     w("")
 
-    w("## 2. Base case — five-year P&L\n")
+    w("## 2. Plan of record (bootstrap) — five-year P&L\n")
     w("| ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |")
     w("| --- | ---: | ---: | ---: | ---: | ---: |")
     def line(label, key, fmt=rands):
@@ -618,7 +680,7 @@ def build_markdown(results, needs):
     line("**Net profit**", "net_profit")
     w("")
 
-    w("## 3. Base case — cashflow\n")
+    w("## 3. Plan of record (bootstrap) — cashflow\n")
     w("| ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |")
     w("| --- | ---: | ---: | ---: | ---: | ---: |")
     for label, key in [("Receipts from customers (incl VAT)", "cash_in_sales"),
@@ -640,10 +702,10 @@ def build_markdown(results, needs):
     w("")
 
     w("## 4. Scenarios\n")
-    w("| | Bootstrap | Bear | Base | Bull |")
-    w("| --- | ---: | ---: | ---: | ---: |")
+    w("| | Plan of record | Bootstrap bear | Funded base | Funded bear | Funded bull |")
+    w("| --- | ---: | ---: | ---: | ---: | ---: |")
     rows = [
-        ("Year 5 units vs base", lambda s: f"{results[s].annual('units_total')[4]/results['base'].annual('units_total')[4]:.0%}"),
+        ("Year 5 units vs the plan", lambda s: f"{results[s].annual('units_total')[4]/results[PLAN].annual('units_total')[4]:.0%}"),
         ("Year 1 units", lambda s: f"{results[s].annual('units_total')[0]:,.0f}"),
         ("Year 5 units", lambda s: f"{results[s].annual('units_total')[4]:,.0f}"),
         ("Year 1 revenue", lambda s: rands(results[s].annual("revenue")[0])),
@@ -661,22 +723,44 @@ def build_markdown(results, needs):
         ("Year 5 closing cash", lambda s: rands(results[s].annual_last("closing_cash")[4])),
     ]
     for label, fn in rows:
-        w(f"| {label} | " + " | ".join(fn(s) for s in ("bootstrap", "bear", "base", "bull")) + " |")
+        w(f"| {label} | " + " | ".join(fn(s) for s in SCENARIO_ORDER) + " |")
     w("")
 
     w("## 5. Capital requirement\n")
-    for m, label, amt in A.FUNDING_ROUNDS:
+    for m, label, amt in plan_funding_rounds():
         w(f"- **Month {m} — {label}: {rands(amt)}**")
     w("")
-    w(f"The base case's *unfunded* peak cash deficit is {rands(needs['base']['peak_deficit'])} "
-      f"in month {needs['base']['peak_month']}. With the two rounds above, the lowest cash balance "
-      f"is {rands(needs['base']['min_closing_cash'])} in month {needs['base']['min_closing_month']} — "
-      "which is the single tightest point in the plan and the deadline for closing the growth round.")
+    w(f"The plan of record's *unfunded* peak cash deficit is {rands(needs[PLAN]['peak_deficit'])} "
+      f"in month {needs[PLAN]['peak_month']}. With the round above, the lowest cash balance is "
+      f"{rands(needs[PLAN]['min_closing_cash'])} in month {needs[PLAN]['min_closing_month']} — the "
+      "single tightest point in the plan. There is no second round: trade finance from the third "
+      "order funds 70% of each stock payment from month 8, and the business is EBITDA-positive "
+      f"from month {next((i + 1 for i, v in enumerate(base.rows['ebitda']) if v > 0), 0)}.")
     w("")
-    w(f"The bear case needs {rands(needs['bear']['peak_deficit'])} and never comfortably repays it "
-      "inside five years. That is the honest downside: if venue sell-through lands at half the plan, "
-      "this is a business that survives but does not earn a venture return, and the right response "
-      "is to hold headcount flat and run it as a niche brand rather than raise the growth round.")
+    w(f"For comparison, the funded-scale case would need {rands(needs[COMPARATOR]['peak_deficit'])} "
+      f"in month {needs[COMPARATOR]['peak_month']} to reach "
+      f"{rands(results[COMPARATOR].annual('revenue')[4])} of year-5 revenue against the plan's "
+      f"{rands(base.annual('revenue')[4])}. That is the trade being made, and it is set out in "
+      "`finance/5-year-plan.md`.")
+    w("")
+    bb = results["bootstrap_bear"]
+    w("**The downside, on the plan of record's own structure.** In `bootstrap_bear` the "
+      f"distributor's sell-through lands at 55% of plan. The business still survives on the same "
+      f"{rands(plan_funding_rounds()[0][2])}: the lowest cash balance is "
+      f"{rands(needs['bootstrap_bear']['min_closing_cash'])} in month "
+      f"{needs['bootstrap_bear']['min_closing_month']}, EBITDA turns positive in year "
+      f"{next((i + 1 for i, v in enumerate(bb.annual('ebitda')) if v > 0), 0)}, and year 5 lands at "
+      f"{rands(bb.annual('revenue')[4])} of revenue and {rands(bb.annual('ebitda')[4])} of EBITDA.")
+    w("")
+    w("**What the investor loses in that case is time, not capital.** No licensee signs a brand "
+      "that has not proved it moves, so licensing revenue disappears entirely; the R1 a tin is "
+      f"still {rands(bb.rows['investor_outstanding'][A.HORIZON_MONTHS - 1])} short of repaid at "
+      "month 60, and no dividend is ever declared. That is the honest shape of the downside: a "
+      "business that survives and grows, on a slower clock than the one in the plan.")
+    w("")
+    w(f"The funded bear case needs {rands(needs['bear']['peak_deficit'])} and never comfortably "
+      "repays it inside five years — but note that it is a downside of the *funded* structure, "
+      "with grocery and export channels this plan does not use. It is not this plan's downside.")
     return "\n".join(L)
 
 

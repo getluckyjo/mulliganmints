@@ -65,7 +65,7 @@ one invoiced customer. No 3PL storage, no pick-and-pack, no courier to hundreds
 of venues, no credit control across a long tail of small accounts, no route
 accounting software. **Logistics fall from R1.35 a tin to R0.20 and overheads run
 at 30% of a conventional base rather than 40%** — together worth about R790,000
-of cumulative EBITDA and taking break-even from 4,500 tins a month to 3,800.
+of cumulative EBITDA and taking break-even from 4,500 tins a month to 3,750.
 
 The counterpart is a **concentrated debtor book**: one customer at 45 days is now
 most of the receivables, and our stock sits in their warehouse. Credit-check

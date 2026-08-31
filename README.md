@@ -40,7 +40,7 @@ ops/           Risk register
 | Landed cost per tin | **R10.29** (Suntak quote, 29 Aug 2026) |
 | Net price per tin, golf & bars | **R24.25** (RSP R45 incl VAT) |
 | Gross margin, direct channels | **58%** |
-| **Break-even** | **~3,800 tins/month** — EBITDA-positive in month 10 |
+| **Break-even** | **~3,750 tins/month** — EBITDA-positive in month 9 |
 | Year 5 | **R20.6m revenue · R9.5m EBITDA at 46%** |
 | **Capital required** | **R1,000,000, once** |
 

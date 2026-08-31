@@ -20,85 +20,88 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 
 | Channel | Net price | Landed cost | Gross profit | Gross margin | Contribution | Contribution % |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Golf clubs (pro shop + halfway house) | 24.25 | 10.09 | 14.16 | 58% | 12.08 | 50% |
-| Bars, pubs and restaurants | 24.25 | 10.09 | 14.16 | 58% | 12.08 | 50% |
+| Golf clubs (pro shop + halfway house) | 20.00 | 10.09 | 9.91 | 50% | 9.71 | 49% |
+| Bars, pubs and restaurants | 20.00 | 10.09 | 9.91 | 50% | 9.71 | 49% |
 | Direct to consumer (own webshop + events) | 35.00 | 10.09 | 24.91 | 71% | 23.56 | 67% |
-| Grocery + pharmacy retail (Checkers, Spar, Clicks, Dis-Chem) | 21.00 | 10.09 | 10.91 | 52% | 9.56 | 46% |
-| Export (importer/distributor, FOB South Africa) | 15.50 | 10.09 | 5.41 | 35% | 4.96 | 32% |
 
-## 2. Base case — five-year P&L
+## 2. Plan of record (bootstrap) — five-year P&L
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| **Units sold** | 24,520 | 183,100 | 554,640 | 1,136,725 | 1,790,588 |
-| Revenue — golf clubs | R298,760 | R1.97m | R3.56m | R4.85m | R5.79m |
-| Revenue — bars & restaurants | R237,650 | R1.99m | R4.92m | R8.63m | R12.32m |
-| Revenue — direct to consumer | R84,000 | R529,200 | R1.02m | R1.56m | R2.04m |
-| Revenue — grocery & pharmacy | R0 | R222,264 | R2.24m | R5.60m | R9.43m |
-| Revenue — export | R0 | R0 | R1.54m | R5.74m | R12.25m |
-| Revenue — brand licensing | R0 | R0 | R0 | R400,000 | R1.80m |
-| **Net revenue** | R620,410 | R4.71m | R13.28m | R26.78m | R43.63m |
-| Cost of goods sold | R252,319 | R1.77m | R4.99m | R9.80m | R15.08m |
-| **Gross profit** | R368,091 | R2.95m | R8.29m | R16.98m | R28.56m |
-| Gross margin | 59% | 63% | 62% | 63% | 65% |
-| Salaries | R522,000 | R1.41m | R3.14m | R4.90m | R6.65m |
-| Marketing, trade & listings | R380,000 | R839,443 | R2.63m | R3.53m | R4.80m |
-| Logistics & warehousing | R33,102 | R250,384 | R655,591 | R1.20m | R1.83m |
-| Sales commission | R16,092 | R109,811 | R188,095 | R223,283 | R247,666 |
-| Product & export development | R0 | R70,655 | R419,422 | R937,540 | R1.61m |
-| Fixed overheads | R490,500 | R693,240 | R734,834 | R778,924 | R825,660 |
-| One-off setup | R388,000 | R0 | R0 | R0 | R0 |
-| **Total operating costs** | R1.83m | R3.37m | R7.76m | R11.57m | R15.97m |
-| **EBITDA** | R-1.46m | R-426,117 | R530,186 | R5.41m | R12.59m |
-| Finance costs (trade finance) | R0 | R0 | R0 | R0 | R0 |
-| EBITDA margin | -236% | -9% | 4% | 20% | 29% |
-| Tax charge | R0 | R2,778 | R65,290 | R1.03m | R3.40m |
-| **Net profit** | R-1.46m | R-428,895 | R464,896 | R4.39m | R9.19m |
+| **Units sold** | 22,275 | 145,110 | 287,775 | 463,480 | 638,005 |
+| Revenue — golf clubs | R252,000 | R1.48m | R2.46m | R3.34m | R3.93m |
+| Revenue — bars & restaurants | R190,969 | R1.62m | R4.23m | R8.28m | R13.15m |
+| Revenue — direct to consumer | R63,000 | R396,900 | R694,575 | R972,405 | R1.28m |
+| Revenue — grocery & pharmacy | R0 | R0 | R0 | R0 | R0 |
+| Revenue — export | R0 | R0 | R0 | R0 | R0 |
+| Revenue — brand licensing | R0 | R0 | R300,000 | R1.20m | R2.28m |
+| **Net revenue** | R505,969 | R3.50m | R7.68m | R13.80m | R20.64m |
+| Cost of goods sold | R229,217 | R1.52m | R2.88m | R4.38m | R6.08m |
+| **Gross profit** | R276,752 | R1.98m | R4.80m | R9.42m | R14.56m |
+| Gross margin | 55% | 57% | 63% | 68% | 71% |
+| Salaries | R0 | R381,600 | R910,116 | R1.50m | R2.17m |
+| Marketing, trade & listings | R120,000 | R350,189 | R768,426 | R1.24m | R1.86m |
+| Logistics & warehousing | R6,525 | R43,929 | R87,927 | R143,274 | R204,649 |
+| Sales commission | R0 | R0 | R0 | R0 | R0 |
+| Product & export development | R0 | R120,000 | R256,843 | R446,986 | R589,630 |
+| Fixed overheads | R147,150 | R207,972 | R220,450 | R233,677 | R247,698 |
+| One-off setup | R125,000 | R0 | R0 | R0 | R0 |
+| **Total operating costs** | R398,675 | R1.10m | R2.24m | R3.57m | R5.07m |
+| **EBITDA** | R-121,923 | R878,913 | R2.56m | R5.85m | R9.49m |
+| Finance costs (trade finance) | R18,215 | R95,732 | R159,136 | R238,633 | R315,308 |
+| EBITDA margin | -24% | 25% | 33% | 42% | 46% |
+| Tax charge | R3,338 | R170,284 | R648,065 | R1.52m | R2.48m |
+| **Net profit** | R-143,475 | R612,897 | R1.75m | R4.10m | R6.70m |
 
-## 3. Base case — cashflow
+## 3. Plan of record (bootstrap) — cashflow
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Receipts from customers (incl VAT) | R537,222 | R4.94m | R13.57m | R28.23m | R45.62m |
-| Payments to supplier | R785,071 | R2.36m | R6.03m | R9.77m | R12.48m |
-| Import duty & clearing | R147,387 | R500,524 | R1.35m | R2.30m | R3.24m |
-| Operating costs paid | R1.83m | R3.37m | R7.76m | R11.57m | R15.97m |
-| VAT settled | R185,007 | R-117,904 | R-262,444 | R-705,682 | R-1.12m |
-| Tax paid | R0 | R-2,778 | R-65,290 | R-1.03m | R-3.40m |
-| Trade finance drawn | R0 | R0 | R0 | R0 | R0 |
-| Trade finance repaid | R0 | R0 | R0 | R0 | R0 |
-| Investor revenue share | R0 | R0 | R0 | R0 | R0 |
-| Dividends declared | R0 | R0 | R0 | R0 | R0 |
-| Funding received | R3.50m | R12.00m | R0 | R0 | R0 |
-| **Net cashflow** | R1.46m | R10.58m | R-1.90m | R2.85m | R9.41m |
-| **Closing cash** | R1.46m | R12.04m | R10.15m | R13.00m | R22.41m |
-| Stock on hand (units) | 42,935 | 107,172 | 272,056 | 416,982 | 470,175 |
-| Stock on hand (value) | R441,819 | R1.03m | R2.43m | R3.60m | R3.98m |
+| Receipts from customers (incl VAT) | R367,317 | R3.68m | R8.26m | R14.97m | R22.66m |
+| Payments to supplier | R814,353 | R1.73m | R2.72m | R4.08m | R5.15m |
+| Import duty & clearing | R147,387 | R403,273 | R656,610 | R1.02m | R1.32m |
+| Operating costs paid | R398,675 | R1.10m | R2.24m | R3.57m | R5.07m |
+| VAT settled | R81,628 | R-159,166 | R-503,594 | R-958,529 | R-1.51m |
+| Tax paid | R-3,338 | R-170,284 | R-648,065 | R-1.52m | R-2.48m |
+| Trade finance drawn | R451,506 | R1.49m | R2.37m | R3.57m | R4.53m |
+| Trade finance repaid | R-127,575 | R-1.19m | R-2.05m | R-3.18m | R-4.33m |
+| Investor revenue share | R-22,275 | R-145,110 | R-287,775 | R-463,480 | R-81,360 |
+| Dividends declared | R0 | R0 | R0 | R0 | R-3.35m |
+| Funding received | R1.00m | R0 | R0 | R0 | R0 |
+| **Net cashflow** | R368,634 | R175,141 | R1.35m | R3.51m | R3.58m |
+| **Closing cash** | R368,634 | R543,775 | R1.90m | R5.41m | R8.99m |
+| Stock on hand (units) | 45,180 | 79,951 | 106,968 | 160,646 | 174,709 |
+| Stock on hand (value) | R464,921 | R850,646 | R1.06m | R1.51m | R1.69m |
 
 ## 4. Scenarios
 
-| | Bootstrap | Bear | Base | Bull |
-| --- | ---: | ---: | ---: | ---: |
-| Year 5 units vs base | 36% | 45% | 100% | 155% |
-| Year 1 units | 22,275 | 11,034 | 24,520 | 38,006 |
-| Year 5 units | 638,005 | 805,764 | 1,790,588 | 2,775,411 |
-| Year 1 revenue | R505,969 | R262,433 | R620,410 | R990,485 |
-| Year 3 revenue | R7.68m | R5.62m | R13.28m | R21.20m |
-| Year 5 revenue | R20.64m | R17.70m | R43.63m | R68.59m |
-| Year 5 EBITDA | R9.49m | R-189,443 | R12.59m | R25.70m |
-| Year 5 EBITDA margin | 46% | -1% | 29% | 37% |
-| Cumulative 5-yr EBITDA | R18.66m | R-5.92m | R16.65m | R43.82m |
-| First EBITDA-positive year | 2 | never | 3 | 2 |
-| Unfunded peak cash deficit | R699,727 | R8.60m | R5.57m | R3.36m |
-| Month of peak deficit | M14 | M50 | M33 | M33 |
-| Lowest funded cash balance | R300,273 | R1.21m | R573,601 | R629,994 |
-| Year 5 closing cash | R8.99m | R7.64m | R22.41m | R38.84m |
+| | Plan of record | Bootstrap bear | Funded base | Funded bear | Funded bull |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Year 5 units vs the plan | 100% | 55% | 281% | 126% | 435% |
+| Year 1 units | 22,275 | 12,251 | 24,520 | 11,034 | 38,006 |
+| Year 5 units | 638,005 | 350,903 | 1,790,588 | 805,764 | 2,775,411 |
+| Year 1 revenue | R505,969 | R267,152 | R620,410 | R262,433 | R990,485 |
+| Year 3 revenue | R7.68m | R3.90m | R13.28m | R5.62m | R21.20m |
+| Year 5 revenue | R20.64m | R9.70m | R43.63m | R17.70m | R68.59m |
+| Year 5 EBITDA | R9.49m | R2.78m | R12.59m | R-189,443 | R25.70m |
+| Year 5 EBITDA margin | 46% | 29% | 29% | -1% | 37% |
+| Cumulative 5-yr EBITDA | R18.66m | R6.09m | R16.65m | R-5.92m | R43.82m |
+| First EBITDA-positive year | 2 | 2 | 3 | never | 2 |
+| Unfunded peak cash deficit | R699,727 | R546,135 | R5.57m | R8.60m | R3.36m |
+| Month of peak deficit | M14 | M15 | M33 | M50 | M33 |
+| Lowest funded cash balance | R300,273 | R453,865 | R573,601 | R1.21m | R629,994 |
+| Year 5 closing cash | R8.99m | R4.10m | R22.41m | R7.64m | R38.84m |
 
 ## 5. Capital requirement
 
-- **Month 1 — Pre-seed — brand, first production run, SA proof of concept: R3.50m**
-- **Month 20 — Seed — national retail rollout + export entry: R12.00m**
+- **Month 1 — Investor — R1m for 10% equity plus revenue share: R1.00m**
 
-The base case's *unfunded* peak cash deficit is R5.57m in month 33. With the two rounds above, the lowest cash balance is R573,601 in month 19 — which is the single tightest point in the plan and the deadline for closing the growth round.
+The plan of record's *unfunded* peak cash deficit is R699,727 in month 14. With the round above, the lowest cash balance is R300,273 in month 14 — the single tightest point in the plan. There is no second round: trade finance from the third order funds 70% of each stock payment from month 8, and the business is EBITDA-positive from month 9.
 
-The bear case needs R8.60m and never comfortably repays it inside five years. That is the honest downside: if venue sell-through lands at half the plan, this is a business that survives but does not earn a venture return, and the right response is to hold headcount flat and run it as a niche brand rather than raise the growth round.
+For comparison, the funded-scale case would need R5.57m in month 33 to reach R43.63m of year-5 revenue against the plan's R20.64m. That is the trade being made, and it is set out in `finance/5-year-plan.md`.
+
+**The downside, on the plan of record's own structure.** In `bootstrap_bear` the distributor's sell-through lands at 55% of plan. The business still survives on the same R1.00m: the lowest cash balance is R453,865 in month 15, EBITDA turns positive in year 2, and year 5 lands at R9.70m of revenue and R2.78m of EBITDA.
+
+**What the investor loses in that case is time, not capital.** No licensee signs a brand that has not proved it moves, so licensing revenue disappears entirely; the R1 a tin is still R143,845 short of repaid at month 60, and no dividend is ever declared. That is the honest shape of the downside: a business that survives and grows, on a slower clock than the one in the plan.
+
+The funded bear case needs R8.60m and never comfortably repays it inside five years — but note that it is a downside of the *funded* structure, with grocery and export channels this plan does not use. It is not this plan's downside.

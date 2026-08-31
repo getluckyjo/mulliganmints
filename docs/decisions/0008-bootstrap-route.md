@@ -16,7 +16,7 @@ Two routes were modelled side by side:
 | Year 5 EBITDA | R4.47m at **38%** | R12.59m at 29% |
 | Break-even | **~2,700 tins/month** | ~15,600 tins/month |
 | First EBITDA-positive | **Year 2** | Year 3 |
-| Founder ownership | **80%** | ~52% |
+| Founder ownership | **81%** | ~52% |
 
 ## Decision
 
@@ -43,7 +43,7 @@ national retail costs R1.4m in listing fees and gives up R6 a tin, and export
 gives up R9 a tin plus the working capital to carry stock in someone else's
 market.
 
-**Ownership.** 80% against 52%, on a business reaching R4.5m of EBITDA either way
+**Ownership.** 81% against 52%, on a business reaching R4.5m of EBITDA either way
 within a factor of three.
 
 ## What we give up

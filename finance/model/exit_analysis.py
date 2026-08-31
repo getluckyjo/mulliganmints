@@ -18,8 +18,15 @@ import model as M
 SCENARIO = "bootstrap"
 
 # Equity splits after the R1m round.
-FOUNDERS_PCT = 0.80
-PJ_PCT = 0.10
+#
+# Sequence matters. PJ Offner takes 10% for the brand, leaving founders 90%.
+# The investor then subscribes for 10% of the post-money company, which dilutes
+# BOTH of them pro rata -- PJ is explicitly not anti-diluted (term sheet cl. 7).
+#   founders  90% x 0.9 = 81%
+#   PJ        10% x 0.9 =  9%
+#   investor              10%
+FOUNDERS_PCT = 0.81
+PJ_PCT = 0.09
 INVESTOR_PCT = 0.10
 
 # SA capital gains tax on a share disposal. Inclusion rate x marginal rate:
@@ -140,7 +147,7 @@ if __name__ == "__main__":
     print()
 
     hdr = (f"{'Multiple':<10}{'Enterprise':>14}{'Equity value':>15}"
-           f"{'Founders (80%)':>17}{'after CGT':>13}{'PJ (10%)':>12}"
+           f"{'Founders (81%)':>17}{'after CGT':>13}{'PJ (9%)':>12}"
            f"{'Investor':>12}{'IRR':>7}")
     print(hdr)
     print("-" * len(hdr))

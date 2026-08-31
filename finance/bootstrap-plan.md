@@ -20,15 +20,15 @@ until repaid.**
 | | |
 | --- | --- |
 | Cash in | R1,000,000, once, at the start |
-| Equity | 10% — permanent. Founders 80%, PJ Offner 10%. |
+| Equity | 10% — permanent. **Founders 81%, PJ Offner 9%, investor 10%** (PJ dilutes pro rata). |
 | Repayment | R1 per tin, from the first sale |
 | Tins required | 1,000,000 — **repaid in month 50** |
 | Dividends | None until capital is repaid, then 50% of profit above a R1.5m cash buffer |
 
 ## Why R1m is enough
 
-**Break-even is about 3,800 tins a month.** The model turns EBITDA-positive in
-**month 10**, and the lowest cash balance across five years is **R300,273**. A business that breaks even there does not need R15m; it needs
+**Break-even is about 3,750 tins a month.** The model turns EBITDA-positive in
+**month 9**, and the lowest cash balance across five years is **R300,273**. A business that breaks even there does not need R15m; it needs
 enough to buy stock and survive its first year.
 
 Three things make the small raise sufficient:
@@ -165,11 +165,11 @@ specification, and documented sell-through by channel and by month.
 
 Equity value = enterprise value + surplus cash − trade finance − capital owed.
 
-| Multiple | Equity value | Founders (80%) | After CGT | PJ (10%) | Investor (10%) | IRR |
+| Multiple | Equity value | Founders (81%) | After CGT | PJ (9%) | Investor (10%) | IRR |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| **4x** | 44,594,487 | 35,675,589 | **29,253,983** | 4,459,449 | 4,459,449 | 49% |
-| **6x** | 63,579,887 | 50,863,910 | **41,708,406** | 6,357,989 | 6,357,989 | 58% |
-| **8x** | 82,565,288 | 66,052,230 | **54,162,829** | 8,256,529 | 8,256,529 | 65% |
+| **4x** | 44,594,487 | 36,121,534 | **29,619,658** | 4,013,504 | 4,459,449 | 49% |
+| **6x** | 63,579,887 | 51,499,709 | **42,229,761** | 5,722,190 | 6,357,989 | 58% |
+| **8x** | 82,565,288 | 66,877,883 | **54,839,864** | 7,430,876 | 8,256,529 | 65% |
 
 Founders' CGT at 18% effective, holding personally
 ([0007](../docs/decisions/0007-hold-shares-personally.md)).
@@ -177,6 +177,45 @@ Founders' CGT at 18% effective, holding personally
 **Every multiple is an estimate and nobody has offered anything.** This is
 arithmetic on top of a plan whose volumes are still assumptions — a way of seeing
 how value is shared, not a valuation.
+
+## If sell-through comes in at half
+
+Every number above rests on tins per outlet per month, and nobody has that
+benchmark. So the model carries a downside built on this plan's own structure —
+`bootstrap_bear` — where the distributor's sell-through lands at **55% of plan**,
+smaller orders lose the volume tiers on the FOB curve, the distributor pushes us
+on price, hires slip a year and marketing is cut to what the cash allows.
+
+| ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Tins sold | 12,251 | 79,810 | 158,276 | 254,914 | 350,903 |
+| Revenue | 267,152 | 1,849,000 | 3,898,891 | 6,652,316 | 9,695,128 |
+| EBITDA | (227,995) | 536,001 | 1,095,845 | 1,911,292 | 2,779,223 |
+| Net profit | (238,024) | 414,104 | 730,467 | 1,282,366 | 1,879,286 |
+| Closing cash | 479,829 | 701,413 | 1,201,509 | 2,217,409 | 4,096,208 |
+
+**The business survives on the same R1m.** The lowest cash balance is R453,865 in
+month 15 — higher than the plan's own R300,273, because a slower business buys
+less stock. It is EBITDA-positive from month 12, and cumulative five-year EBITDA
+is R6.09m against the plan's R18.66m.
+
+**What the downside costs is time, not the company.** Two things go:
+
+- **Licensing disappears entirely.** Nobody licenses a brand that has not proved
+  it moves, and licensing is 24% of year-5 EBITDA in the plan. This is the real
+  cost of a slow start — not the lost SA margin, the lost licence.
+- **The investor is not repaid inside five years.** At R1 a tin, R143,845 of the
+  R1m is still outstanding at month 60, and because capital is not repaid **no
+  dividend is ever declared.**
+
+That is the honest shape of it: a business that survives and grows on a slower
+clock, an investor who waits longer and forgoes the dividend, and a global
+licensing story that has to wait for proof it did not get in year 2.
+
+**Note on the other scenarios.** The workbook also carries *funded base*, *funded
+bear* and *funded bull*. Those belong to the R15m plan in `finance/5-year-plan.md`
+and they carry grocery and export channels this route deliberately switches off.
+`bootstrap_bear` is this plan's downside; funded bear is not.
 
 ## What we would rather say up front
 

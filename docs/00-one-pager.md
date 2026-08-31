@@ -37,7 +37,7 @@ on a global media channel at South African cost.
 | Landed cost / tin | R10.29 (quoted, not estimated) |
 | Net price / tin (golf, bars) | R24.25 — RSP R45 incl VAT |
 | Gross margin | 58% direct, 68% blended by year 5 |
-| **Break-even** | **~3,800 tins/month — EBITDA-positive month 10** |
+| **Break-even** | **~3,750 tins/month — EBITDA-positive month 9** |
 | Year 5 | 638,005 tins · R20.6m revenue · R9.5m EBITDA at 46% |
 | **Capital** | **R1,000,000, once** — 10% equity + R1/tin until repaid |
 | Licensing | R2.28m of year-5 revenue — **24% of EBITDA** |
@@ -53,8 +53,8 @@ on a global media channel at South African cost.
 
 ## The bet
 
-R1m to find out whether a golf club sells one tin a day. Break-even is ~3,800
+R1m to find out whether a golf club sells one tin a day. Break-even is ~3,750
 tins a month, and a distributor's sales team is opening outlets from month 7. If
 it works, the business self-funds from year 2 and the brand gets licensed
 globally. If it doesn't, we find out in 90 days for R231,000 of stock and still
-own 80%.
+own 81%.

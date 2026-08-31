@@ -494,3 +494,37 @@ SCENARIOS = {
         "overhead_multiplier": 1.10,
     },
 }
+
+# ---------------------------------------------------------------------------
+# The downside case for the plan of record
+# ---------------------------------------------------------------------------
+# "bear" and "bull" above are variations of the FUNDED base case. They carry the
+# grocery and export channels that the bootstrap route deliberately switches off,
+# so neither is a downside of the plan we are actually running -- reading them
+# side by side with the plan of record is misleading.
+#
+# This one inherits the whole bootstrap structure (one distributor, golf and bars
+# and DTC only, R1m raise, trade finance from the third order) and asks the only
+# question an investor really asks: what if the distributor's sell-through comes
+# in at half of what we assumed?
+#
+# 0.55 on volume is the "half of plan, plus a little" case. Tins per outlet per
+# month is the single assumption with no published benchmark anywhere in the
+# world, so it is the one that deserves the harshest test. [EST]
+SCENARIOS["bootstrap_bear"] = {
+    **SCENARIOS["bootstrap"],
+    "label": "Bootstrap bear — distributor sell-through at 55% of plan",
+    "volume_multiplier": 0.55,
+    # A slow brand gets pushed on price by its own distributor. [EST]
+    "net_price_multiplier": 0.96,
+    # Smaller, later orders lose the volume tiers on the FOB curve. [EST]
+    "fob_multiplier": 1.08,
+    # Nobody licenses a brand that has not proved it moves. This is the real
+    # cost of the downside: licensing is 24% of year-5 EBITDA in the plan, and
+    # in the bear case it is the first thing to disappear.
+    "licensing": False,
+    "licensing_costs": {},
+    # Hires slip a year and marketing is cut to what the cash allows.
+    "hire_delay_months": 12,
+    "marketing_multiplier": 0.70,
+}

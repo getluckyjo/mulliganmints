@@ -111,7 +111,7 @@ per-outlet invoicing, and far less travel without a field force. Overheads run a
 **30% of a conventional base rather than 40%.**
 
 Together those are worth roughly **R790,000 of cumulative EBITDA** across five
-years and take break-even from 4,500 tins a month down to **3,800**.
+years and take break-even from 4,500 tins a month down to **3,750**.
 
 ### What it costs
 

@@ -91,7 +91,7 @@ At the month-12 cost base:
 it. At 38 tins per outlet per month that is roughly **410 active outlets.**
 
 The year-1 plan exits with about 250. So break-even lands in **month 21** — early
-year 2, not year 1. The model agrees: first EBITDA-positive month is 21.
+year 2, not year 1. The model agrees: first EBITDA-positive month is 22.
 
 **This is the most important sanity check in the plan.** If venues sell through
 at half the modelled rate, break-even needs twice the outlets, and no amount of
