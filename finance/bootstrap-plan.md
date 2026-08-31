@@ -270,7 +270,7 @@ capital owed.**
 Founders' CGT at **18% effective** — 40% inclusion rate on 45% marginal, for
 individuals holding the shares directly.
 
-### Holding structure — personal is the cheapest
+### Holding structure — decided: personal, no trust
 
 | Structure | Inclusion × rate | Effective CGT | Nets at 6x |
 | --- | --- | ---: | ---: |
@@ -289,15 +289,17 @@ emigrated pulls the gain back into the trust at 36%.
 A company is worse than it looks: 21.6% inside the company, then 20% dividends
 tax to get the money out — roughly **37% all-in**.
 
-**So do not put the shares in a trust to save tax on exit, because it will not.**
-The reasons to use one are estate duty, asset protection and succession, and they
-are real reasons — they are just not this one.
+**Decision: the founders hold personally.** See
+`docs/decisions/0007-hold-shares-personally.md`. A trust would not save tax on
+exit — the reasons to use one are estate duty and asset protection, and those
+are accepted losses at this stage.
 
-**The timing point still stands, and it is the important one.** If a trust is
-wanted for those reasons, it has to hold the shares **before they have value**.
-Moving shares into a trust later is a disposal at market value: it triggers CGT
-on the way in and possibly donations tax as well. At R24m of value that is an
-expensive change of mind.
+**The timing point is worth keeping in view.** If a trust is ever wanted for
+those reasons, it has to hold the shares **before they have value**. Moving
+shares into a trust later is a disposal at market value: CGT on the way in, and
+possibly donations tax with it. At R24m that is an expensive change of mind, so
+the decision is worth revisiting once the business is clearly working rather than
+left until exit.
 
 *General information, not tax advice. Rates and the section 25B rules change —
 confirm with a tax adviser before the shares are issued.*

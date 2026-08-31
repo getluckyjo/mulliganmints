@@ -14,3 +14,4 @@ more useful than one that was quietly removed.
 | [0004](0004-sweetener.md) | Which sweetener | **Open** |
 | [0005](0005-tin-format.md) | 35g tin as the launch format | Confirmed by quote |
 | [0006](0006-launch-single-flavour.md) | Launch with strong peppermint only | Accepted |
+| [0007](0007-hold-shares-personally.md) | Hold founders' shares personally, no trust | Accepted |
