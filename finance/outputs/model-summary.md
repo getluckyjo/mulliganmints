@@ -67,7 +67,8 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 | Tax paid | R0 | R-2,778 | R-65,290 | R-1.03m | R-3.40m |
 | Trade finance drawn | R0 | R0 | R0 | R0 | R0 |
 | Trade finance repaid | R0 | R0 | R0 | R0 | R0 |
-| Investor revenue share (R2/tin) | R0 | R0 | R0 | R0 | R0 |
+| Investor revenue share | R0 | R0 | R0 | R0 | R0 |
+| Dividends declared | R0 | R0 | R0 | R0 | R0 |
 | Funding received | R3.50m | R12.00m | R0 | R0 | R0 |
 | **Net cashflow** | R1.46m | R10.58m | R-1.90m | R2.85m | R9.41m |
 | **Closing cash** | R1.46m | R12.04m | R10.15m | R13.00m | R22.41m |

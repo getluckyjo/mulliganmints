@@ -350,7 +350,8 @@ def build_workbook():
             ("Tax paid", "cash_tax", MONEY),
             ("Trade finance drawn", "cash_tf_draw", MONEY),
             ("Trade finance repaid", "cash_tf_repay", MONEY),
-            ("Investor revenue share (R2/tin)", "cash_investor_repay", MONEY),
+            ("Investor revenue share", "cash_investor_repay", MONEY),
+            ("Dividends declared", "cash_dividend", MONEY),
             ("Funding received", "cash_funding", MONEY),
             ("NET CASHFLOW", "net_cashflow", MONEY),
             ("CLOSING CASH", "closing_cash", MONEY),
@@ -359,6 +360,7 @@ def build_workbook():
             ("Debtors", "debtors", MONEY),
             ("Trade finance outstanding", "tf_outstanding", MONEY),
             ("Investor capital outstanding", "investor_outstanding", MONEY),
+            ("  of dividends, to investor", "dividend_to_investor", MONEY),
         ], "Cashflow monthly"),
     ]:
         ws = wb.create_sheet(name)
@@ -573,7 +575,8 @@ def build_markdown(results, needs):
                        ("Tax paid", "cash_tax"),
                        ("Trade finance drawn", "cash_tf_draw"),
                        ("Trade finance repaid", "cash_tf_repay"),
-                       ("Investor revenue share (R2/tin)", "cash_investor_repay"),
+                       ("Investor revenue share", "cash_investor_repay"),
+                       ("Dividends declared", "cash_dividend"),
                        ("Funding received", "cash_funding"),
                        ("**Net cashflow**", "net_cashflow")]:
         line(label, key)

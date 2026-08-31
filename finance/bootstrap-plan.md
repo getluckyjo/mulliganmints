@@ -164,45 +164,74 @@ Three things, and the dividend stream is the smallest of them:
 
 | | Over five years |
 | --- | ---: |
-| Capital returned at R1 a tin | R770,505 (balance ~month 69) |
-| **10% of profits**, if distributed in full, after 20% dividends tax | **R440,367** |
+| Capital returned at R1 a tin | R770,505 by month 60; balance ~month 69 |
+| **Dividends inside five years** | **Nil — see below** |
 | 10% equity at exit — year-5 EBITDA R4.47m at 6–8x | R2.68m – R3.58m |
-| **Total back on R1,000,000** | **R3.68m – R5.02m** |
-| **IRR** | **34% – 43% a year** |
+| **Total back on R1,000,000** | **R3.68m – R4.58m** |
+| **IRR** | **34% – 40% a year** |
 
-| Dividend policy | IRR at 6x | IRR at 8x |
-| --- | ---: | ---: |
-| Retain everything | 34% | 40% |
-| Distribute 50% of profit | 35% | 41% |
-| Distribute 100% of profit | 37% | 43% |
+### The dividend policy, and what it does
 
-**The profit share is worth having but it is not what makes the deal.** Fully
-distributed it adds R440,367 and about **three points of IRR**. The equity stake
-at exit is worth six to eight times that. If an investor is pricing this deal on
-the dividend stream they are pricing it wrong — and so are we if we assume the
-profit share is what persuades them.
+The agreed policy is modelled: **no distributions until the investor's R1m has
+been returned in full**, then half of each year's profit is declared, and never
+so much that cash falls below a **R1.5m** working-capital buffer.
 
-### The dividend question this raises
+**Modelled result: no dividend is declared in any of the five years.**
 
-**This plan currently retains every rand of profit.** That is how it self-funds:
-year-5 closing cash of R5.36m is accumulated earnings, and it is what pays for
-stock, the second rep and the licensing push without another raise.
+That is not a quirk of the model — it is the arithmetic of the two terms
+together. R1 a tin needs 1,000,000 tins to repay R1m; the plan sells 770,505 in
+five years. **Capital is not returned until roughly month 69, so the dividend
+trigger is never reached inside the plan.** The first distribution would fall in
+year 6.
 
-Cumulative distributable profit across years 2–5 is **R5.50m**. So:
+| Repayment rate | Capital repaid | First dividend |
+| --- | --- | --- |
+| R1 a tin *(chosen)* | ~Month 69 | **Year 6** |
+| R2 a tin | Month 50 | Year 5 |
+| R3 a tin | Month 42 | Year 4 |
 
-- **Distribute 100%** and the business ends year 5 with roughly nothing in the
-  bank. The self-funding story disappears.
-- **Distribute 50%** and about R2.75m leaves, ending year 5 near R2.6m — still
-  workable, but it is no longer a business that can absorb a bad year.
-- **Retain everything** and the plan works exactly as modelled, with the
-  investor's return concentrated at exit.
+### What that means for the investor
+
+Six years of holding R1m before a single rand of profit share, with capital
+trickling back the whole time. Their return inside five years is **R770,505 of
+their own money and an unrealised stake.** Everything else is at exit.
+
+**That is a real tension in the deal and it will surface in the negotiation.**
+The two terms pull against each other: R1 a tin is the lightest possible drag on
+the business, and it is precisely what pushes the dividend trigger beyond the
+plan. You cannot give the investor a soft repayment rate *and* an early income
+stream out of the same business.
+
+Three ways to resolve it, in order of what they cost the company:
+
+1. **Leave it.** Be explicit that this is a capital-growth deal with a six-year
+   payback and effectively no yield. Some investors are entirely happy with that
+   — it is what an equity investor signs up for anyway.
+2. **Trigger dividends at 50% repaid** rather than 100%. That lands around month
+   38 and starts a modest income stream in year 4, at a real but manageable cost
+   to cash.
+3. **Raise the repayment to R2 a tin.** Capital back by month 50, dividends from
+   year 5. It costs the business R228,635 more in year 4 — the year it is
+   scaling hardest — which is exactly why R1 was chosen.
+
+**The buffer is doing real work either way.** In the R3-a-tin test the policy
+correctly held year-4 cash at exactly R1,500,000 and paid out only the headroom
+above it. Whatever trigger is agreed, keep the buffer: it is what stops a
+distribution starving the stock cycle.
+
+### One thing the policy protects
+
+**This plan self-funds only because it retains everything.** Year-5 closing cash
+of R5.36m is accumulated earnings, and it is what pays for stock, the second rep
+and the licensing push without another raise. Cumulative distributable profit
+across years 2–5 is R5.50m — so distributing it all would leave the business with
+roughly nothing, and distributing half would end year 5 near R2.6m and unable to
+absorb a bad year.
 
 **You cannot both distribute profits and fund growth from retained earnings.**
-Worth settling the dividend policy in the shareholders agreement rather than
-discovering the disagreement in year three — a common formulation is no
-distributions until the capital is fully repaid, then a fixed share of
-distributable profit thereafter, with the board retaining discretion to fund
-working capital first.
+The agreed policy is the right one for the company. It is simply worth walking
+the investor through what it means for them before they sign it rather than
+after.
 
 ### The trade finance facility
 

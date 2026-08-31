@@ -442,6 +442,18 @@ SCENARIOS = {
             "total": 1_000_000,
             "start_month": FIRST_SALE_MONTH,   # payments begin with the first sale
         },
+
+        # Dividend policy: nothing is distributed until the investor's R1m has
+        # been returned in full; after that, half of each year's profit is paid
+        # out, and never so much that cash falls below the working-capital
+        # buffer. Investor takes their 10% of whatever is declared.
+        "investor_equity_pct": 0.10,
+        "dividend_policy": {
+            "after_capital_repaid": True,
+            "payout_pct": 0.50,
+            "min_cash_buffer": 1_500_000,   # [EST] ~4 months of year-5 opex
+            "frequency_months": 12,         # declared at each year end
+        },
     },
 
     "bear": {

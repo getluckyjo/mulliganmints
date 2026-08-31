@@ -237,6 +237,7 @@ def run(scenario: str = "base") -> Result:
         "ebitda", "finance_cost", "tax_charge", "net_profit",
         "cash_tf_draw", "cash_tf_repay", "tf_outstanding",
         "cash_investor_repay", "investor_outstanding",
+        "cash_dividend", "dividend_to_investor", "dividend_to_founders",
         "cash_in_sales", "cash_out_supplier", "cash_out_duty_clearing",
         "cash_out_opex", "cash_vat", "cash_tax", "cash_funding",
         "net_cashflow", "closing_cash",
@@ -272,6 +273,12 @@ def run(scenario: str = "base") -> Result:
     # operating cost, so it sits below EBITDA and hits cash only.
     inv = sc.get("investor_repayment")
     inv_repaid = 0.0
+
+    # Dividend policy. Nothing is distributed until the investor's capital has
+    # been returned in full; thereafter a share of each year's profit is paid
+    # out, but never so much that cash falls below the working-capital buffer.
+    div = sc.get("dividend_policy")
+    year_profit = 0.0
 
     for m in range(1, N + 1):
         y = year_of(m)
@@ -537,12 +544,33 @@ def run(scenario: str = "base") -> Result:
         R.rows["cash_investor_repay"][i] = -inv_pay
         R.rows["investor_outstanding"][i] = (inv["total"] - inv_repaid) if inv else 0.0
 
+        # ---------------- dividends ----------------
+        year_profit += R.rows["net_profit"][i]
+        dividend = 0.0
+        if div and month_in_year(m) == div.get("frequency_months", 12):
+            capital_repaid = (not inv) or (inv_repaid >= inv["total"] - 0.01)
+            eligible = capital_repaid if div.get("after_capital_repaid", True) else True
+            if eligible and year_profit > 0:
+                proposed = year_profit * div.get("payout_pct", 0.50)
+                # never distribute below the buffer: test against the cash the
+                # month will actually close with, before the dividend
+                headroom = (cash + (cash_in - supplier_out - duty_clearing - opex_cash
+                                    - vat_payment - tax_payment + tf_draw - tf_repay
+                                    - tf_interest - inv_pay)
+                            - div.get("min_cash_buffer", 0.0))
+                dividend = max(0.0, min(proposed, headroom))
+            year_profit = 0.0
+        inv_share = sc.get("investor_equity_pct", 0.0) * dividend
+        R.rows["cash_dividend"][i] = -dividend
+        R.rows["dividend_to_investor"][i] = inv_share
+        R.rows["dividend_to_founders"][i] = dividend - inv_share
+
         funding = sum(amt for mm, _lbl, amt in sc.get("funding_rounds", A.FUNDING_ROUNDS) if mm == m)
         R.rows["cash_funding"][i] = funding
 
         net_cf = (cash_in - supplier_out - duty_clearing - opex_cash
                   - vat_payment - tax_payment + funding
-                  + tf_draw - tf_repay - tf_interest - inv_pay)
+                  + tf_draw - tf_repay - tf_interest - inv_pay - dividend)
         R.rows["net_cashflow"][i] = net_cf
         cash += net_cf
         R.rows["closing_cash"][i] = cash
