@@ -98,11 +98,31 @@ The distributor's team also opens outlets far faster than two founders could —
 **120 golf clubs and 150 bars in year 1**, against 60 and 40 selling direct, and
 300 clubs and 1,800 bars by year 5.
 
+### What comes back with it
+
+**They warehouse the stock.** We take delivery of a container and move it once,
+to one address. They hold it, pick it and deliver to every outlet. That removes
+the entire 3PL layer — no storage rental, no pick-and-pack, no outbound courier
+to hundreds of venues. **Logistics fall from R1.35 a tin to R0.20.**
+
+**One invoiced customer instead of three hundred.** No credit control across
+hundreds of small venues, no route accounting or field-sales software, no
+per-outlet invoicing, and far less travel without a field force. Overheads run at
+**30% of a conventional base rather than 40%.**
+
+Together those are worth roughly **R790,000 of cumulative EBITDA** across five
+years and take break-even from 4,500 tins a month down to **3,800**.
+
 ### What it costs
 
 **R4.25 a tin.** On the year-5 plan that is roughly R2.7m of gross profit handed
 over. We buy back reach we could not otherwise have had, and a cost base with no
-field force.
+field force or warehouse.
+
+**And a concentrated debtor book.** One customer at 45 days is now most of the
+receivables. If they do not pay, there is nothing else to collect. Credit-check
+them before signing, and consider credit insurance on the balance — the admin
+saving is real, and so is the concentration that creates it.
 
 **R20.00 is a thin cut at 18%**, against the ~26% a distributor would normally
 want for a single-SKU startup brand. It is achievable because **Get Lucky's
@@ -132,6 +152,9 @@ relationship ends, there is no field force to fall back on.
   outlets and the founders are already there — it could be taken back in-house.
 - **Review annually.** Distributor margins compress as a brand builds pull. The
   18% is a starting point, not a settlement.
+- **Agree in writing what happens to stock in their warehouse if the agreement
+  ends.** They hold our inventory. That needs to be addressed on the way in, not
+  discovered on the way out.
 
 Tracked as R-17 in `ops/risk-register.md`.
 

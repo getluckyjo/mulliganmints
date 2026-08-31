@@ -9,7 +9,9 @@ tin that is 22,857 tins, or **22,944 rounded up to whole 96-tin cartons**. It is
 batch minimum on a recipe, so it applies per flavour.
 
 The plan of record was three launch flavours. That would mean a **68,832-tin
-launch order costing R681,000** — against year-one demand of about 24,500 tins.
+launch order costing R681,000** — against year-one demand of about 22,300 tins
+under the distributor-led plan ([0009](0009-distributor-led.md)), which is
+almost exactly one flavour's minimum order.
 
 ## Options
 

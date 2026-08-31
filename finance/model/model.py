@@ -421,9 +421,10 @@ def run(scenario: str = "base") -> Result:
         bulk = set(sc.get("bulk_logistics_channels", []))
         bulk_units = (sold["export"] + sold["bars"] * dist_share
                       + sum(sold[k] for k in bulk))
+        bulk_rate = sc.get("logistics_bulk_per_unit", A.LOGISTICS_ZAR_PER_UNIT_EXPORT)
         logistics = (
             (units_sold - bulk_units) * inflate(A.LOGISTICS_ZAR_PER_UNIT, A.OPEX_INFLATION_PA, m)
-            + bulk_units * inflate(A.LOGISTICS_ZAR_PER_UNIT_EXPORT, A.OPEX_INFLATION_PA, m)
+            + bulk_units * inflate(bulk_rate, A.OPEX_INFLATION_PA, m)
         )
         R.rows["opex_logistics"][i] = logistics
 

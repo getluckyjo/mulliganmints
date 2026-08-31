@@ -352,6 +352,12 @@ SCENARIOS = {
         "net_price_override": {"golf": 20.00, "bars": 20.00},
         "debtor_days_override": {"golf": 45, "bars": 45},
         "bulk_logistics_channels": ["golf", "bars"],   # palletised to their DC
+
+        # The distributor warehouses the stock. We take delivery of a container
+        # and move it once, to one address; they hold it, pick it, and deliver to
+        # every outlet. No 3PL storage, no pick-and-pack, no outbound courier to
+        # hundreds of venues -- one bulk drop per shipment. [EST]
+        "logistics_bulk_per_unit": 0.20,
         "commission_pct": 0.0,                          # their team, their commission
         "distributor_share": [0.0, 0.0, 0.0, 0.0, 0.0], # superseded by the overrides above
 
@@ -394,7 +400,11 @@ SCENARIOS = {
         # buying the pull that makes their push work.
         "marketing_y1_total": 120_000,
         "marketing_pct": [None, 0.10, 0.10, 0.09, 0.09],
-        "overhead_multiplier": 0.40,
+        # One delivery address and one invoiced customer instead of hundreds:
+        # no storage to rent, no route accounting or field-sales software, no
+        # credit control across 300+ venues, and far less travel without a field
+        # force. Overheads run at 30% of the funded plan's base rather than 40%.
+        "overhead_multiplier": 0.30,
         "npd_pct": [0.0, 0.0, 0.01, 0.015, 0.015],
 
         # THE STRATEGY. Prove it in SA, then licence the brand territory by
@@ -422,11 +432,19 @@ SCENARIOS = {
             (6, "POS kit — counter units and display boxes",     20_000),
         ],
 
+        # Trade finance against confirmed stock orders: advances a share of each
+        # landed-stock payment, repaid out of sale proceeds four months later.
+        #
+        # Available from the THIRD order [SOURCE: founders], which is placed in
+        # month 8 — by then a distributor has been selling since month 7, two
+        # shipments have landed and cleared, and there is a trading record and
+        # stock to secure against. Five months earlier than the year-2 timing we
+        # first assumed, and it is what makes the R1m raise work.
         "trade_finance": {
             "advance_pct": 0.70,
             "repay_months": 4,
             "rate_pa": 0.17,
-            "start_month": 13,
+            "start_month": 8,     # third purchase order
         },
 
         "funding_rounds": [

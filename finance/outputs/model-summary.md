@@ -85,14 +85,14 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 | Year 1 revenue | R505,969 | R262,433 | R620,410 | R990,485 |
 | Year 3 revenue | R7.68m | R5.62m | R13.28m | R21.20m |
 | Year 5 revenue | R20.64m | R17.70m | R43.63m | R68.59m |
-| Year 5 EBITDA | R9.22m | R-189,443 | R12.59m | R25.70m |
-| Year 5 EBITDA margin | 45% | -1% | 29% | 37% |
-| Cumulative 5-yr EBITDA | R17.87m | R-5.92m | R16.65m | R43.82m |
+| Year 5 EBITDA | R9.49m | R-189,443 | R12.59m | R25.70m |
+| Year 5 EBITDA margin | 46% | -1% | 29% | 37% |
+| Cumulative 5-yr EBITDA | R18.66m | R-5.92m | R16.65m | R43.82m |
 | First EBITDA-positive year | 2 | never | 3 | 2 |
-| Unfunded peak cash deficit | R983,568 | R8.60m | R5.57m | R3.36m |
-| Month of peak deficit | M12 | M50 | M33 | M33 |
-| Lowest funded cash balance | R16,432 | R1.21m | R573,601 | R629,994 |
-| Year 5 closing cash | R8.65m | R7.64m | R22.41m | R38.84m |
+| Unfunded peak cash deficit | R699,727 | R8.60m | R5.57m | R3.36m |
+| Month of peak deficit | M14 | M50 | M33 | M33 |
+| Lowest funded cash balance | R300,273 | R1.21m | R573,601 | R629,994 |
+| Year 5 closing cash | R8.99m | R7.64m | R22.41m | R38.84m |
 
 ## 5. Capital requirement
 

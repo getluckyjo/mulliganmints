@@ -12,24 +12,6 @@ scenario `bootstrap`. Rebuild with `cd finance/model && python3 build_outputs.py
 
 ---
 
-> ## ⚠ One thing to resolve before this goes in a dataroom
-> **Month-12 cash is R16,432.** The distributor-led ramp buys far more stock in
-> year 1 than a direct plan would, and trade finance does not arrive until month
-> 13. Two fixes:
->
-> | | Minimum cash |
-> | --- | ---: |
-> | R1m, trade finance month 13 *(as modelled)* | **R16,432** ⚠ |
-> | **R1m, trade finance month 10** | **R249,718** |
-> | R1.25m, trade finance month 13 | R266,432 |
->
-> **Getting the facility three months earlier is worth as much as R250,000 of
-> equity and costs nothing.** With a distributor selling from month 7 there is a
-> real trading record and landed stock to secure against by month 10. Tracked as
-> R-18 in the risk register.
-
----
-
 ## The deal
 
 **R1m for 10% of the equity, plus the R1m returned out of R1 from every tin sold,
@@ -45,8 +27,8 @@ until repaid.**
 
 ## Why R1m is enough
 
-**Break-even is about 4,500 tins a month.** The model turns EBITDA-positive in
-**month 10**. A business that breaks even there does not need R15m; it needs
+**Break-even is about 3,800 tins a month.** The model turns EBITDA-positive in
+**month 10**, and the lowest cash balance across five years is **R300,273**. A business that breaks even there does not need R15m; it needs
 enough to buy stock and survive its first year.
 
 Three things make the small raise sufficient:
@@ -57,8 +39,18 @@ Three things make the small raise sufficient:
 2. **Get Lucky Golf Club's access to 30 courses and 600+ promotions a year.**
    The golf channel starts warm, and the sampling engine is already paid for.
    A tin in a golfer's hand costs R10.29 and converts better than advertising.
-3. **Branding, packaging, website and content cost nothing in cash.** PJ Offner
+3. **The distributor warehouses the stock.** We take delivery of a container and
+   move it once, to one address. They hold it, pick it and deliver to every
+   outlet. No 3PL storage, no pick-and-pack, no courier to hundreds of venues —
+   and **one invoiced customer instead of three hundred**, which removes the
+   credit control, route accounting and field-sales software a direct model
+   needs. Logistics run at **R0.20 a tin** rather than R1.35, and overheads at
+   30% of a conventional base.
+4. **Branding, packaging, website and content cost nothing in cash.** PJ Offner
    takes 10% equity for the identity; the founders build the rest.
+5. **Trade finance from the third order**, placed in month 8 — by then the
+   distributor has been selling since month 7 and two shipments have landed and
+   cleared. That timing is what makes R1m sufficient.
 
 ## The numbers
 
@@ -72,16 +64,16 @@ Three things make the small raise sufficient:
 | **Net revenue** | **505,969** | **3,501,894** | **7,684,262** | **13,799,084** | **20,641,984** |
 | Gross profit | 276,752 | 1,982,603 | 4,803,141 | 9,421,416 | 14,558,866 |
 | Gross margin | 55% | 57% | 63% | 68% | 71% |
-| Operating costs | (452,844) | (1,208,606) | (2,393,026) | (3,775,285) | (5,340,630) |
-| **EBITDA** | **(176,092)** | **773,997** | **2,410,115** | **5,646,131** | **9,218,236** |
-| EBITDA margin | — | 22% | 31% | 41% | **45%** |
-| Trade finance interest @ 17% | — | (81,965) | (159,136) | (238,633) | (315,308) |
-| Tax | (2,967) | (136,336) | (607,764) | (1,460,024) | (2,403,790) |
-| **Net profit** | **(179,059)** | **555,696** | **1,643,215** | **3,947,473** | **6,499,137** |
+| Operating costs | (398,675) | (1,103,690) | (2,243,763) | (3,566,536) | (5,066,166) |
+| **EBITDA** | **(121,923)** | **878,913** | **2,559,378** | **5,854,881** | **9,492,700** |
+| EBITDA margin | — | 25% | 33% | 42% | **46%** |
+| Trade finance interest @ 17% | (18,215) | (95,732) | (159,136) | (238,633) | (315,308) |
+| Tax | (4,224) | (178,033) | (648,065) | (1,516,387) | (2,477,896) |
+| **Net profit** | **(143,475)** | **612,897** | **1,752,177** | **4,099,861** | **6,699,496** |
 
-**Cumulative five-year EBITDA R17.87m. Net profit R12.47m.**
+**Cumulative five-year EBITDA R18.66m. Net profit R13.02m.**
 
-> **On that 45% year-5 EBITDA margin.** It is at the very top of what a branded
+> **On that 46% year-5 EBITDA margin.** It is at the very top of what a branded
 > FMCG business earns, and it needs three things to go right at once: the
 > distributor delivering the outlet counts, licensing arriving on schedule, and a
 > cost base with no field force. **A conservative read of years 4 and 5 is
@@ -95,15 +87,15 @@ Three things make the small raise sufficient:
 | Receipts from customers (incl VAT) | 367,317 | 3,675,755 | 8,259,752 | 14,972,615 | 22,657,384 |
 | Payments to supplier | (814,353) | (1,729,847) | (2,722,258) | (4,077,941) | (5,154,826) |
 | Import duty & clearing | (147,387) | (403,273) | (656,610) | (1,023,384) | (1,315,699) |
-| Operating costs paid | (452,844) | (1,208,606) | (2,393,026) | (3,775,285) | (5,340,630) |
-| **Trade finance drawn** | — | **1,493,184** | **2,365,208** | **3,570,927** | **4,529,367** |
-| **Trade finance repaid** | — | **(862,765)** | **(2,051,988)** | **(3,183,845)** | **(4,333,194)** |
+| Operating costs paid | (398,675) | (1,103,690) | (2,243,763) | (3,566,536) | (5,066,166) |
+| **Trade finance drawn** | **451,506** | **1,493,184** | **2,365,208** | **3,570,927** | **4,529,367** |
+| **Trade finance repaid** | **(127,575)** | **(1,186,696)** | **(2,051,988)** | **(3,183,845)** | **(4,333,194)** |
 | **Investor revenue share (R1/tin)** | **(22,275)** | **(145,110)** | **(287,775)** | **(463,480)** | **(81,360)** |
 | VAT settled | 88,941 | (145,003) | (483,443) | (930,347) | (1,470,916) |
-| Tax paid | (2,967) | (136,336) | (607,764) | (1,460,024) | (2,403,790) |
+| Tax paid | (4,224) | (178,033) | (648,065) | (1,516,387) | (2,477,896) |
 | Investor capital | 1,000,000 | — | — | — | — |
-| **Net cashflow** | **16,432** | **456,034** | **1,262,959** | **3,390,602** | **3,521,459** |
-| **Closing cash** | **16,432** ⚠ | **472,466** | **1,735,425** | **5,126,028** | **8,647,487** |
+| **Net cashflow** | **368,634** | **175,141** | **1,351,771** | **3,514,808** | **3,584,586** |
+| **Closing cash** | **368,634** | **543,775** | **1,895,546** | **5,410,354** | **8,994,940** |
 | *Investor capital outstanding* | *977,725* | *832,615* | *544,840* | *81,360* | *nil* |
 
 **Inventory dominates the raise, not startup costs.** The money buys tins before
@@ -145,7 +137,7 @@ content lead from month 49. **No field reps — the distributor has the feet.**
 | **Licensing revenue** | **300,000** | **1,200,000** | **2,280,000** |
 | Licensing costs | (180,000) | (240,000) | (280,000) |
 
-By year 5 licensing is **25% of EBITDA** on 11% of revenue — no inventory, no
+By year 5 licensing is **24% of EBITDA** on 11% of revenue — no inventory, no
 COGS, no working capital.
 
 > **Licensing is zero-inventory, not zero-input.** Trademarks must be registered
@@ -166,8 +158,8 @@ specification, and documented sell-through by channel and by month.
 | | |
 | --- | ---: |
 | Capital returned at R1 a tin | R1,000,000 by **month 50** |
-| Dividend in year 5 (10% of R3.25m declared) | R324,957 |
-| 10% equity at exit — year-5 EBITDA R9.22m | see below |
+| Dividend in year 5 (10% of R3.35m declared) | R334,975 |
+| 10% equity at exit — year-5 EBITDA R9.49m | see below |
 
 ### Exit at month 60
 
@@ -175,9 +167,9 @@ Equity value = enterprise value + surplus cash − trade finance − capital owe
 
 | Multiple | Equity value | Founders (80%) | After CGT | PJ (10%) | Investor (10%) | IRR |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| **4x** | 43,103,433 | 34,482,747 | **28,275,852** | 4,310,343 | 4,310,343 | 49% |
-| **6x** | 61,539,906 | 49,231,925 | **40,370,178** | 6,153,991 | 6,153,991 | 57% |
-| **8x** | 79,976,378 | 63,981,103 | **52,464,504** | 7,997,638 | 7,997,638 | 64% |
+| **4x** | 44,594,487 | 35,675,589 | **29,253,983** | 4,459,449 | 4,459,449 | 49% |
+| **6x** | 63,579,887 | 50,863,910 | **41,708,406** | 6,357,989 | 6,357,989 | 58% |
+| **8x** | 82,565,288 | 66,052,230 | **54,162,829** | 8,256,529 | 8,256,529 | 65% |
 
 Founders' CGT at 18% effective, holding personally
 ([0007](../docs/decisions/0007-hold-shares-personally.md)).
@@ -200,10 +192,17 @@ revenue is.
 hundreds of lines they carry, we have no field force to fall back on. Contract
 minimum performance and the data. Tracked as R-17.
 
-**Month-12 cash is R16,432.** See the box at the top. This is fixable and it is
-not yet fixed.
+**The plan rests on trade finance arriving with the third order**, placed in
+month 8. If a bank will not lend until year 2, month-12 cash falls to R16,432 and
+the raise has to be R1.25m. **Get an indicative term sheet before committing to
+the R1m number.**
 
-**Year-5 EBITDA of 45% is at the top of the credible range.** 30–35% is the
+**One customer is now most of our debtor book.** The admin saving from a single
+invoiced client is real, and so is the concentration: if the distributor does not
+pay, there are no other receivables to fall back on. Credit-check them properly
+and consider credit insurance on the balance.
+
+**Year-5 EBITDA of 46% is at the top of the credible range.** 30–35% is the
 conservative read.
 
 ## What R1m actually buys

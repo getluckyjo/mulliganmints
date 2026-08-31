@@ -55,30 +55,43 @@ lines they carry.
 - Net price on golf and bars: R24.25 → **R20.00**, rising 5% a year thereafter
 - Debtor terms 30 → **45 days**; logistics move to bulk drops at their DC
 - Field reps removed from the plan; trade marketing manager from month 31
-- Year 5: **638,005 tins, R20.6m revenue, R9.2m EBITDA**
-- **The R1m raise becomes marginal — see below**
+- Year 5: **638,005 tins, R20.6m revenue, R9.5m EBITDA at 46%**
+- Cumulative five-year EBITDA **R18.66m**, net profit **R13.02m**
 
-## The problem this creates
+## What else comes with it
 
-Faster growth is bought with stock. The plan now buys far more inventory in
-year 1, and **the month-12 cash balance falls to R16,432** — effectively zero,
-against R369,997 on the direct plan.
+**The distributor warehouses the stock.** One container, one delivery address,
+one invoiced customer. No 3PL storage, no pick-and-pack, no courier to hundreds
+of venues, no credit control across a long tail of small accounts, no route
+accounting software. **Logistics fall from R1.35 a tin to R0.20 and overheads run
+at 30% of a conventional base rather than 40%** — together worth about R790,000
+of cumulative EBITDA and taking break-even from 4,500 tins a month to 3,800.
 
-Two fixes, and the cheaper one costs no equity:
+The counterpart is a **concentrated debtor book**: one customer at 45 days is now
+most of the receivables, and our stock sits in their warehouse. Credit-check
+before signing, consider insuring the balance, and agree in writing what happens
+to stock on termination. Tracked in R-17.
 
-| | Month-12 / minimum cash |
+## The cash problem it created, and how it was solved
+
+Faster growth is bought with stock. The plan buys far more inventory in year 1,
+and on the original year-2 trade finance assumption **month-12 cash fell to
+R16,432** — effectively zero.
+
+**Trade finance now draws from the third order, placed in month 8**
+[SOURCE: founders]. By then the distributor has been selling since month 7 and
+two shipments have landed and cleared, so there is a trading record and stock to
+secure against.
+
+| | Minimum cash |
 | --- | ---: |
-| R1m, trade finance month 13 *(current)* | **R16,432** ⚠ |
-| **R1m, trade finance month 10** | **R249,718** |
-| R1.25m, trade finance month 13 | R266,432 |
+| R1m, facility from year 2 | R16,432 ⚠ |
+| **R1m, facility from the third order (month 8)** | **R300,273** |
+| R1.25m, facility from year 2 | R266,432 |
 
-**Getting the facility three months earlier is worth as much as R250,000 of
-equity and costs nothing.** With a distributor selling from month 7 there is a
-real trading record and landed stock to secure against by month 10, which is a
-reasonable proposition to put to a bank.
-
-**This must be resolved before the dataroom goes out.** R16,432 of headroom is
-not a plan.
+**The timing is worth more than R284,000 of equity and costs nothing.** The
+condition is that a bank actually lends at that point — get an indicative term
+sheet before committing to the R1m number. Tracked as R-18.
 
 ## Revisit when
 

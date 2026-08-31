@@ -19,7 +19,7 @@ should be written through the `johannes-voice` skill.*
 | Equity | 10% — permanent |
 | Repayment | R1 per tin sold until R1m is returned |
 | Cap table after | Founders 80% · PJ Offner 10% · Investor 10% |
-| Investor all-in over 5 years | **R5.6m – R9.3m** on R1m — a **49–64% IRR** |
+| Investor all-in over 5 years | **R5.8m – R9.6m** on R1m — a **49–65% IRR** |
 
 No second round. **A distributor with a sales team covers golf clubs and bars
 from day 1.** Trade finance carries the stock from year 2. After that the
@@ -65,6 +65,10 @@ This is the part that makes R1m enough.
 - **A distributor with an existing sales team, from day 1.** Their feet, their
   routes, their relationships — covering golf clubs and bars from launch. We pay
   R4.25 a tin for it and never build a field force.
+- **They warehouse the stock.** One container, one delivery address, one invoiced
+  customer instead of three hundred. No 3PL, no pick-and-pack, no courier runs,
+  no credit control across hundreds of venues. Logistics cost **R0.20 a tin
+  instead of R1.35.**
 - **Two marketing executives**, not one founder learning on the job.
 - **Get Lucky Golf Club already has access to 30 golf courses** and runs
   **600+ promotions a year** across them. The golf channel starts warm, and the
@@ -84,14 +88,14 @@ The supplier has quoted. Suntak Foods, 29 August 2026:
 | Price to the distributor | **R20.00** — they sell at R24.25, retails at R45 |
 | Gross margin | **55%** in year 1, rising to 71% |
 | Minimum order | 800 kg of candy = 22,944 tins per flavour |
-| **Break-even** | **~4,500 tins a month** |
+| **Break-even** | **~3,800 tins a month** |
 
-**Break-even is about 4,500 tins a month**, and the model turns EBITDA-positive
+**Break-even is about 3,800 tins a month**, and the model turns EBITDA-positive
 in **month 10**.
 
 That number is the whole argument for this structure. A business that breaks even
-on 4,500 tins does not need R15m; it needs enough to buy stock and survive its
-first year.
+on 3,800 tins does not need R15m; it needs enough to buy stock and survive its
+first year — and trade finance from the third order covers most of even that.
 
 ### 6. Licensing is the actual business
 
@@ -107,8 +111,8 @@ right to it.
 
 ### 7. And there is a way out
 
-At year-5 EBITDA of R9.22m, a sale at 4–8x gives an equity value of
-**R43m – R80m**. The investor's 10% is worth R4.3m – R8.0m on top of their
+At year-5 EBITDA of R9.49m, a sale at 4–8x gives an equity value of
+**R45m – R83m**. The investor's 10% is worth R4.5m – R8.3m on top of their
 returned capital and year-5 dividend.
 
 ---
@@ -120,18 +124,17 @@ returned capital and year-5 dividend.
 | Tins sold | 22,275 | 145,110 | 287,775 | 463,480 | 638,005 |
 | Revenue | 505,969 | 3,501,894 | 7,684,262 | 13,799,084 | 20,641,984 |
 | *of which licensing* | — | — | *300,000* | *1,200,000* | *2,280,000* |
-| **EBITDA** | **(176,092)** | **773,997** | **2,410,115** | **5,646,131** | **9,218,236** |
-| EBITDA margin | — | 22% | 31% | 41% | **45%** |
-| Net profit | (179,059) | 555,696 | 1,643,215 | 3,947,473 | **6,499,137** |
-| **Closing cash** | **16,432** | **472,466** | **1,735,425** | **5,126,028** | **8,647,487** |
+| **EBITDA** | **(121,923)** | **878,913** | **2,559,378** | **5,854,881** | **9,492,700** |
+| EBITDA margin | — | 25% | 33% | 42% | **46%** |
+| Net profit | (143,475) | 612,897 | 1,752,177 | 4,099,861 | **6,699,496** |
+| **Closing cash** | **368,634** | **543,775** | **1,895,546** | **5,410,354** | **8,994,940** |
 
-**Cumulative five-year EBITDA R17.87m. Net profit R12.47m.** EBITDA-positive in
+**Cumulative five-year EBITDA R18.66m. Net profit R13.02m.** EBITDA-positive in
 year 2 and self-funding from there.
 
-**The lowest cash balance is R16,432, in month 12** — the last month before trade
-finance takes over the stock. That is too thin, and it is the one open item in
-this plan: getting the facility agreed for month 10 instead of month 13 lifts it
-to R249,718 and costs nothing. See `finance/bootstrap-plan.md`.
+The lowest cash balance across five years is **R300,273**, in month 14. Trade
+finance is drawn from the **third order** in month 8, by which point the
+distributor has been selling since month 7 and two shipments have landed.
 
 ## Where the R1m goes
 
@@ -160,15 +163,16 @@ real supplier quote — R0.465 FOB, 25% duty, 800 kg minimum, 60-day production.
 Not one rand of revenue is yet. We would rather show you that asymmetry than let
 you find it.
 
-**Month-12 cash is R16,432.** The distributor-led ramp buys a lot of stock in
-year 1 and trade finance does not arrive until month 13. It is fixable — the
-facility three months earlier is worth R250,000 of headroom and costs no equity —
-but it is not yet fixed, and you should see it before we do.
+**The plan needs trade finance from the third order**, placed in month 8. If a
+bank will not lend until year 2, month-12 cash falls to R16,432 and the raise has
+to be R1.25m. We are getting an indicative term sheet before we ask you to
+commit to R1m.
 
-**One distributor holds every outlet we have.** If they deprioritise us among the
-hundreds of lines they carry, we have no field force to fall back on. We contract
-minimum performance and the sell-through data; that is a mitigation, not a
-guarantee.
+**One distributor holds every outlet we have** — and is now most of our debtor
+book. If they deprioritise us among the hundreds of lines they carry, we have no
+field force to fall back on; if they do not pay, there are no other receivables.
+We contract minimum performance and the sell-through data, credit-check them
+properly, and consider insuring the balance. Mitigations, not guarantees.
 
 **No distributions until your capital is repaid.** That lands in month 50, so the
 first dividend is in year 5 — R324,957 to you on R3.25m declared. It is what
@@ -196,8 +200,9 @@ before signing anything.
 ## The one-line version
 
 > A strong mint in a tin, built for golf, proved in South Africa for R1m — and
-> licensed to the world. **Break-even is 4,500 tins a month. We have a
-> distributor's sales team from day 1 and we already stand on 30 golf courses.**
+> licensed to the world. **Break-even is 3,800 tins a month. A distributor's
+> sales team sells it and warehouses it from day 1, and we already stand on 30
+> golf courses.**
 
 ---
 
