@@ -61,6 +61,14 @@ unless stated. **Add to this file whenever you bring a new external number in.**
 | Imports detained by SARS on arrival for Port Health / DALRRD inspection; importer carries full compliance responsibility | [ASC Food Safety — Importing into South Africa](https://ascfoodsafety.com/importing-into-south-africa/) |
 | Stats SA food & beverages survey: sampling frame of 5,178 enterprises (2025); total income +7.1% in the three months to October 2025 | [Stats SA P6420, October 2025](https://www.statssa.gov.za/publications/P6420/P6420October2025.pdf) |
 
+## Tax
+
+| Figure | Source |
+| --- | --- |
+| CGT inclusion rates: individuals and special trusts 40%, companies and other trusts 80%. Maximum effective rate for individuals **18%** (40% × 45%) | [SARS — Capital Gains Tax](https://www.sars.gov.za/tax-rates/income-tax/capital-gains-tax-cgt/) |
+| Conduit principle: a capital gain vested in a beneficiary before year end is taxed in the beneficiary's hands rather than in the trust (s25B). **From 1 March 2025 the flow-through is limited to resident beneficiaries** — gains vested in non-residents are taxed in the trust | [Cliffe Dekker Hofmeyr — A vested interest in a capital gain](https://www.cliffedekkerhofmeyr.com/en/news/publications/2021/Tax/tax-and-exchange-control-alert-22-april-a-vested-interest-in-a-capital-gain-to-be-taxed-in-the-trust-or-in-the-hands-of-its-beneficiaries.html) · [Thomson Wilks — Tax law tightens for SA trusts with offshore beneficiaries](https://www.thomsonwilks.co.za/news-and-media/tax-law-tightens-for-sa-trusts-with-offshore-beneficiaries) |
+| Trust flat rate 45%, company rate 27% — giving 36% and 21.6% effective CGT respectively | [SARS](https://www.sars.gov.za/tax-rates/income-tax/capital-gains-tax-cgt/) |
+
 ## Licensing
 
 | Figure | Source |

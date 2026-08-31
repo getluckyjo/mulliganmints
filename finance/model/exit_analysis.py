@@ -22,9 +22,21 @@ FOUNDERS_PCT = 0.80
 PJ_PCT = 0.10
 INVESTOR_PCT = 0.10
 
-# SA capital gains tax on a share disposal by an individual:
-# 40% inclusion rate x 45% top marginal rate = 18% effective. [SOURCE: SARS]
+# SA capital gains tax on a share disposal. Inclusion rate x marginal rate:
+#
+#   Individual        40% x 45%  = 18.0%   <- cheapest
+#   Trust (retained)  80% x 45%  = 36.0%
+#   Company           80% x 27%  = 21.6%, then 20% dividends tax to extract
+#                                  => ~37.3% all-in
+#
+# A trust matches 18% only via the conduit principle (s25B): the gain must be
+# VESTED IN RESIDENT BENEFICIARIES in the same year of assessment, and since
+# 1 March 2025 flow-through applies to resident beneficiaries only. Left in the
+# trust, or vested in a non-resident, it is 36%.
+# [SOURCE: SARS CGT tables; s25B Income Tax Act. Confirm with a tax adviser.]
 CGT_EFFECTIVE_INDIVIDUAL = 0.18
+CGT_EFFECTIVE_TRUST_RETAINED = 0.36
+CGT_EFFECTIVE_COMPANY = 0.216
 
 # Multiples to test. A South African SME trades at 4-6x EBITDA; a branded
 # consumer business with growth at 6-10x; a strategic buyer who wants the brand
@@ -155,5 +167,15 @@ if __name__ == "__main__":
     print(f"  1.0x revenue                {rands(rev * 1.0)}")
     print(f"  1.5x revenue                {rands(rev * 1.5)}")
     print(f"  10x the licensing royalty   {rands(lic * 10)}   (brand-only valuation)")
+    print()
+    print("HOLDING STRUCTURE — effective CGT on the founders' share:")
+    w6 = waterfall(6)
+    g = w6["founders_gross"]
+    for label, rate in [("Individuals (as modelled)", CGT_EFFECTIVE_INDIVIDUAL),
+                        ("Trust, gain vested in resident beneficiaries", CGT_EFFECTIVE_INDIVIDUAL),
+                        ("Trust, gain retained in the trust", CGT_EFFECTIVE_TRUST_RETAINED),
+                        ("Company, before extracting the cash", CGT_EFFECTIVE_COMPANY)]:
+        print(f"  {label:<46} {rate*100:>5.1f}%   nets {rands(g*(1-rate))} at 6x")
+    print("  Holding personally is the cheapest. A trust only matches it, never beats it.")
     print()
     print("All multiples are estimates. Nobody has offered anything.")

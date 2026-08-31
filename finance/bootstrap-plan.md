@@ -268,9 +268,39 @@ capital owed.**
 | **10x** | 44,747,740 | 48,278,843 | 38,623,075 | **31,670,921** | 4,827,884 | 5,057,379 | 46% |
 
 Founders' CGT at **18% effective** — 40% inclusion rate on 45% marginal, for
-individuals holding the shares directly. Worth taking advice on whether to hold
-through a trust or company before the shares are issued rather than after; the
-structure is very hard to change once there is value in it.
+individuals holding the shares directly.
+
+### Holding structure — personal is the cheapest
+
+| Structure | Inclusion × rate | Effective CGT | Nets at 6x |
+| --- | --- | ---: | ---: |
+| **Individuals (as modelled)** | 40% × 45% | **18.0%** | **R19,929,114** |
+| Trust — gain vested in resident beneficiaries | conduit to individuals | 18.0% | R19,929,114 |
+| Trust — gain retained in the trust | 80% × 45% | **36.0%** | R15,554,431 |
+| Company | 80% × 27% | 21.6% *before* extraction | R19,054,177 |
+
+**Holding personally is the cheapest, and a trust only matches it — never beats
+it.** A trust pays 36% if the gain stays in the trust. It gets to 18% only
+through the conduit principle in section 25B: the gain must be **vested in
+resident beneficiaries in the same year of assessment**. Since 1 March 2025 the
+flow-through applies to **resident beneficiaries only**, so a beneficiary who has
+emigrated pulls the gain back into the trust at 36%.
+
+A company is worse than it looks: 21.6% inside the company, then 20% dividends
+tax to get the money out — roughly **37% all-in**.
+
+**So do not put the shares in a trust to save tax on exit, because it will not.**
+The reasons to use one are estate duty, asset protection and succession, and they
+are real reasons — they are just not this one.
+
+**The timing point still stands, and it is the important one.** If a trust is
+wanted for those reasons, it has to hold the shares **before they have value**.
+Moving shares into a trust later is a disposal at market value: it triggers CGT
+on the way in and possibly donations tax as well. At R24m of value that is an
+expensive change of mind.
+
+*General information, not tax advice. Rates and the section 25B rules change —
+confirm with a tax adviser before the shares are issued.*
 
 ### The investor's all-in return
 
