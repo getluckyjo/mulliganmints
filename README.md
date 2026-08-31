@@ -16,7 +16,7 @@ taking the brand global by licence or by export.
 | Product | 35g sugar-free pressed mints in a printed hinged tin (supplier spec in `product/`) |
 | Supplier | Suntak Foods (Shantou, China) — **quoted USD 0.465/tin FOB, 29 Aug 2026, valid 30 days**. Samples inbound. |
 | Brand | PJ Offner engaged for **10% equity, not a fee** — brief in `brand/brand-brief-pj-offner.md`, terms in `legal/term-sheet-pj-offner.md` |
-| Capital ask | **Two routes.** Funded: R3.5m pre-seed then R12m by month 20. Bootstrap: **R1m for 10% equity plus R2/tin until repaid**, with trade finance from year 2 — see `finance/bootstrap-plan.md` |
+| Capital ask | **Two routes.** Funded: R3.5m pre-seed then R12m by month 20. Bootstrap: **R1m for 10% equity plus R2/tin (stepping to R1 at 50% repaid) until repaid**, with trade finance from year 2 — see `finance/bootstrap-plan.md` |
 | Next decisions | See `docs/decisions/` |
 
 ## Repository map
@@ -49,8 +49,8 @@ and the workbook at `finance/outputs/mulligan-mints-5yr-model.xlsx`.
 
 **There is a second route, and it is the stronger one.**
 [`finance/bootstrap-plan.md`](finance/bootstrap-plan.md) models a single **R1m
-raise — 10% equity plus R2 from every tin until the R1m is repaid** — with trade
-finance carrying stock from year 2. Golf and bars in South Africa, no retail, no
+raise — 10% equity plus R2 from every tin, stepping down to R1 once half is
+repaid** — with trade finance carrying stock from year 2. Golf and bars in South Africa, no retail, no
 export, and the brand **licensed** globally rather than shipped. EBITDA-positive
 in year 2, **R11.9m of revenue and R4.5m of EBITDA by year 5** at a 38% margin,
 with **80% of the company retained**. Licensing is 51% of year-5 EBITDA. The two

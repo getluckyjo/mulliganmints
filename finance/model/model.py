@@ -517,7 +517,22 @@ def run(scenario: str = "base") -> Result:
         if inv and m >= inv.get("start_month", A.FIRST_SALE_MONTH):
             remaining = inv["total"] - inv_repaid
             if remaining > 0:
-                inv_pay = min(units_sold * inv["per_tin"], remaining)
+                # Optional step-down: the per-tin rate drops once an agreed
+                # share of the capital has been returned. Units in the month
+                # that straddles the threshold are split across both rates so
+                # the step happens at the right rand, not the right month.
+                step_at = inv.get("step_down_at_pct")
+                rate_hi = inv["per_tin"]
+                rate_lo = inv.get("per_tin_after", rate_hi)
+                if step_at is None or inv_repaid >= inv["total"] * step_at:
+                    rate = rate_hi if step_at is None else rate_lo
+                    inv_pay = min(units_sold * rate, remaining)
+                else:
+                    to_step = inv["total"] * step_at - inv_repaid
+                    units_at_hi = min(units_sold, to_step / rate_hi)
+                    inv_pay = units_at_hi * rate_hi
+                    inv_pay += (units_sold - units_at_hi) * rate_lo
+                    inv_pay = min(inv_pay, remaining)
                 inv_repaid += inv_pay
         R.rows["cash_investor_repay"][i] = -inv_pay
         R.rows["investor_outstanding"][i] = (inv["total"] - inv_repaid) if inv else 0.0
