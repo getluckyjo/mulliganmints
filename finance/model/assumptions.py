@@ -431,15 +431,14 @@ SCENARIOS = {
         "funding_rounds": [
             (1, "Investor — R1m for 10% equity plus revenue share", 1_000_000),
         ],
-        # R2 a tin until half the capital is back, then R1 a tin on the rest.
-        # Same R1m returned either way; the step-down moves the drag out of the
-        # years the business is scaling hardest and into the years it can carry
-        # it. Repaying R500k at R2 takes 250,000 tins; the second R500k at R1
-        # takes another 500,000 — so 750,000 tins in total rather than 500,000.
+        # R1 a tin from the first sale until the R1m is returned. That needs
+        # 1,000,000 tins. This plan sells 770,505 in five years, so the capital
+        # is NOT fully repaid inside the horizon — roughly R229k is still
+        # outstanding at the end of year 5, clearing during year 6. That is the
+        # trade: the lightest possible drag on the business, and an investor who
+        # waits longer than five years to be made whole.
         "investor_repayment": {
-            "per_tin": 2.00,
-            "step_down_at_pct": 0.50,
-            "per_tin_after": 1.00,
+            "per_tin": 1.00,
             "total": 1_000_000,
             "start_month": FIRST_SALE_MONTH,   # payments begin with the first sale
         },

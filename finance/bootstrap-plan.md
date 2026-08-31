@@ -11,8 +11,7 @@ scenario `bootstrap`. Rebuild with `cd finance/model && python3 build_outputs.py
 > ## Raise **R1,000,000**, once, at the start.
 >
 > **The deal:** R1m for **10% of the equity**, *plus* the R1m returned to the
-> investor out of **R2 from every tin sold — stepping down to R1 once half the
-> capital is back** — until it is repaid in full.
+> investor out of **R1 from every tin sold**, until it is repaid in full.
 
 Trade finance from year 2 carries the stock. The R1m carries year one and leaves
 a genuine buffer — the lowest cash balance across five years is **R306,728**,
@@ -27,12 +26,12 @@ of cumulative EBITDA** over five years with no further equity.
 | --- | --- |
 | Cash in | R1,000,000, month 1 |
 | Equity given | **10%** — permanent |
-| Repayment | **R2 per tin**, dropping to **R1 per tin** once R500,000 is repaid |
-| Step-down reached | **Month 38** |
-| Tins required to repay | **750,000** (250,000 at R2, then 500,000 at R1) |
-| Repaid in full | **Month 60** |
-| R2 as a share of net price (R24.25) | **8.2%** — R1 is 4.1% |
-| R2 as a share of contribution (R11.88) | **17%** — R1 is 8% |
+| Repayment | **R1 per tin sold**, from the first sale |
+| Tins required to repay | **1,000,000** |
+| Repaid within five years | **No — R229,495 still outstanding at month 60** |
+| Balance clears | **~month 69**, at the year-5 run rate |
+| R1 as a share of net price (R24.25) | **4.1%** |
+| R1 as a share of contribution (R11.88) | **8%** |
 
 **Cap table after the round: founders 80%, PJ Offner 10%, investor 10%.**
 
@@ -109,51 +108,55 @@ not appear here. It appears in the cashflow below, where it bites.*
 | Operating costs paid | (402,244) | (1,065,462) | (2,020,094) | (3,076,405) | (4,152,620) |
 | **Trade finance drawn** | — | **801,824** | **1,253,472** | **1,965,327** | **2,481,040** |
 | **Trade finance repaid** | — | **(465,297)** | **(1,095,094)** | **(1,751,091)** | **(2,284,684)** |
-| **Investor revenue share** | **(21,520)** | **(143,960)** | **(291,060)** | **(250,365)** | **(293,095)** |
+| **Investor revenue share (R1/tin)** | **(10,760)** | **(71,980)** | **(145,530)** | **(228,635)** | **(313,600)** |
 | VAT settled | 80,516 | (80,974) | (245,683) | (476,738) | (737,367) |
 | Tax paid | (334) | (5,890) | (151,648) | (629,676) | (1,162,208) |
 | Investor capital | 1,000,000 | — | — | — | — |
-| **Net cashflow** | **359,237** | **(28,711)** | **342,482** | **1,390,983** | **3,064,711** |
-| **Closing cash** | **359,237** | **330,526** | **673,008** | **2,063,991** | **5,128,703** |
+| **Net cashflow** | **369,997** | **43,269** | **488,012** | **1,412,713** | **3,044,206** |
+| **Closing cash** | **369,997** | **413,266** | **901,278** | **2,313,991** | **5,358,198** |
 | *Trade finance outstanding (year end)* | — | *336,527* | *494,904* | *709,140* | *905,496* |
-| *Investor capital outstanding* | *978,480* | *834,520* | *543,460* | *293,095* | *nil* |
+| *Investor capital outstanding* | *989,240* | *917,260* | *771,730* | *543,095* | ***229,495*** |
 
 **Cumulative five-year EBITDA: R7.65m**, and **R5.27m of net profit** after
 R428,714 of trade finance interest. Every rand after the initial R1,000,000 is
 self-funded.
 
-### What the step-down does — and does not do
+### What R1 a tin does
 
-The step-down moves **R206,905 out of year 4**, the year the business is scaling
-hardest, and pushes it into year 5, which can carry it. Year-4 closing cash
-improves from R1.86m to **R2.06m**. The same R1m is repaid either way, so year-5
-closing cash is identical at R5.13m.
+**It is the lightest drag available**, and it lands where it matters. The plan's
+tightest month is **month 12**, and R1 a tin leaves **R369,997** there against
+R306,728 at R2 — the single biggest improvement any of the repayment structures
+tested delivers, precisely because it applies from the first sale rather than
+after a threshold.
 
-Its real value is as **downside protection**. If sell-through runs behind plan,
-the drag from month 38 onward is R1 a tin rather than R2 — 8% of contribution
-instead of 17%. That is exactly when you would need the relief.
-
-**Be clear about what it does not fix.** The plan's tightest month is **month 26**
-at R306,728, and the step-down does not touch it — 50% of the capital is not
-repaid until month 38. Every variant tested leaves that trough identical:
-
-| Structure | Min cash | Repaid | Year-4 drag |
+| Structure | Min cash | Repaid in full | Year-4 drag |
 | --- | ---: | ---: | ---: |
 | R2 flat | R306,728 (m26) | Month 50 | R457,270 |
-| **R2 → R1 at 50% (chosen)** | **R306,728 (m26)** | **Month 60** | **R250,365** |
-| R2 → R1 at 25% | R306,728 (m26) | Beyond year 5 | R228,635 |
-| R1 flat | R369,997 (m12) | Beyond year 5 | R228,635 |
+| R2 → R1 at 50% | R306,728 (m26) | Month 60 | R250,365 |
+| **R1 flat (chosen)** | **R369,997 (m12)** | **~Month 69** | **R228,635** |
 
-**Fifty percent is the right threshold**, and for a specific reason: it is the
-only step-down that still repays the investor in full **inside five years**. Step
-at 25%, or run R1 flat, and the R1m is still outstanding at the end of year 5 —
-which most investors will not accept.
+Every rand of it stays in the business through the years it is scaling: **year-4
+closing cash R2.31m and year-5 R5.36m**, the best of any structure tested.
 
-**One risk worth naming.** Repayment completes in **month 60** — the last month of
-the plan. There is no slack. If volumes run even slightly behind, the R1m is not
-fully repaid within five years. If the investor needs certainty on that date,
-either the step-down threshold has to move up, or the plan needs a longstop that
-converts the residual to cash.
+### The catch, stated plainly
+
+**R1 a tin does not repay R1m inside five years.** It needs **1,000,000 tins** and
+this plan sells **770,505** in five years. At month 60 the investor is still owed
+**R229,495**, clearing around **month 69** at the year-5 run rate.
+
+That is not a modelling problem, it is the deal. An investor lending R1m against
+R1 a tin is accepting a **five-and-a-half to six-year** return of capital, on a
+plan whose volumes are still assumptions. Three things follow:
+
+1. **Say it out loud in the term sheet.** A repayment schedule that quietly runs
+   past the plan horizon is the kind of thing that sours a relationship in year
+   four. Show them the month-69 number up front.
+2. **Expect them to ask for something in exchange** — a longstop date that
+   converts the residual to cash, a higher equity share, or a rate that steps
+   *up* if volumes beat plan.
+3. **If sell-through disappoints, this stretches badly.** At half the modelled
+   volume the balance runs past year 10. A longstop protects the investor; a cap
+   on total repayment protects you. Ideally the agreement has both.
 
 ### The trade finance facility
 
@@ -266,11 +269,11 @@ not so comfortable that it can be ignored.
 delayed facility survivable rather than fatal, but every month it slips past
 month 13 is another reorder funded from equity that should be funded by the bank.
 
-**The revenue share is heaviest in year 3, before the step-down.** R291,060 leaves
-in year 3 at the full R2 a tin — 17% of contribution. The step-down at month 38
-brings that down, but not before. If you can negotiate one more thing, negotiate
-the threshold down to 40%: it pulls the relief into year 3 where it does more
-good, at a modest cost to how fast the investor is repaid.
+**The revenue share is light but long.** R1 a tin is only 8% of contribution and
+never threatens the business — but it runs past the five-year horizon and is
+still costing R313,600 a year in year 5 with R229,495 outstanding. It is the
+right structure for the company and the slowest one for the investor, and that
+asymmetry is what the negotiation is actually about.
 
 **Growth is bought with stock.** A faster ramp needs more capital, not less —
 270 golf clubs need more tins on hand than 210 do. That is why the facility
