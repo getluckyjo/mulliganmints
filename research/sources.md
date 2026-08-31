@@ -51,6 +51,17 @@ unless stated. **Add to this file whenever you bring a new external number in.**
 | **FOB Shantou USD 0.465/tin**; 35g sugar-free strong peppermint; tin 96 × 61.5 × 21 mm; 1g tablets, 13.5mm dia (35/tin); 24-month shelf life; 96 tins/carton, 1,400 cartons = 134,400 tins per 20GP; carton 0.02 CBM, 7.6 kg; 60-day production after artwork + deposit; 50% T/T deposit, balance before shipment; tin sample USD 250/design, OEM formula USD 200/flavour, embossing mould USD 300/position; USD 200 LCL charge under USD 5,000; **quote valid 30 days from 29 Aug 2026** | **Suntak Foods Manufacturing Co., Ltd — quotation, 29 August 2026.** Held at `product/quotes/suntak-quotation-2026-08-29.pdf` |
 | USD/ZAR ~15.93 (25 Aug 2026); rand +4.94% on the month, +9.60% on the year | [Trading Economics — South African Rand](https://tradingeconomics.com/south-africa/currency) |
 
+## Distribution landscape
+
+| Figure | Source |
+| --- | --- |
+| SA liquor industry structure: producers and wholesalers DGB, Diageo, Heineken Beverages, SAB, Pernod Ricard; Heineken combined Distell, Namibia Breweries and Heineken SA into Heineken Beverages in 2023; redistributors carry those principals' lines | [ResearchAndMarkets — SA Liquor Industry Report 2024](https://www.businesswire.com/news/home/20241216401197/en/South-Africa-Liquor-Industry-Report-2024-with-Profiles-of-20-Industry-Players-Including-DGB-Diageo-Heineken-Beverages-SAB-Pernod-Ricard-Liquor-City-Norman-Goodfellows-Overland-and-Picardi---ResearchAndMarkets.com) · [Heineken — completion of Distell acquisition](https://www.theheinekencompany.com/newsroom/heineken-successfully-completes-acquisition-of-distell-and-namibia-breweries-to-create-heineken-beverages/) |
+| **Key Distributors** — FMCG distributor carrying Nestlé, Unilever, Reckitt, GSK and Tiger Brands including confectionery and snacks; depots in Cape Town, Johannesburg, Durban, Nelspruit, Polokwane, Bloemfontein; 48-hour delivery | [Key Distributors](https://keydistributors.co.za/) |
+| **Maspark** — snacks, confectionery, grocery and beverages; Cape Town warehouse and manufacturing; distributes to retailers, wholesalers, forecourts and independents | [Maspark](https://www.maspark.co.za/about) |
+| **Makro / Massmart** — 22 warehouse stores, cash-and-carry to VAT-registered businesses including restaurants, hotels and caterers; Massmart Wholesale also runs CBW, Jumbo, Trident, Shield | [Makro — About](https://www.makro.co.za/about) · [Makro (Wikipedia)](https://en.wikipedia.org/wiki/Makro) |
+| **Golf pro shops are frequently leased or concessioned**, not club-run: Clovelly operated by Global Golf; Wanderers a PGA-affiliated shop run by professionals; Port Shepstone run by the resident PGA professional | [Clovelly Golf Club — Pro Shop](https://clovellygolfclub.co.za/pro-shop/) · [Wanderers Golf Club — Golf Shop](https://www.wanderersgolfclub.com/wgc/golf-shop/) · [Port Shepstone Country Club](https://pscc.co.za/Pro-Shop.html) |
+| **The Pro Shop** — largest SA golf equipment retailer, Johannesburg warehouse, stores in Cape Town, Johannesburg, Durban and Pretoria | [The Pro Shop](https://www.theproshop.co.za/about-the-pro-shop) |
+
 ## Regulatory
 
 | Figure | Source |
@@ -90,6 +101,11 @@ here so nobody mistakes them for research:
    a weak proxy.
 3. **Golf-course retail sell-through.** No benchmark exists anywhere. Must be
    measured in our own pilot.
+3b. **What share of SA golf clubs lease their pro shop rather than running it.**
+   We have three worked examples, not a survey — and it decides who we call.
+   Answerable by telephone. See `gtm/sales-and-distribution-strategy.md`.
+3c. **Whether any distributor treats golf clubs as a defined channel**, and
+   whether golf club groups buy centrally. We found no evidence either way.
 4. ~~Supplier FOB cost per tin.~~ **Answered** by the Suntak quotation above:
    USD 0.465 FOB Shantou. What remains estimated is the *volume curve* — every
    price tier above 150,000 units a year is extrapolated from that single

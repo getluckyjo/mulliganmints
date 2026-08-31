@@ -27,7 +27,7 @@ research/      Market, competitors, channels, global route — with sources
 brand/         Creative brief for PJ Offner, verbal identity, asset store
 product/       Product & packaging spec, supplier brief and sample evaluation
 finance/       The 5-year model (Python) and its outputs (xlsx + markdown)
-gtm/           Go-to-market, 90-day launch plan, pricing and trade terms
+gtm/           Go-to-market, sales & distribution strategy, 90-day launch plan, pricing
 legal/         SA compliance checklist, IP strategy, PJ Offner term sheet
 pitch/         Investor narrative
 ops/           Risk register
