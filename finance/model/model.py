@@ -322,8 +322,10 @@ def run(scenario: str = "base") -> Result:
                 lag_days = (A.CHANNELS[k]["debtor_days"] * (1 - dist_share)
                             + A.DISTRIBUTOR_DEBTOR_DAYS * dist_share)
             else:
-                rev = sold[k] * A.CHANNELS[k]["net_price_y1"] * pf
-                lag_days = A.CHANNELS[k]["debtor_days"]
+                price = sc.get("net_price_override", {}).get(k, A.CHANNELS[k]["net_price_y1"])
+                rev = sold[k] * price * pf
+                lag_days = sc.get("debtor_days_override", {}).get(
+                    k, A.CHANNELS[k]["debtor_days"])
 
             R.rows[f"rev_{k}"][i] = rev
             revenue += rev
@@ -414,15 +416,21 @@ def run(scenario: str = "base") -> Result:
         marketing += listing
         R.rows["opex_marketing"][i] = marketing
 
-        bulk_units = sold["export"] + sold["bars"] * dist_share
+        # Channels served by a third-party distributor ship in bulk to their DC
+        # rather than outlet by outlet, so they carry the bulk logistics rate.
+        bulk = set(sc.get("bulk_logistics_channels", []))
+        bulk_units = (sold["export"] + sold["bars"] * dist_share
+                      + sum(sold[k] for k in bulk))
         logistics = (
             (units_sold - bulk_units) * inflate(A.LOGISTICS_ZAR_PER_UNIT, A.OPEX_INFLATION_PA, m)
             + bulk_units * inflate(A.LOGISTICS_ZAR_PER_UNIT_EXPORT, A.OPEX_INFLATION_PA, m)
         )
         R.rows["opex_logistics"][i] = logistics
 
-        direct_venue_rev = R.rows["rev_golf"][i] + R.rows["rev_bars"][i] * (1 - dist_share)
-        commission = direct_venue_rev * A.SALES_COMMISSION_PCT
+        direct_venue_rev = (R.rows["rev_golf"][i] * (0 if "golf" in bulk else 1)
+                            + R.rows["rev_bars"][i] * (1 - dist_share)
+                            * (0 if "bars" in bulk else 1))
+        commission = direct_venue_rev * sc.get("commission_pct", A.SALES_COMMISSION_PCT)
         R.rows["opex_commission"][i] = commission
 
         npd = revenue * sc.get("npd_pct", A.NPD_PCT_OF_REVENUE)[y - 1]

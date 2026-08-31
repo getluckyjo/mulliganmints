@@ -40,17 +40,22 @@ ops/           Risk register
 | Landed cost per tin | **R10.29** (Suntak quote, 29 Aug 2026) |
 | Net price per tin, golf & bars | **R24.25** (RSP R45 incl VAT) |
 | Gross margin, direct channels | **58%** |
-| **Break-even** | **~2,700 tins/month** — EBITDA-positive in month 11 |
-| Year 5 | **R11.9m revenue · R4.5m EBITDA at 38%** |
+| **Break-even** | **~4,500 tins/month** — EBITDA-positive in month 10 |
+| Year 5 | **R20.6m revenue · R9.2m EBITDA at 45%** |
 | **Capital required** | **R1,000,000, once** |
 
 **The plan is the bootstrap route** —
 [`finance/bootstrap-plan.md`](finance/bootstrap-plan.md), adopted in
 [decision 0008](docs/decisions/0008-bootstrap-route.md). One R1m raise: 10%
 equity plus R1 from every tin until repaid, with trade finance carrying stock
-from year 2. Golf clubs, bars and DTC in South Africa — no national retail, no
-export — and the brand **licensed** globally rather than shipped. Licensing is
-51% of year-5 EBITDA. Founders keep 80%.
+from year 2. **A distributor with a sales team covers golf clubs and bars from
+day 1** ([0009](docs/decisions/0009-distributor-led.md)); DTC stays ours. No
+national retail, no export — the brand is **licensed** globally rather than
+shipped. Founders keep 80%.
+
+> ⚠ **Open item:** month-12 cash is R16,432. Getting trade finance agreed for
+> month 10 rather than 13 lifts it to R249,718 and costs no equity. Resolve
+> before the dataroom goes out — see `ops/risk-register.md` R-18.
 
 The fully funded alternative (R3.5m then R12m, reaching R43.6m of year-5 revenue)
 stays modelled in [`finance/5-year-plan.md`](finance/5-year-plan.md) as the scale

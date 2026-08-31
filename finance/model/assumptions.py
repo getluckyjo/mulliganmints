@@ -333,52 +333,67 @@ SCENARIOS = {
     # reason the outlet plan below is credible without a sales team.
     # -----------------------------------------------------------------------
     "bootstrap": {
-        "label": "Bootstrap — founder-funded, licence the brand globally",
+        "label": "Plan of record — R1m, distributor-led from day 1, brand licensed globally",
         "volume_multiplier": 1.00,
         "net_price_multiplier": 1.00,
         "fob_multiplier": 1.00,
 
-        # No retail (R1.4m of listing fees and 65-day terms), and no export --
-        # the global route is LICENSING ONLY. We ship the brand, never the tins.
+        # No retail (R1.4m of listing fees), and no export -- the global route is
+        # LICENSING ONLY. We ship the brand, never the tins.
         "channels_off": ["retail", "export"],
 
-        # Warm start. Get Lucky Golf Club already has access to 30 clubs and runs
-        # 600 promotions a year across them, so the golf channel does not begin
-        # at zero and does not need a rep to open it. [SOURCE: founders]
+        # ---------------------------------------------------------------
+        # DISTRIBUTOR-LED FROM DAY 1. A distributor with an existing sales
+        # team covers golf clubs AND bars from launch. [SOURCE: founders]
+        # We sell to them at R20.00; they sell on to the venue at R24.25,
+        # which retails at R45 -- about an 18% distributor margin.
+        # DTC stays ours at R35.
+        # ---------------------------------------------------------------
+        "net_price_override": {"golf": 20.00, "bars": 20.00},
+        "debtor_days_override": {"golf": 45, "bars": 45},
+        "bulk_logistics_channels": ["golf", "bars"],   # palletised to their DC
+        "commission_pct": 0.0,                          # their team, their commission
+        "distributor_share": [0.0, 0.0, 0.0, 0.0, 0.0], # superseded by the overrides above
+
+        # A distributor sales team opens far more outlets than two founders
+        # could, and does it from month one. Get Lucky's access to 30 courses
+        # and 600 promotions a year still warms the golf channel. [EST]
         "outlets_override": {
-            "golf": [60, 120, 180, 230, 270],
-            "bars": [40, 120, 240, 360, 480],
+            "golf": [120, 200, 260, 285, 300],
+            "bars": [150, 450, 900, 1_400, 1_800],
         },
-        # Two marketing executives running 600 sampling promotions a year should
-        # drive better trial per outlet than a generic bootstrap. Set between the
-        # old bootstrap (28->45) and the fully funded plan (32->55). [EST]
+        # Reach comes at the cost of depth. A distributor rep carries hundreds of
+        # lines and will not merchandise ours the way a founder would, so the
+        # rate per outlet sits BELOW the direct-sales bootstrap. [EST]
         "rate_override": {
-            "golf": [32, 38, 43, 47, 50],
-            "bars": [16, 19, 22, 24, 26],
+            "golf": [30, 36, 40, 44, 46],
+            "bars": [15, 17, 19, 21, 23],
         },
         "dtc_override": [300, 900, 1_500, 2_000, 2_500],
-        "distributor_share": [0.0, 0.0, 0.0, 0.0, 0.0],
         "no_listing_fees": True,
 
-        # Two founders, both drawing nothing in year 1. Draw rows step up rather
-        # than stack (see headcount_is_cumulative_draw).
+        # No field reps -- the distributor has the feet. What we do need is
+        # someone to manage the distributor, run trade activation and keep the
+        # brand pulled through, plus a brand and content lead as licensing
+        # conversations start.
         "headcount": [
-            (13, "Johannes draw (part-time)",     15_000),
-            (13, "Andrew draw (part-time)",       15_000),
-            (25, "Johannes draw",                 25_000),
-            (25, "Andrew draw",                   25_000),
-            (30, "Brand & trade rep — Gauteng",   25_000),
-            (37, "Johannes draw (full)",          35_000),
-            (37, "Andrew draw (full)",            35_000),
-            (48, "Brand & trade rep — Cape",      28_000),
+            (13, "Johannes draw (part-time)",              15_000),
+            (13, "Andrew draw (part-time)",                15_000),
+            (25, "Johannes draw",                          25_000),
+            (25, "Andrew draw",                            25_000),
+            (31, "Trade marketing & key accounts manager", 35_000),
+            (37, "Johannes draw (full)",                   35_000),
+            (37, "Andrew draw (full)",                     35_000),
+            (49, "Brand & content lead",                   38_000),
         ],
         "headcount_is_cumulative_draw": True,
 
-        # Two marketing executives make a rand go further. That advantage is
-        # modelled as HIGHER SELL-THROUGH FOR THE SAME SPEND (the rates above),
-        # not as a smaller budget -- claiming both would be double-counting.
-        "marketing_y1_total": 60_000,
-        "marketing_pct": [None, 0.07, 0.07, 0.06, 0.06],
+        # A distributor pushes what already has pull. Handing them a brand with
+        # no consumer demand is how a listing dies quietly in a warehouse, so
+        # marketing runs HIGHER here than it would if we sold direct -- we are
+        # buying the pull that makes their push work.
+        "marketing_y1_total": 120_000,
+        "marketing_pct": [None, 0.10, 0.10, 0.09, 0.09],
         "overhead_multiplier": 0.40,
         "npd_pct": [0.0, 0.0, 0.01, 0.015, 0.015],
 
@@ -386,20 +401,18 @@ SCENARIOS = {
         # territory: a signing fee up front and a running royalty on the
         # licensee's net sales, with no inventory, no COGS and no working
         # capital on our side. Royalty rate is LICENSING_ROYALTY_PCT (6%).
-        # Licensee net sales are the licensee's, not ours. [EST]
         "licensing": {
-            3: {"signing_fees": 300_000, "licensee_net_sales": 0},           # 1st territory signs, launches late
-            4: {"signing_fees": 600_000, "licensee_net_sales": 10_000_000},  # 3 territories live
-            5: {"signing_fees": 600_000, "licensee_net_sales": 28_000_000},  # 5 territories live
+            3: {"signing_fees": 300_000, "licensee_net_sales": 0},
+            4: {"signing_fees": 600_000, "licensee_net_sales": 10_000_000},
+            5: {"signing_fees": 600_000, "licensee_net_sales": 28_000_000},
         },
-        # Licensing is low-cost, not no-cost. Trademark filings per territory,
+        # Licensing is low-cost, not no-cost: trademark filings per territory,
         # agreements, licensee search, travel and quality audits. [EST]
         "licensing_costs": {2: 120_000, 3: 180_000, 4: 240_000, 5: 280_000},
 
-        # Branding, website and design cost nothing in cash: PJ Offner takes
-        # 10% equity for the identity and packaging, and the founders build the
-        # site and shoot the content themselves. What remains below are
-        # third-party fees that no amount of in-house skill removes.
+        # Branding, website and design cost nothing in cash: PJ Offner takes 10%
+        # equity for the identity and packaging, and the founders build the site
+        # and shoot the content themselves. What remains are third-party fees.
         "setup_costs": [
             (1, "Company setup and banking",                     18_000),
             (1, "Trademark filing — SA classes 30 and 25",       22_000),
@@ -409,50 +422,27 @@ SCENARIOS = {
             (6, "POS kit — counter units and display boxes",     20_000),
         ],
 
-        # Trade finance against confirmed stock orders. The facility advances a
-        # share of each landed-stock payment and is repaid out of sale proceeds
-        # a few months later, at 17% p.a. [SOURCE: founders]
-        #
-        # It attacks the single biggest use of the raise -- inventory. But it
-        # only arrives in year 2, once there is traction to lend against
-        # [SOURCE: founders], and that timing is the whole shape of this plan:
-        # the raise has to carry the launch order and the first two reorders
-        # unaided, and the bank carries the stock from year two onward.
         "trade_finance": {
-            "advance_pct": 0.70,      # [EST] typical import facility advance
-            "repay_months": 4,        # [EST] repaid out of sale proceeds
-            "rate_pa": 0.17,          # [SOURCE: founders]
-            "start_month": 13,        # year 2 [SOURCE: founders]
+            "advance_pct": 0.70,
+            "repay_months": 4,
+            "rate_pa": 0.17,
+            "start_month": 13,
         },
 
-        # R1m from an outside investor on a hybrid structure: 10% of the equity
-        # PLUS the R1m returned out of R2 from every tin sold, until repaid.
-        # See finance/bootstrap-plan.md for what that costs.
         "funding_rounds": [
             (1, "Investor — R1m for 10% equity plus revenue share", 1_000_000),
         ],
-        # R1 a tin from the first sale until the R1m is returned. That needs
-        # 1,000,000 tins. This plan sells 770,505 in five years, so the capital
-        # is NOT fully repaid inside the horizon — roughly R229k is still
-        # outstanding at the end of year 5, clearing during year 6. That is the
-        # trade: the lightest possible drag on the business, and an investor who
-        # waits longer than five years to be made whole.
         "investor_repayment": {
             "per_tin": 1.00,
             "total": 1_000_000,
-            "start_month": FIRST_SALE_MONTH,   # payments begin with the first sale
+            "start_month": FIRST_SALE_MONTH,
         },
-
-        # Dividend policy: nothing is distributed until the investor's R1m has
-        # been returned in full; after that, half of each year's profit is paid
-        # out, and never so much that cash falls below the working-capital
-        # buffer. Investor takes their 10% of whatever is declared.
         "investor_equity_pct": 0.10,
         "dividend_policy": {
             "after_capital_repaid": True,
             "payout_pct": 0.50,
-            "min_cash_buffer": 1_500_000,   # [EST] ~4 months of year-5 opex
-            "frequency_months": 12,         # declared at each year end
+            "min_cash_buffer": 1_500_000,
+            "frequency_months": 12,
         },
     },
 

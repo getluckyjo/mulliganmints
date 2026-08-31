@@ -16,3 +16,4 @@ more useful than one that was quietly removed.
 | [0006](0006-launch-single-flavour.md) | Launch with strong peppermint only | Accepted |
 | [0007](0007-hold-shares-personally.md) | Hold founders' shares personally, no trust | Accepted |
 | [0008](0008-bootstrap-route.md) | **The bootstrap route is the plan — R1m, no growth round** | **Accepted** |
+| [0009](0009-distributor-led.md) | **Distributor-led from day 1, golf and bars at R20/tin** | **Accepted** |

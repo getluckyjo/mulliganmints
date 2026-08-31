@@ -79,20 +79,20 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 
 | | Bootstrap | Bear | Base | Bull |
 | --- | ---: | ---: | ---: | ---: |
-| Year 5 units vs base | 18% | 45% | 100% | 155% |
-| Year 1 units | 10,760 | 11,034 | 24,520 | 38,006 |
-| Year 5 units | 313,600 | 805,764 | 1,790,588 | 2,775,411 |
-| Year 1 revenue | R280,280 | R262,433 | R620,410 | R990,485 |
-| Year 3 revenue | R4.40m | R5.62m | R13.28m | R21.20m |
-| Year 5 revenue | R11.92m | R17.70m | R43.63m | R68.59m |
-| Year 5 EBITDA | R4.47m | R-189,443 | R12.59m | R25.70m |
-| Year 5 EBITDA margin | 38% | -1% | 29% | 37% |
-| Cumulative 5-yr EBITDA | R7.65m | R-5.92m | R16.65m | R43.82m |
+| Year 5 units vs base | 36% | 45% | 100% | 155% |
+| Year 1 units | 22,275 | 11,034 | 24,520 | 38,006 |
+| Year 5 units | 638,005 | 805,764 | 1,790,588 | 2,775,411 |
+| Year 1 revenue | R505,969 | R262,433 | R620,410 | R990,485 |
+| Year 3 revenue | R7.68m | R5.62m | R13.28m | R21.20m |
+| Year 5 revenue | R20.64m | R17.70m | R43.63m | R68.59m |
+| Year 5 EBITDA | R9.22m | R-189,443 | R12.59m | R25.70m |
+| Year 5 EBITDA margin | 45% | -1% | 29% | 37% |
+| Cumulative 5-yr EBITDA | R17.87m | R-5.92m | R16.65m | R43.82m |
 | First EBITDA-positive year | 2 | never | 3 | 2 |
-| Unfunded peak cash deficit | R630,003 | R8.60m | R5.57m | R3.36m |
+| Unfunded peak cash deficit | R983,568 | R8.60m | R5.57m | R3.36m |
 | Month of peak deficit | M12 | M50 | M33 | M33 |
-| Lowest funded cash balance | R369,997 | R1.21m | R573,601 | R629,994 |
-| Year 5 closing cash | R5.36m | R7.64m | R22.41m | R38.84m |
+| Lowest funded cash balance | R16,432 | R1.21m | R573,601 | R629,994 |
+| Year 5 closing cash | R8.65m | R7.64m | R22.41m | R38.84m |
 
 ## 5. Capital requirement
 

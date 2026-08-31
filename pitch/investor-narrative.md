@@ -19,9 +19,10 @@ should be written through the `johannes-voice` skill.*
 | Equity | 10% — permanent |
 | Repayment | R1 per tin sold until R1m is returned |
 | Cap table after | Founders 80% · PJ Offner 10% · Investor 10% |
-| Investor all-in over 5 years | **R3.1m – R5.8m** on R1m — a **29–46% IRR** |
+| Investor all-in over 5 years | **R5.6m – R9.3m** on R1m — a **49–64% IRR** |
 
-No second round. Trade finance carries the stock from year 2. After that the
+No second round. **A distributor with a sales team covers golf clubs and bars
+from day 1.** Trade finance carries the stock from year 2. After that the
 business funds itself.
 
 ---
@@ -61,10 +62,13 @@ Not a better mint. The mint that has a place.
 
 This is the part that makes R1m enough.
 
+- **A distributor with an existing sales team, from day 1.** Their feet, their
+  routes, their relationships — covering golf clubs and bars from launch. We pay
+  R4.25 a tin for it and never build a field force.
 - **Two marketing executives**, not one founder learning on the job.
 - **Get Lucky Golf Club already has access to 30 golf courses** and runs
-  **600+ promotions a year** across them. We are standing on the customer's
-  premises most weeks. The plan needs no sales hire until month 30.
+  **600+ promotions a year** across them. The golf channel starts warm, and the
+  distributor is handed live outlets rather than a cold list.
 - **600 promotions a year is a sampling machine.** A tin in a golfer's hand costs
   us R10.29 and converts better than any advertisement we could buy.
 - **Branding, packaging, website and content cost nothing in cash.** PJ Offner
@@ -77,16 +81,16 @@ The supplier has quoted. Suntak Foods, 29 August 2026:
 | | |
 | --- | --- |
 | Landed cost per tin | **R10.29** |
-| Net price, golf clubs and bars | **R24.25** (RSP R45 incl VAT) |
-| Gross margin | **58%** |
+| Price to the distributor | **R20.00** — they sell at R24.25, retails at R45 |
+| Gross margin | **55%** in year 1, rising to 71% |
 | Minimum order | 800 kg of candy = 22,944 tins per flavour |
-| **Break-even** | **~2,700 tins a month** |
+| **Break-even** | **~4,500 tins a month** |
 
-**Break-even is about 2,700 tins a month.** That is roughly 60 golf clubs and 40
-bars — the year-one plan. The model turns EBITDA-positive in **month 11**.
+**Break-even is about 4,500 tins a month**, and the model turns EBITDA-positive
+in **month 10**.
 
 That number is the whole argument for this structure. A business that breaks even
-on 2,700 tins does not need R15m; it needs enough to buy stock and survive its
+on 4,500 tins does not need R15m; it needs enough to buy stock and survive its
 first year.
 
 ### 6. Licensing is the actual business
@@ -97,14 +101,15 @@ From year 3 we licence territory by territory — a signing fee up front and a
 royalty on the licensee's net sales, with **no inventory, no COGS and no working
 capital on our side.** Food and beverage brand royalties run 4–6%; we model 6%.
 
-**By year 5 licensing is R2.28m of revenue and 51% of EBITDA.** The tins are how
-we earn the right to it.
+**By year 5 licensing is R2.28m of revenue and 25% of EBITDA** — on 11% of
+revenue, with no inventory and no working capital. The tins are how we earn the
+right to it.
 
 ### 7. And there is a way out
 
-At year-5 EBITDA of R4.47m, a sale at 4–8x gives an equity value of
-**R21m – R39m**. The investor's 10% is worth R2.4m – R4.2m on top of their
-returned capital.
+At year-5 EBITDA of R9.22m, a sale at 4–8x gives an equity value of
+**R43m – R80m**. The investor's 10% is worth R4.3m – R8.0m on top of their
+returned capital and year-5 dividend.
 
 ---
 
@@ -112,19 +117,21 @@ returned capital.
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Tins sold | 10,760 | 71,980 | 145,530 | 228,635 | 313,600 |
-| Revenue | 280,280 | 1,954,696 | 4,404,169 | 7,917,002 | 11,915,683 |
+| Tins sold | 22,275 | 145,110 | 287,775 | 463,480 | 638,005 |
+| Revenue | 505,969 | 3,501,894 | 7,684,262 | 13,799,084 | 20,641,984 |
 | *of which licensing* | — | — | *300,000* | *1,200,000* | *2,280,000* |
-| **EBITDA** | **(232,688)** | **138,915** | **807,483** | **2,461,548** | **4,474,774** |
-| EBITDA margin | — | 7% | 18% | 31% | **38%** |
-| Net profit | (233,022) | 90,532 | 569,328 | 1,702,459 | **3,142,266** |
-| **Closing cash** | **369,997** | **413,266** | **901,278** | **2,313,991** | **5,358,198** |
+| **EBITDA** | **(176,092)** | **773,997** | **2,410,115** | **5,646,131** | **9,218,236** |
+| EBITDA margin | — | 22% | 31% | 41% | **45%** |
+| Net profit | (179,059) | 555,696 | 1,643,215 | 3,947,473 | **6,499,137** |
+| **Closing cash** | **16,432** | **472,466** | **1,735,425** | **5,126,028** | **8,647,487** |
 
-**Cumulative five-year EBITDA R7.65m. Net profit R5.27m.** EBITDA-positive in
+**Cumulative five-year EBITDA R17.87m. Net profit R12.47m.** EBITDA-positive in
 year 2 and self-funding from there.
 
-The lowest cash balance across five years is **R369,997, in month 12** — the last
-month before trade finance takes over the stock.
+**The lowest cash balance is R16,432, in month 12** — the last month before trade
+finance takes over the stock. That is too thin, and it is the one open item in
+this plan: getting the facility agreed for month 10 instead of month 13 lifts it
+to R249,718 and costs nothing. See `finance/bootstrap-plan.md`.
 
 ## Where the R1m goes
 
@@ -153,14 +160,19 @@ real supplier quote — R0.465 FOB, 25% duty, 800 kg minimum, 60-day production.
 Not one rand of revenue is yet. We would rather show you that asymmetry than let
 you find it.
 
-**R1 a tin does not repay R1m inside five years.** It needs 1,000,000 tins; the
-plan sells 770,505. About R229,000 is still outstanding at month 60, clearing
-around month 69. This is a capital-growth deal with a six-year payback, and the
-return lives at exit rather than in yield.
+**Month-12 cash is R16,432.** The distributor-led ramp buys a lot of stock in
+year 1 and trade finance does not arrive until month 13. It is fixable — the
+facility three months earlier is worth R250,000 of headroom and costs no equity —
+but it is not yet fixed, and you should see it before we do.
 
-**No distributions until your capital is repaid.** That is the policy, and on
-this repayment rate it means no dividend inside five years. It is what keeps the
-business self-funding — but you should sign it knowing that.
+**One distributor holds every outlet we have.** If they deprioritise us among the
+hundreds of lines they carry, we have no field force to fall back on. We contract
+minimum performance and the sell-through data; that is a mitigation, not a
+guarantee.
+
+**No distributions until your capital is repaid.** That lands in month 50, so the
+first dividend is in year 5 — R324,957 to you on R3.25m declared. It is what
+keeps the business self-funding.
 
 **A golf creator could launch a competing mint tomorrow** with an audience we
 would need five years and R20m to build. That is why we move now, and why we
@@ -175,7 +187,7 @@ Four numbers that do not currently exist anywhere in the world:
 3. Sell-through by placement — counter vs halfway house vs bar
 4. Cost to acquire an outlet
 
-Plus a registered brand, a proven supply chain, roughly 100 active outlets by the
+Plus a registered brand, a proven supply chain, roughly 270 active outlets by the
 end of year one, and the sell-through evidence a global licensee will want to see
 before signing anything.
 
@@ -184,8 +196,8 @@ before signing anything.
 ## The one-line version
 
 > A strong mint in a tin, built for golf, proved in South Africa for R1m — and
-> licensed to the world. **Break-even is 2,700 tins a month. We already stand on
-> 30 golf courses.**
+> licensed to the world. **Break-even is 4,500 tins a month. We have a
+> distributor's sales team from day 1 and we already stand on 30 golf courses.**
 
 ---
 
