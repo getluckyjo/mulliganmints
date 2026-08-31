@@ -115,7 +115,7 @@ brand story, and the content engine. It is worth the cost to serve.
 ## 7. What "proof of concept" actually means
 
 The pilot is not "did we sell some mints". It has to produce four specific,
-defensible numbers, because those numbers are what the growth round is raised on
+defensible numbers, because those numbers are what a licensee eventually buys
 and what a licensee eventually buys:
 
 1. **Tins per outlet per month**, by channel, measured over at least 90 days

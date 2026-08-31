@@ -1,6 +1,19 @@
 # 0003 — Export to two or three markets first, then licence
 
-**Date:** August 2026 · **Status:** Accepted
+**Date:** August 2026 · **Status:** SUPERSEDED by
+[0008](0008-bootstrap-route.md) — the global route is now **licensing only**
+
+> **What changed.** This decision said export to two or three markets first, so
+> that licensing later would be possible at a better rate. The bootstrap route
+> adopted in 0008 has no capital for export inventory and no appetite for the
+> working capital it consumes, so **we licence from year 3 without exporting
+> first.** The reasoning below about why export makes licensing easier still
+> holds — we are simply choosing not to pay for it. The substitute proof point
+> is South African sell-through data rather than an export track record.
+>
+> Everything else in this record — the comparison of the two models, what a
+> licensee is buying, the target territories, the Irish-origin constraint —
+> remains current.
 
 ## Context
 

@@ -4,11 +4,29 @@
 conversation — **not final copy.** Anything that goes out under Johannes's name
 should be written through the `johannes-voice` skill.*
 
-**The ask: R3.5m pre-seed.**
+**The ask: R1,000,000.**
 
 ---
 
-## The story in six beats
+## The deal
+
+> **R1m for 10% of the equity, plus the R1m returned out of R1 from every tin
+> sold, until it is repaid.**
+
+| | |
+| --- | --- |
+| Cash in | R1,000,000, once, at the start |
+| Equity | 10% — permanent |
+| Repayment | R1 per tin sold until R1m is returned |
+| Cap table after | Founders 80% · PJ Offner 10% · Investor 10% |
+| Investor all-in over 5 years | **R3.1m – R5.8m** on R1m — a **29–46% IRR** |
+
+No second round. Trade finance carries the stock from year 2. After that the
+business funds itself.
+
+---
+
+## The story in seven beats
 
 ### 1. The category is asleep
 
@@ -17,156 +35,168 @@ category as a line extension. Fisherman's Friend built a **£56m global business
 on one product, five billion lozenges a year, 97% exported** — with almost no
 marketing. Altoids took **25%+ of the US market** on a tin and a tone of voice.
 
-Neither of them has an occasion, a community, or a reason to exist beyond being
-strong. That is the gap.
+Neither has an occasion, a community, or a reason to exist beyond being strong.
+Nobody is defending the premium strong-mint tin in South Africa. It is empty.
 
-### 2. Golf has become a media business, and nobody is selling it a mint
+### 2. Golf became a media business, and nobody is selling it a mint
 
 **Good Good Golf raised USD 45m in 2025 on USD 40m+ of revenue. Bob Does Sports
 has 1.1m subscribers and has launched both an apparel line and an alcoholic
 drinks brand.** Golf creators are not selling ad slots any more — they are
 building consumer product companies, and their audiences are buying.
 
-A mint tin is close to a perfect product for that ecosystem: cheap to ship,
-funny on camera, obviously useful on a course, and endlessly photographable.
-**Nobody has made one.**
+A mint tin is close to a perfect product for that ecosystem: cheap to ship, funny
+on camera, obviously useful on a course, endlessly photographable. **Nobody has
+made one.**
 
 ### 3. Mulligan Mints is the mint that belongs somewhere
 
-A genuinely strong pressed mint in a tin worth keeping. Irish-inflected heritage
-design with a modern edge. **Like it never happened** — the ceremonial second
-chance for the shot you'd rather forget.
+A genuinely strong sugar-free pressed mint in a tin worth keeping. Irish-inflected
+heritage design with a modern edge. **Like it never happened** — the ceremonial
+second chance for the shot you'd rather forget.
 
 Not a better mint. The mint that has a place.
 
-### 4. South Africa is the cheapest proving ground in the world
+### 4. We are not starting from zero
 
-**460 golf clubs. 139,496 registered golfers. 4.2 million rounds a year.** Small
-enough that one person can physically visit every club that matters. Big enough
-that the sell-through data is real.
+This is the part that makes R1m enough.
 
-We prove the unit economics here for under R1m of stock, then take the evidence
-global.
+- **Two marketing executives**, not one founder learning on the job.
+- **Get Lucky Golf Club already has access to 30 golf courses** and runs
+  **600+ promotions a year** across them. We are standing on the customer's
+  premises most weeks. The plan needs no sales hire until month 30.
+- **600 promotions a year is a sampling machine.** A tin in a golfer's hand costs
+  us R10.29 and converts better than any advertisement we could buy.
+- **Branding, packaging, website and content cost nothing in cash.** PJ Offner
+  takes 10% equity for the identity; we build the rest ourselves.
 
-### 5. The economics work at small scale
+### 5. The economics are already real, not estimated
+
+The supplier has quoted. Suntak Foods, 29 August 2026:
 
 | | |
 | --- | --- |
-| Landed cost per tin | **R10.29** — on a real supplier quote |
-| Net price, golf and bars | **R24.25** (RSP R45) |
+| Landed cost per tin | **R10.29** |
+| Net price, golf clubs and bars | **R24.25** (RSP R45 incl VAT) |
 | Gross margin | **58%** |
-| A club buys a 12-tin box for R291 ex-VAT and makes **R178 (38%)** on it | |
-| Break-even | **~15,600 tins/month — around month 21** |
+| Minimum order | 800 kg of candy = 22,944 tins per flavour |
+| **Break-even** | **~2,700 tins a month** |
 
-### 6. The product is the proof. The brand is the asset.
+**Break-even is about 2,700 tins a month.** That is roughly 60 golf clubs and 40
+bars — the year-one plan. The model turns EBITDA-positive in **month 11**.
 
-By year 4 the brand starts earning without shipping anything. Food and beverage
-brand licences run **4–6% of licensee net sales** at roughly **95% margin and
-zero working capital**. Year 5 of the plan carries R1.8m of licensing income
-across three territories.
+That number is the whole argument for this structure. A business that breaks even
+on 2,700 tins does not need R15m; it needs enough to buy stock and survive its
+first year.
 
-**Everything before year 4 is the manufacture of a licensable asset.**
+### 6. Licensing is the actual business
+
+South Africa is the proof. The brand is the asset.
+
+From year 3 we licence territory by territory — a signing fee up front and a
+royalty on the licensee's net sales, with **no inventory, no COGS and no working
+capital on our side.** Food and beverage brand royalties run 4–6%; we model 6%.
+
+**By year 5 licensing is R2.28m of revenue and 51% of EBITDA.** The tins are how
+we earn the right to it.
+
+### 7. And there is a way out
+
+At year-5 EBITDA of R4.47m, a sale at 4–8x gives an equity value of
+**R21m – R39m**. The investor's 10% is worth R2.4m – R4.2m on top of their
+returned capital.
 
 ---
 
 ## The numbers
 
-| Base case | Y1 | Y2 | Y3 | Y4 | Y5 |
+| ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Tins | 25k | 183k | 555k | 1.14m | 1.79m |
-| Revenue | R0.62m | R4.71m | R13.28m | R26.78m | R43.63m |
-| Gross margin | 59% | 63% | 63% | 63% | 65% |
-| EBITDA | −R1.46m | −R0.43m | R0.53m | R5.41m | R12.59m |
+| Tins sold | 10,760 | 71,980 | 145,530 | 228,635 | 313,600 |
+| Revenue | 280,280 | 1,954,696 | 4,404,169 | 7,917,002 | 11,915,683 |
+| *of which licensing* | — | — | *300,000* | *1,200,000* | *2,280,000* |
+| **EBITDA** | **(232,688)** | **138,915** | **807,483** | **2,461,548** | **4,474,774** |
+| EBITDA margin | — | 7% | 18% | 31% | **38%** |
+| Net profit | (233,022) | 90,532 | 569,328 | 1,702,459 | **3,142,266** |
+| **Closing cash** | **369,997** | **413,266** | **901,278** | **2,313,991** | **5,358,198** |
 
-**Cumulative five-year EBITDA: R16.7m.** Full model in
-`finance/outputs/mulligan-mints-5yr-model.xlsx`.
+**Cumulative five-year EBITDA R7.65m. Net profit R5.27m.** EBITDA-positive in
+year 2 and self-funding from there.
 
-## The ask
+The lowest cash balance across five years is **R369,997, in month 12** — the last
+month before trade finance takes over the stock.
 
-| Round | When | Amount |
-| --- | --- | ---: |
-| **Pre-seed** | Now | **R3.5m** |
-| Growth round | Month 20 | R12m |
+## Where the R1m goes
 
-### What the R3.5m buys
+| | ZAR |
+| --- | ---: |
+| First production order — 22,944 tins landed | ~231,000 |
+| Second and third orders, year 1, before trade finance | ~317,000 |
+| Company, SA trademark, samples, tooling, barcodes, lab and label compliance | 125,000 |
+| Year-1 marketing — sampling, club activation, content | 60,000 |
+| Working capital and runway to month 12 | balance |
+| **Branding, packaging, website, photography** | **nil — equity and in-house** |
 
-| | |
-| --- | --- |
-| Trademark, artwork, content, website, launch (brand identity is equity, not cash) | R388k |
-| First three production runs and import costs | ~R900k |
-| Team — founder from month 4, first rep from month 7 | R522k |
-| Marketing — creator seeding, club activation, sampling | R380k |
-| Overheads, logistics and working capital buffer | balance |
+**Inventory dominates the raise, not startup costs.** The money buys tins before
+people buy them from us. From year 2 the bank funds that at 17% and the equity
+stays in the business.
 
-### What it produces
+## What we would rather tell you up front
 
-**Four numbers that do not currently exist anywhere in the world:**
+**The riskiest number is one nobody in the world has.** Tins sold per golf club
+per month has no published benchmark anywhere. We model 32 in year one. Get
+Lucky's 30 courses make the *access* real; they do not make the *rate* real.
+Everything else in this plan is downstream of that one figure.
+
+**The cost side is quoted; the revenue side is not.** Every rand of cost is on a
+real supplier quote — R0.465 FOB, 25% duty, 800 kg minimum, 60-day production.
+Not one rand of revenue is yet. We would rather show you that asymmetry than let
+you find it.
+
+**R1 a tin does not repay R1m inside five years.** It needs 1,000,000 tins; the
+plan sells 770,505. About R229,000 is still outstanding at month 60, clearing
+around month 69. This is a capital-growth deal with a six-year payback, and the
+return lives at exit rather than in yield.
+
+**No distributions until your capital is repaid.** That is the policy, and on
+this repayment rate it means no dividend inside five years. It is what keeps the
+business self-funding — but you should sign it knowing that.
+
+**A golf creator could launch a competing mint tomorrow** with an audience we
+would need five years and R20m to build. That is why we move now, and why we
+approach them as partners and licensees rather than competing quietly.
+
+## What the R1m actually buys
+
+Four numbers that do not currently exist anywhere in the world:
 
 1. Tins sold per golf club per month
 2. Reorder rate by channel
 3. Sell-through by placement — counter vs halfway house vs bar
 4. Cost to acquire an outlet
 
-Plus a registered brand, a proven supply chain, and roughly 250 active outlets.
-
-That is precisely what the R12m growth round is raised on, and what a global
-licensee eventually buys.
-
----
-
-## What we would rather say up front than be asked
-
-**The riskiest number is one nobody in the world has.** Sell-through per golf club
-per month has no published benchmark. We model 32 tins. We are spending R30,000
-of stock and 90 days to find out, before spending anything else. The decision
-gates are written down: below 20 tins a month and we stop and re-architect the
-product rather than spend into it.
-
-**The downside is not a slower version of the upside.** At half the modelled
-sell-through the business is EBITDA-negative for all five years and needs R8.60m it
-cannot service. If that happens, **the right answer is not to raise the growth
-round** — it is to hold headcount flat, stay in golf and DTC where margins are
-60–73%, and run it as a profitable niche brand at ~200,000 tins a year. We would
-rather have that conversation now than in month 20.
-
-**We now have a supplier price, and it came in above our estimate.** Suntak
-Foods quoted USD 0.465 FOB Shantou on 29 August 2026 against the USD 0.44 we had
-modelled — 5.7% higher — and wants a 50% deposit rather than 30%. That is already
-in the numbers above: it cost about R1.6m of cumulative five-year EBITDA. We
-would rather show you the re-costed plan than one built on our own guess.
-
-**We are launching with one flavour, not three.** The minimum order is 800 kg of
-candy per recipe — 22,944 tins, R231,000 a flavour. Three flavours would have
-tied up R681,000 of stock in three untested bets before a single tin was sold,
-against year-one demand of 24,500 and a 24-month shelf life. Strong peppermint is
-the hero and the only flavour quoted; flavours two and three get chosen on real
-sell-through. We would rather buy one year of the right stock than three years of
-a guess.
-
-**Year 4–5 EBITDA margins of 26–31% are at the top of the range** for branded
-confectionery. They depend on the distributor transition working and the
-licensing line arriving. A conservative read of years 4 and 5 is 20–25%.
-
-**A golf creator could launch a competing mint tomorrow** with an audience we
-would need five years and R20m to build. That is real. It is also why we are
-approaching them as partners and licensees rather than competing quietly, and why
-speed matters more than perfection.
+Plus a registered brand, a proven supply chain, roughly 100 active outlets by the
+end of year one, and the sell-through evidence a global licensee will want to see
+before signing anything.
 
 ---
 
 ## The one-line version
 
-> A strong mint in a tin, built for golf, proved in South Africa for under R1m,
-> and licensed to the world. **R3.5m to find out whether a golf club sells one a
-> day.**
+> A strong mint in a tin, built for golf, proved in South Africa for R1m — and
+> licensed to the world. **Break-even is 2,700 tins a month. We already stand on
+> 30 golf courses.**
 
 ---
 
 ## Before this becomes a deck
 
-- [ ] Supplier quote in hand — replaces the biggest unknown
 - [ ] PJ Offner's identity delivered — the deck needs the tin on the first page
 - [ ] Trademark filed
-- [ ] Physical samples to hand out in the room. **This product sells itself when
-      someone eats one.** Do not pitch it without tins on the table.
-- [ ] Rewrite this in Johannes's voice via the `johannes-voice` skill
+- [ ] Physical samples in the room. **This product sells itself when someone eats
+      one.** Do not pitch it without tins on the table.
+- [ ] Rewrite in Johannes's voice via the `johannes-voice` skill
+- [ ] Decide whether to show the R15.5m funded alternative at all. It is modelled
+      in `finance/5-year-plan.md` and reaches R43.6m of year-5 revenue. Showing it
+      proves we know what scale would cost; it also invites the question of why we
+      are not asking for it. Recommendation: keep it in the appendix, not the deck.

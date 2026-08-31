@@ -1,4 +1,14 @@
-# The five-year plan
+# The funded plan — scale comparator, not the plan of record
+
+> **This is no longer the plan.** [Decision 0008](../docs/decisions/0008-bootstrap-route.md)
+> adopted the bootstrap route: **R1m, once**, golf and bars only, brand licensed
+> globally rather than exported. See [`bootstrap-plan.md`](bootstrap-plan.md).
+>
+> This document is kept as the answer to *"what would it take to go faster?"* —
+> R15.5m of capital, national retail, export inventory, and roughly half the
+> company. It reaches R43.6m of year-5 revenue at a **lower** EBITDA margin than
+> the bootstrap route, and it is the option to revisit if the 90-day pilot beats
+> plan materially.
 
 *Narrative accompaniment to [`outputs/model-summary.md`](outputs/model-summary.md).
 All figures base case, ZAR, excluding VAT.*

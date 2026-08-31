@@ -20,10 +20,20 @@ and bars), then global by brand licence or export. Owner: Johannes Le Roux
 - Documents are written to be read by outsiders — a designer, an investor, a
   freight agent, a retail buyer. Write them that way.
 
+## The plan of record
+
+**The bootstrap route** — `finance/bootstrap-plan.md`, adopted in decision 0008.
+One R1m raise (10% equity plus R1/tin until repaid), trade finance from year 2,
+golf clubs and bars and DTC only, and the brand **licensed** globally rather than
+exported. `finance/5-year-plan.md` is the funded scale comparator, not the plan.
+
+Model scenario: `bootstrap`. When quoting numbers, quote that one.
+
 ## Open questions being carried
 
-Tracked in `docs/decisions/`. The live ones are the supplier quote, the tin
-format decision, and whether the global route is licence or export.
+Tracked in `docs/decisions/`. The live ones are the second flavour (a month-9
+decision on real sell-through), the sweetener, and getting trade finance agreed
+before month 13.
 
 ## Voice
 

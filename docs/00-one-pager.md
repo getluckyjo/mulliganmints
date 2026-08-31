@@ -15,7 +15,8 @@ mulligan — the shot you take again, the one that never counted.
 **Who for.** Golfers, and the people who drink with them.
 
 **Where.** Golf club pro shops and halfway houses, then bars and restaurants,
-then national retail, then export — then licensed globally.
+then direct to consumer. No national retail, no export — the brand is **licensed**
+globally rather than shipped.
 
 **Why South Africa first.** 460 golf clubs, 139,496 registered golfers, 4.2m
 rounds a year. Small enough to prove sell-through by hand. Cheap enough to prove
@@ -34,10 +35,11 @@ on a global media channel at South African cost.
 | --- | --- |
 | Landed cost / tin | R10.29 (quoted, not estimated) |
 | Net price / tin (golf, bars) | R24.25 — RSP R45 incl VAT |
-| Gross margin | 58% direct, 65% blended by year 5 |
-| Break-even | ~15,600 tins/month, around month 21 |
-| Year 5 (base) | 1.79m tins · R43.6m revenue · R12.6m EBITDA |
-| Capital | **R3.5m pre-seed**, then R12m at month 20 |
+| Gross margin | 58% direct, 68% blended by year 5 |
+| **Break-even** | **~2,700 tins/month — EBITDA-positive month 11** |
+| Year 5 | 313,600 tins · R11.9m revenue · R4.5m EBITDA at 38% |
+| **Capital** | **R1,000,000, once** — 10% equity + R1/tin until repaid |
+| Licensing | R2.28m of year-5 revenue — **51% of EBITDA** |
 
 ## The state of play
 
@@ -50,6 +52,7 @@ on a global media channel at South African cost.
 
 ## The bet
 
-R3.5m to find out whether a golf club sells one tin a day. If it does, the
-five-year plan follows. If it doesn't, we find out in 90 days for R30,000 of
-stock.
+R1m to find out whether a golf club sells one tin a day. Break-even is ~2,700
+tins a month — about 60 clubs and 40 bars, which is the year-one plan. If it
+works, the business self-funds from year 2 and the brand gets licensed globally.
+If it doesn't, we find out in 90 days for R231,000 of stock and still own 80%.

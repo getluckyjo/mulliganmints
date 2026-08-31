@@ -1,7 +1,11 @@
-# The bootstrap plan — prove it here, licence it everywhere
+# The plan — prove it here, licence it everywhere
 
-*Founder-funded. No growth round. Golf and bars in South Africa; the brand
-licensed globally. Figures generated from `finance/model/assumptions.py`,
+> **This is the plan of record**, adopted in
+> [decision 0008](../docs/decisions/0008-bootstrap-route.md). The fully funded
+> alternative is kept as a scale comparator in [`5-year-plan.md`](5-year-plan.md).
+
+*One R1m raise. No growth round. Golf clubs, bars and DTC in South Africa; the
+brand licensed globally. Figures generated from `finance/model/assumptions.py`,
 scenario `bootstrap`. Rebuild with `cd finance/model && python3 build_outputs.py`.*
 
 ---

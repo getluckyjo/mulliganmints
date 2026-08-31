@@ -2,6 +2,15 @@
 
 *The decision that determines what kind of company this is. Sources in [`sources.md`](sources.md).*
 
+> **Decided: licensing only.** [Decision 0008](../docs/decisions/0008-bootstrap-route.md)
+> adopted the bootstrap route, which has no capital for export inventory. The
+> recommendation below — export first, then licence — was the right answer for a
+> funded plan and is **superseded**. We licence from year 3 without exporting
+> first, and the substitute proof point is South African sell-through data rather
+> than an export track record. Everything else here still stands: what a licensee
+> is buying, the target territories, the royalty benchmarks, and the Irish-origin
+> constraint.
+
 ---
 
 ## 1. The question

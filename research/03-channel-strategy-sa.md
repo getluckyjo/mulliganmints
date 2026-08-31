@@ -1,32 +1,39 @@
 # Channel strategy — South Africa
 
-*How we actually get 1.8 million tins a year into hands. Sources in [`sources.md`](sources.md).*
+*How we get tins into hands. Sources in [`sources.md`](sources.md).*
+
+> **Scope note.** [Decision 0008](../docs/decisions/0008-bootstrap-route.md)
+> adopted the bootstrap route, which stops the ladder at bars and DTC. **National
+> retail and export are out of the plan** — the global route is licensing, not
+> shipping. The retail and export sections below are kept because the analysis
+> stands and they are the channels to reopen if the pilot beats plan, but they
+> are not funded and not scheduled.
 
 ---
 
 ## 1. The channel ladder
 
 We deliberately enter through the hardest, smallest, highest-margin channel and
-work outward. That order is not sentiment — it is how brand permission is built
-before retail buyers are asked to take a risk.
+work outward. That order is not sentiment — it is how brand permission is built.
 
 ```
-YEAR 1        YEAR 2              YEAR 3              YEAR 4-5
-Golf clubs → + Bars & pubs   →  + Grocery/pharmacy → + Export
-(direct)      (direct, then      (national retail)    (importers)
-              distributors)                           + Licensing
+YEAR 1              YEAR 2              YEAR 3 ONWARD
+Golf clubs      →   + Bars & pubs   →   + Brand licensing, territory by territory
+(direct)            (direct)            (no inventory, no working capital)
++ DTC
+                    ── not in the plan: national retail, export ──
 ```
 
 Every step down the ladder trades margin for reach:
 
-| Channel | Net to us | Gross margin | Why it exists |
+| Channel | Net to us | Gross margin | Status |
 | --- | ---: | ---: | --- |
-| Direct to consumer | R35.00 | 73% | Highest margin, lowest volume, best data |
-| Golf clubs (direct) | R24.25 | 60% | **The brand engine.** Never give this up. |
-| Bars (direct) | R24.25 | 60% | Volume, but expensive to service |
-| Bars (via distributor) | R18.00 | 46% | Reach we cannot afford to service ourselves |
-| Grocery & pharmacy | R21.00 | 54% | Scale, after 32% retail margin + 13% trade spend |
-| Export FOB SA | R15.50 | 38% | Volume with almost no cost to serve |
+| Direct to consumer | R35.00 | 71% | **In the plan.** Highest margin, best data |
+| Golf clubs (direct) | R24.25 | 58% | **In the plan.** The brand engine. |
+| Bars (direct) | R24.25 | 58% | **In the plan.** |
+| Bars (via distributor) | R18.00 | 43% | Not in the plan — we keep the margin |
+| Grocery & pharmacy | R21.00 | 51% | **Out.** R1.4m of listing fees, 65-day terms |
+| Export FOB SA | R15.50 | 34% | **Out.** We licence the brand instead |
 
 ## 2. Channel one — golf clubs
 
@@ -122,9 +129,12 @@ ignores it is a plan that either overstates margin or understates headcount.
 **Golf stays direct forever.** It is 300 outlets, it is the brand, and it is
 worth the cost to serve.
 
-## 4. Channel three — grocery and pharmacy retail
+## 4. Channel three — grocery and pharmacy retail *(out of the plan)*
 
-Enters month 19. Not before.
+> Not funded and not scheduled under decision 0008. Kept as the analysis to
+> revisit if the pilot beats plan and a growth round is raised.
+
+Would enter month 19 at the earliest. Not before.
 
 **Why not earlier.** Retail is where challenger brands go to die early. Listing
 fees, promotional grids, 60–75 day terms and returns will consume a pre-seed

@@ -78,8 +78,8 @@ By day 90 the numbers are in and they say one of three things:
 
 | If sell-through is | Then |
 | --- | --- |
-| **Above ~32 tins/club/month** | The base case holds. Scale the outlet count, start the growth round conversation early, hold pricing. |
-| **20–32** | The model works but slower. Push break-even out, raise a smaller growth round, lean harder on DTC and golf where margins are best. |
+| **Above ~32 tins/club/month** | The plan holds. Scale the outlet count, get trade finance agreed early, hold pricing. Start the licensing conversations. |
+| **20–32** | The model works but slower. Push break-even out, slow the outlet ramp to match cash, lean harder on DTC and golf where margins are best. Break-even is only ~2,700 tins/month, so this is survivable rather than fatal. |
 | **Below ~20** | **Stop and diagnose before spending more.** Is it price, placement, product strength, or the wrong channel? A 35g tin at R45 may simply be the wrong architecture — a smaller tin at R30 is a real alternative. Better to find this out on 40 clubs than on 300. |
 
 Also due by day 90:
