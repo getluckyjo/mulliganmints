@@ -286,6 +286,7 @@ def build_workbook():
         ("TOTAL OPERATING COSTS", "opex_total", MONEY),
         ("", None, None),
         ("EBITDA", "ebitda", MONEY),
+        ("Finance costs (trade finance interest)", "finance_cost", MONEY),
         ("Tax charge", "tax_charge", MONEY),
         ("NET PROFIT", "net_profit", MONEY),
     ]
@@ -347,12 +348,15 @@ def build_workbook():
             ("Operating costs paid", "cash_out_opex", MONEY),
             ("VAT settled", "cash_vat", MONEY),
             ("Tax paid", "cash_tax", MONEY),
+            ("Trade finance drawn", "cash_tf_draw", MONEY),
+            ("Trade finance repaid", "cash_tf_repay", MONEY),
             ("Funding received", "cash_funding", MONEY),
             ("NET CASHFLOW", "net_cashflow", MONEY),
             ("CLOSING CASH", "closing_cash", MONEY),
             ("Stock on hand (units)", "stock_units", UNITS),
             ("Stock on hand (value)", "stock_value", MONEY),
             ("Debtors", "debtors", MONEY),
+            ("Trade finance outstanding", "tf_outstanding", MONEY),
         ], "Cashflow monthly"),
     ]:
         ws = wb.create_sheet(name)
@@ -549,6 +553,7 @@ def build_markdown(results, needs):
         line(label, key)
     line("**Total operating costs**", "opex_total")
     line("**EBITDA**", "ebitda")
+    line("Finance costs (trade finance)", "finance_cost")
     w("| EBITDA margin | " + " | ".join(
         f"{(e/r*100 if r else 0):.0f}%" for e, r in zip(base.annual("ebitda"), base.annual("revenue"))) + " |")
     line("Tax charge", "tax_charge")
@@ -564,6 +569,8 @@ def build_markdown(results, needs):
                        ("Operating costs paid", "cash_out_opex"),
                        ("VAT settled", "cash_vat"),
                        ("Tax paid", "cash_tax"),
+                       ("Trade finance drawn", "cash_tf_draw"),
+                       ("Trade finance repaid", "cash_tf_repay"),
                        ("Funding received", "cash_funding"),
                        ("**Net cashflow**", "net_cashflow")]:
         line(label, key)

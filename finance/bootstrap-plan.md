@@ -1,165 +1,229 @@
-# The bootstrap option
+# The bootstrap plan — prove it here, licence it everywhere
 
-*A second route: founder-funded, no growth round, golf and bars only.
-Generated figures from `finance/model/assumptions.py`, scenario `bootstrap`.
-Rebuild with `cd finance/model && python3 build_outputs.py`.*
+*Founder-funded. No growth round. Golf and bars in South Africa; the brand
+licensed globally. Figures generated from `finance/model/assumptions.py`,
+scenario `bootstrap`. Rebuild with `cd finance/model && python3 build_outputs.py`.*
 
 ---
 
-## The idea in one paragraph
+## The answer, up front
 
-Raise **R850,000 instead of R15.5m.** Sell only through the channels that need no
-capital — golf clubs, bars and the webshop, all direct. No national retail, so no
-R1.4m of listing fees and no 65-day terms. No export, so no inventory sitting in
-someone else's warehouse. No distributor, because bootstrapping needs margin, not
-reach. **Turn cash-positive in year 2 and fund every subsequent step out of
-trading profit.**
+> ## Raise **R750,000**, in two tranches.
+> **R450,000 now. R300,000 in month 6.** Nothing after that.
 
-## Why it is credible at all
+The model's unfunded peak deficit is **R619,243, and it lands in month 12** —
+the last month before trade finance switches on. R800k would be needed without
+that facility; R750,000 holds **R130,757** at the trough.
 
-Because the founder is already standing on the customer's premises. **Get Lucky
-Golf Club runs 600+ golf days a year across 30+ premium courses.** That is not a
-cold-call list — it is an existing weekly presence at exactly the venues this
-product sells through. The outlet plan below assumes no sales team until month 30
-precisely because of that.
+That timing is the whole shape of this plan. **The raise carries year one; the
+bank carries the stock from year two.** After that the business funds itself:
+**EBITDA-positive in year 2**, and **R7.65m of cumulative EBITDA** over five
+years without another rand of equity.
 
-That is also the reason this option should not be dismissed as the sad version of
-the plan. It is the version that uses the asset the founder actually has.
+## The strategy in one line
+
+**South Africa is the proof. Licensing is the business.**
+
+Sell tins in SA golf clubs and bars to generate the one thing a global licensee
+will pay for — evidence that the brand moves product. Then licence territory by
+territory: a signing fee up front and a royalty on the licensee's net sales, with
+no inventory, no COGS and no working capital on our side.
+
+By year 5, **licensing is R2.28m of revenue and 51% of EBITDA.** The tins are how
+we earn the right to it.
+
+## Why this is credible — the three things that make it work
+
+**1. The golf channel does not start at zero.** Get Lucky Golf Club already has
+access to 30 clubs and runs 600 promotions a year across them. This is not a
+cold-call list; it is a weekly presence at exactly the venues this product sells
+through. The plan exits year 1 at 60 clubs and needs no sales hire until month 30
+because of it.
+
+**2. 600 promotions a year is a sampling machine.** The single cheapest thing in
+this category is a tin in a golfer's hand — it costs us R10.29 and it converts
+better than any advertisement we could buy. Get Lucky puts us in front of the
+right people roughly fifty times a month, already paid for.
+
+**3. Two marketing executives instead of an agency.** Johannes and Andrew build
+the brand, the site, the content and the trade activation in-house. Combined with
+PJ Offner taking 10% equity for the identity and packaging, **branding, website
+and design cost nothing in cash.**
+
+> One note on how that third advantage is modelled. Being good at marketing is
+> counted **once** — as higher sell-through per outlet for the same spend, not
+> as a smaller budget. Claiming both a cheaper budget *and* the results of an
+> expensive one is the most common way a plan flatters itself.
 
 ## The numbers
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| **Tins sold** | 6,800 | 46,870 | 97,490 | 157,700 | 220,215 |
-| Net revenue | 177,800 | 1,261,152 | 2,734,456 | 4,606,219 | 7,126,264 |
-| Gross profit | 107,826 | 772,719 | 1,675,823 | 2,959,541 | 4,817,833 |
-| Gross margin | 61% | 61% | 61% | 64% | 68% |
-| Salaries & founder draw | — | 190,800 | 533,710 | 890,880 | 1,333,176 |
-| Marketing | 60,000 | 100,892 | 218,757 | 322,435 | 498,838 |
-| Total operating costs | 426,454 | 667,279 | 1,291,155 | 1,968,223 | 2,823,309 |
-| **EBITDA** | **(318,628)** | **105,440** | **384,668** | **991,318** | **1,994,524** |
-| EBITDA margin | — | 8% | 14% | 22% | 28% |
-| **Net profit** | (318,628) | 99,382 | 344,427 | 723,662 | 1,456,003 |
+| **Tins sold** | 10,760 | 71,980 | 145,530 | 228,635 | 313,600 |
+| Product revenue | 280,280 | 1,954,696 | 4,104,169 | 6,717,002 | 9,635,683 |
+| **Licensing revenue** | — | — | **300,000** | **1,200,000** | **2,280,000** |
+| Net revenue | 280,280 | 1,954,696 | 4,404,169 | 7,917,002 | 11,915,683 |
+| Gross profit | 169,556 | 1,204,377 | 2,827,577 | 5,537,953 | 8,627,394 |
+| Operating costs | (402,244) | (1,065,462) | (2,020,094) | (3,076,405) | (4,152,620) |
+| **EBITDA** | **(232,688)** | **138,915** | **807,483** | **2,461,548** | **4,474,774** |
+| EBITDA margin | — | 7% | 18% | 31% | 38% |
+| Trade finance interest @ 17% | — | (42,493) | (86,507) | (129,413) | (170,300) |
+| Tax | (334) | (5,890) | (151,648) | (629,676) | (1,162,208) |
+| **Net profit** | **(233,022)** | **90,532** | **569,328** | **1,702,459** | **3,142,266** |
 
 ### Cashflow
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Receipts from customers (incl VAT) | 159,850 | 1,357,906 | 3,007,410 | 5,128,479 | 7,881,988 |
-| Payments to supplier | (267,602) | (564,745) | (1,147,030) | (1,545,392) | (1,895,485) |
-| Import duty & clearing | (49,129) | (150,801) | (261,281) | (339,630) | (550,756) |
-| Operating costs paid | (426,454) | (667,279) | (1,291,155) | (1,968,223) | (2,823,309) |
-| VAT settled | 64,919 | (22,595) | (135,489) | (332,599) | (457,726) |
-| Tax paid | — | (6,058) | (40,241) | (267,656) | (538,522) |
-| Founder capital | 850,000 | — | — | — | — |
-| **Net cashflow** | **331,584** | **(53,572)** | **132,214** | **674,979** | **1,616,190** |
-| **Closing cash** | **331,584** | **278,012** | **410,226** | **1,085,205** | **2,701,395** |
+| Receipts from customers (incl VAT) | 250,930 | 2,119,004 | 4,769,770 | 8,546,955 | 12,928,289 |
+| Payments to supplier | (449,853) | (943,826) | (1,425,946) | (2,273,671) | (2,843,227) |
+| Import duty & clearing | (98,258) | (201,636) | (364,728) | (533,939) | (701,116) |
+| Operating costs paid | (402,244) | (1,065,462) | (2,020,094) | (3,076,405) | (4,152,620) |
+| **Trade finance drawn** | — | **801,824** | **1,253,472** | **1,965,327** | **2,481,040** |
+| **Trade finance repaid** | — | **(465,297)** | **(1,095,094)** | **(1,751,091)** | **(2,284,684)** |
+| VAT settled | 80,516 | (80,974) | (245,683) | (476,738) | (737,367) |
+| Tax paid | (334) | (8,081) | (184,287) | (664,618) | (1,208,189) |
+| Founder capital | 750,000 | — | — | — | — |
+| **Net cashflow** | **130,757** | **115,249** | **633,542** | **1,641,348** | **3,357,806** |
+| **Closing cash** | **130,757** | **246,006** | **879,548** | **2,520,896** | **5,878,703** |
+| *Trade finance outstanding (year end)* | — | *336,527* | *494,904* | *709,140* | *905,496* |
 
-**Cumulative five-year EBITDA: R3.16m.** Every rand of it self-funded after the
-initial R850,000.
+**Cumulative five-year EBITDA: R7.65m**, and **R5.27m of net profit** after
+R428,714 of interest. Every rand after the initial R750,000 is self-funded.
 
-## The capital
+### The trade finance facility
 
-| | Month | Amount |
-| --- | --- | ---: |
-| Founder capital | 1 | R500,000 |
-| Founder top-up or a small friends & family round | 6 | R350,000 |
-| | | **R850,000** |
+Modelled as an import facility advancing **70% of each landed-stock payment**,
+repaid out of sale proceeds **four months** later, at **17% a year**. It never
+funds the launch order — it switches on in **month 13**, once there is trading
+history to lend against.
 
-The model's unfunded peak deficit is **R671,300**, so R750,000 is the arithmetic
-floor — but it leaves only **R79,000** of headroom at the tightest month, which is
-one late-paying golf club away from trouble. **R850,000 is the number to actually
-raise**: same plan, R158,588 of headroom at the low point in month 5.
+Interest costs **R428,714 across five years**. That is the price of not raising
+another R1m of equity, and it is a good trade: 17% on money you repay in four
+months is far cheaper than selling shares in a business compounding at these
+margins.
 
-Setup costs are cut to **R157,000** against R388,000 in the funded plan — company
-and trademark filings stay, the launch event goes, photography is shot in-house,
-the website is built lean, and the POS kit shrinks. The brand itself still costs
-nothing in cash because PJ takes equity.
+**The facility does not reduce the raise as much as it looks like it should.**
+Because it only arrives in year 2, the peak funding need moves from month 24 to
+**month 12** — the last unaided month — and only falls from R800k to R619k. The
+raise is sized by year one, not by the whole plan.
+
+## Where the R750,000 goes
+
+| | ZAR |
+| --- | ---: |
+| First production order — 22,944 tins landed (FOB, freight, duty, clearing) | ~231,000 |
+| Second and third orders — year 1, before trade finance is available | ~317,000 |
+| Company setup, banking, SA trademark (classes 30 and 25) | 40,000 |
+| Supplier samples, tooling, plates, physical proofs, GS1 barcodes | 33,000 |
+| Lab analysis, nutritional panel, R146 label review | 32,000 |
+| POS kit — counter units and display boxes | 20,000 |
+| Year-1 marketing (sampling stock, club activation, content) | 60,000 |
+| **Working capital and runway to month 12** | **balance** |
+| **Branding, packaging design, website, photography** | **nil — equity and in-house** |
+
+**Total hard setup: R125,000.** Everything else is stock and the runway to month
+12. Note what dominates the raise: it is not startup costs, it is **inventory** —
+specifically the three orders placed in year one, before the bank will lend
+against any of it.
 
 ## What builds the volume
 
 | Exit of year | Y1 | Y2 | Y3 | Y4 | Y5 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Golf clubs | 40 | 90 | 140 | 180 | 210 |
-| Tins per club per month | 28 | 34 | 38 | 42 | 45 |
-| Bars | 30 | 90 | 180 | 280 | 380 |
-| Tins per bar per month | 16 | 18 | 20 | 22 | 24 |
-| DTC per month | 200 | 500 | 900 | 1,200 | 1,500 |
+| Golf clubs | 60 | 120 | 180 | 230 | 270 |
+| Tins per club per month | 32 | 38 | 43 | 47 | 50 |
+| Bars | 40 | 120 | 240 | 360 | 480 |
+| Tins per bar per month | 16 | 19 | 22 | 24 | 26 |
+| DTC per month | 300 | 900 | 1,500 | 2,000 | 2,500 |
 
-Rates are set **below** the funded plan on purpose — less marketing, less
-merchandising support, fewer visits per outlet per quarter. Year 5 is 210 golf
-clubs out of a serviceable 300, reached over five years rather than three.
+Year 5 is 270 of a serviceable 300 golf clubs. Rates sit **between** the old
+slower bootstrap and the fully funded plan — better than a generic bootstrap
+because of the sampling engine, short of the funded plan because there is no
+national campaign behind it.
 
-Headcount: **nothing in year 1** — the founder draws no salary, Get Lucky pays the
-bills. A R15,000 monthly draw from month 13, R25,000 from month 25, R35,000 from
-month 37. The first and only rep arrives in **month 30**, a second in month 48.
+**Headcount:** neither founder draws anything in year 1. R15,000 each from month
+13, R25,000 from month 25, R35,000 from month 37. One rep in month 30, a second
+in month 48.
+
+## The licensing engine
+
+| | Year 3 | Year 4 | Year 5 |
+| --- | ---: | ---: | ---: |
+| Territories live | 1 | 3 | 5 |
+| Signing fees | 300,000 | 600,000 | 600,000 |
+| Licensee net sales | — | 10,000,000 | 28,000,000 |
+| Royalty at 6% | — | 600,000 | 1,680,000 |
+| **Licensing revenue** | **300,000** | **1,200,000** | **2,280,000** |
+| Licensing costs | (180,000) | (240,000) | (280,000) |
+
+Benchmark food and beverage brand royalties run **4–6% of licensee net sales**
+(RoyaltyRange). We model 6%.
+
+> **One correction worth making.** Licensing is not zero-input — it is
+> zero-*inventory*. Trademarks have to be registered in each territory before a
+> licensee will sign, agreements have to be drafted, licensees have to be found
+> and travelled to, and quality has to be audited. That is **R820,000 across
+> years 2–5** in this plan, and it lands *before* most of the royalties do. It is
+> still the best line in the business — no stock, no debtors, no freight, no duty
+> — but a plan that models it at 100% margin is wrong.
+
+**What a licensee is actually buying**, and what the SA years exist to build:
+registered trademarks in their territory, PJ Offner's brand book, a proven
+product specification, and documented sell-through by channel and by month.
 
 ## Bootstrap versus the funded plan
 
 | | Bootstrap | Funded (base) |
 | --- | ---: | ---: |
-| Capital required | **R850,000** | R15.5m |
-| Year 5 revenue | R7.13m | R43.63m |
-| Year 5 units | 220,215 | 1,790,588 |
-| Year 5 units vs funded | **12%** | 100% |
-| Year 5 EBITDA | R1.99m | R12.59m |
-| Year 5 EBITDA margin | 28% | 29% |
-| Cumulative 5-yr EBITDA | R3.16m | R16.65m |
+| **Equity raised** | **R750,000** | R15.5m |
+| Year 5 revenue | R11.92m | R43.63m |
+| Year 5 units | 313,600 | 1,790,588 |
+| Year 5 EBITDA | R4.47m | R12.59m |
+| Year 5 EBITDA margin | **38%** | 29% |
+| Cumulative 5-yr EBITDA | R7.65m | R16.65m |
 | First EBITDA-positive year | **Year 2** | Year 3 |
-| Year 5 closing cash | R2.70m | R22.41m |
-| Founder ownership after rounds | **~90%** | ~52% |
+| Year 5 closing cash | R5.88m | R22.41m |
+| Founder ownership | **~90%** | ~52% |
 
-**The margins are almost identical. The scale is not.** Bootstrap does 12% of the
-funded plan's year-5 volume — and gets there without giving away half the company.
+**Higher margin, a year earlier to profit, on under 5% of the equity** — and the
+founders keep nine tenths of the company. The funded plan wins on absolute scale
+and nothing else.
 
-## What you give up
+## Three things to know before committing
 
-Worth being blunt, because this is the real trade:
+**Month 12 is the pinch, not month 1.** The trough is R130,757 in month 12 — the
+last month before trade finance switches on, with three orders already bought and
+paid for out of equity. **Do not spend the month-6 tranche early**, and start the
+facility conversation with the bank in month 8, not month 12.
 
-**The licensing thesis mostly goes.** The funded plan's year 4–5 value sits in
-brand licensing at ~95% margin, and that requires trademark portfolios in target
-markets, a real audience, and export proof points. On R850,000 you can afford one
-territory, late — modelled as a single R400,000 signing fee in year 5, with no
-royalty flow yet. **That is the biggest single thing this option costs.**
+**If the facility slips, the raise has to grow.** Every month trade finance is
+delayed past month 13 is another reorder funded from equity. If the bank says no
+until month 18, budget closer to R1m. Worth getting an indicative term sheet
+before committing to the R750,000 number.
 
-**You cede the category window.** A golf creator or a Mondelēz line extension
-could occupy premium strong mints in the three years it takes to get to 220,000
-tins. Moving slowly is a real competitive risk in a category this un-defended.
+**Growth is bought with stock.** A faster ramp needs more capital, not less —
+270 golf clubs need more tins on hand than 210 do. That is why the facility
+matters more than the interest rate on it.
 
-**No national retail means a ceiling.** Golf and bars alone cap out somewhere near
-300 clubs and 2,500 metro outlets. Year 5 revenue of R7.13m is a good small
-business; it is not a venture outcome and should not be pitched as one.
+**The volumes are still assumptions.** The cost side is quoted — R10.29 landed,
+800 kg MOQ, 60-day production. The sales side is not. There is no benchmark
+anywhere for tins sold per golf club per month, and the 90-day pilot exists to
+replace it. Get Lucky's 30 clubs make the *access* real; they do not make the
+*sell-through rate* real.
 
-**The founder carries it personally.** No salary in year 1 and R15,000 a month in
-year 2 only works if Get Lucky genuinely covers the household. That is a real
-constraint, not a modelling convenience.
+## What this route gives up
 
-## What you keep
+**Absolute scale.** R11.92m of year-5 revenue is a good business, not a venture
+outcome, and it should not be pitched as one.
 
-- **~90% of the company** instead of ~52%
-- **Optionality.** Nothing here forecloses raising later — off two years of real
-  sell-through data, at a far better valuation than a pre-revenue round
-- **The 90-day pilot is the same either way.** The first R231,000 order, the first
-  40 clubs and the sell-through data do not change. **You do not have to choose
-  yet.**
+**No national retail.** Checkers, Clicks and Dis-Chem stay closed without listing
+fees and 65-day terms. Golf and bars cap out around 300 clubs and 2,500 metro
+outlets.
 
-## The honest recommendation
+**Speed against the category window.** A golf creator or a Mondelēz line
+extension could take premium strong mints while we get to 313,000 tins.
 
-**Run the bootstrap plan for the first 12 months regardless.**
-
-The two plans are identical until roughly month 12 — same product, same launch
-order, same channels, same evidence. The funded plan's extra spend in that window
-is mostly a bigger launch, more marketing and earlier hires, none of which
-answer the question the pilot exists to answer.
-
-So bootstrap the first year, get real sell-through numbers, and *then* choose:
-
-- **Sell-through at or above plan** → raise the growth round off evidence, at a
-  valuation that reflects it, and take the funded path with the licensing upside
-  intact.
-- **Sell-through below plan** → you have spent R850,000 rather than R3.5m
-  finding out, you still own 90% of a profitable small brand, and you can keep
-  running it.
-
-That sequencing is the actual answer. The bootstrap plan is not the lesser
-option — it is the cheaper way to earn the right to the bigger one.
+**What it keeps is the point:** ~90% of the company, an option to raise later off
+two years of real numbers at a far better valuation, and a licensing business
+that scales without capital.

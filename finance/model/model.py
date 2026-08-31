@@ -234,7 +234,8 @@ def run(scenario: str = "base") -> Result:
         "cogs", "gross_profit",
         "opex_salaries", "opex_marketing", "opex_logistics", "opex_commission",
         "opex_overheads", "opex_setup", "opex_npd", "opex_total",
-        "ebitda", "tax_charge", "net_profit",
+        "ebitda", "finance_cost", "tax_charge", "net_profit",
+        "cash_tf_draw", "cash_tf_repay", "tf_outstanding",
         "cash_in_sales", "cash_out_supplier", "cash_out_duty_clearing",
         "cash_out_opex", "cash_vat", "cash_tax", "cash_funding",
         "net_cashflow", "closing_cash",
@@ -259,6 +260,11 @@ def run(scenario: str = "base") -> Result:
     assessed_loss = 0.0
     tax_accrued_unpaid = 0.0
     cash = 0.0
+
+    # Trade finance: an import facility that advances a share of each stock
+    # payment and is repaid out of the sale proceeds a few months later.
+    tf = sc.get("trade_finance")
+    tf_book: list[tuple[int, float]] = []   # (repay_month, principal)
 
     for m in range(1, N + 1):
         y = year_of(m)
@@ -407,7 +413,11 @@ def run(scenario: str = "base") -> Result:
 
         npd = revenue * sc.get("npd_pct", A.NPD_PCT_OF_REVENUE)[y - 1]
         export_dev = R.rows["rev_export"][i] * A.EXPORT_DEV_PCT_OF_EXPORT_REVENUE[y - 1]
-        R.rows["opex_npd"][i] = npd + export_dev
+        # Licensing carries no COGS and no working capital, but it is not free:
+        # trademark filings in each territory, agreements, licensee search,
+        # travel and quality audits all land before the first royalty does.
+        lic_cost = sc.get("licensing_costs", {}).get(y, 0.0) / 12.0
+        R.rows["opex_npd"][i] = npd + export_dev + lic_cost
 
         overheads = (sum(inflate(v, A.OPEX_INFLATION_PA, m) for v in A.OVERHEADS_MONTHLY.values())
                      * sc.get("overhead_multiplier", 1.0)
@@ -418,29 +428,11 @@ def run(scenario: str = "base") -> Result:
         R.rows["opex_setup"][i] = setup
 
         opex = (salaries + marketing + logistics + commission + overheads
-                + setup + npd + export_dev)
+                + setup + npd + export_dev + lic_cost)
         R.rows["opex_total"][i] = opex
 
         ebitda = revenue - cogs - opex
         R.rows["ebitda"][i] = ebitda
-
-        # ---------------- tax ----------------
-        # SA assessed losses may offset at most 80% of taxable income.
-        taxable = ebitda
-        charge = 0.0
-        if taxable > 0:
-            usable = min(assessed_loss, taxable * 0.80)
-            assessed_loss -= usable
-            charge = (taxable - usable) * A.CORPORATE_TAX_RATE
-        else:
-            assessed_loss += -taxable
-        R.rows["tax_charge"][i] = charge
-        R.rows["net_profit"][i] = ebitda - charge
-        tax_accrued_unpaid += charge
-
-        # ---------------- cashflow ----------------
-        cash_in = receivable_schedule[m]
-        R.rows["cash_in_sales"][i] = cash_in
 
         # supplier: 30% deposit on order, 70% against bill of lading
         supplier_out = 0.0
@@ -454,6 +446,42 @@ def run(scenario: str = "base") -> Result:
 
         duty_clearing = sum(po.duty_zar + po.clearing_zar for po in arriving)
         R.rows["cash_out_duty_clearing"][i] = duty_clearing
+
+        # ---------------- trade finance ----------------
+        tf_draw = tf_repay = tf_interest = 0.0
+        if tf:
+            stock_spend = supplier_out + duty_clearing
+            if m >= tf["start_month"] and stock_spend > 0:
+                tf_draw = stock_spend * tf["advance_pct"]
+                tf_book.append((m + tf["repay_months"], tf_draw))
+            due = [(rm, pr) for rm, pr in tf_book if rm == m]
+            tf_repay = sum(pr for _rm, pr in due)
+            tf_book = [(rm, pr) for rm, pr in tf_book if rm != m]
+            outstanding = sum(pr for _rm, pr in tf_book) + tf_repay
+            tf_interest = outstanding * tf["rate_pa"] / 12.0
+        R.rows["cash_tf_draw"][i] = tf_draw
+        R.rows["cash_tf_repay"][i] = -tf_repay
+        R.rows["tf_outstanding"][i] = sum(pr for _rm, pr in tf_book)
+        R.rows["finance_cost"][i] = tf_interest
+
+        # ---------------- tax ----------------
+        # Interest is deductible, so tax bites after finance costs.
+        # SA assessed losses may offset at most 80% of taxable income.
+        taxable = ebitda - R.rows["finance_cost"][i]
+        charge = 0.0
+        if taxable > 0:
+            usable = min(assessed_loss, taxable * 0.80)
+            assessed_loss -= usable
+            charge = (taxable - usable) * A.CORPORATE_TAX_RATE
+        else:
+            assessed_loss += -taxable
+        R.rows["tax_charge"][i] = charge
+        R.rows["net_profit"][i] = ebitda - R.rows["finance_cost"][i] - charge
+        tax_accrued_unpaid += charge
+
+        # ---------------- cashflow ----------------
+        cash_in = receivable_schedule[m]
+        R.rows["cash_in_sales"][i] = cash_in
 
         # opex paid in the month, plus input VAT on the VATable share
         opex_cash = opex
@@ -481,7 +509,8 @@ def run(scenario: str = "base") -> Result:
         R.rows["cash_funding"][i] = funding
 
         net_cf = (cash_in - supplier_out - duty_clearing - opex_cash
-                  - vat_payment - tax_payment + funding)
+                  - vat_payment - tax_payment + funding
+                  + tf_draw - tf_repay - tf_interest)
         R.rows["net_cashflow"][i] = net_cf
         cash += net_cf
         R.rows["closing_cash"][i] = cash

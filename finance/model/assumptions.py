@@ -333,67 +333,104 @@ SCENARIOS = {
     # reason the outlet plan below is credible without a sales team.
     # -----------------------------------------------------------------------
     "bootstrap": {
-        "label": "Bootstrap — founder-funded, golf and bars only, no growth round",
+        "label": "Bootstrap — founder-funded, licence the brand globally",
         "volume_multiplier": 1.00,
         "net_price_multiplier": 1.00,
         "fob_multiplier": 1.00,
 
+        # No retail (R1.4m of listing fees and 65-day terms), and no export --
+        # the global route is LICENSING ONLY. We ship the brand, never the tins.
         "channels_off": ["retail", "export"],
+
+        # Warm start. Get Lucky Golf Club already has access to 30 clubs and runs
+        # 600 promotions a year across them, so the golf channel does not begin
+        # at zero and does not need a rep to open it. [SOURCE: founders]
         "outlets_override": {
-            "golf": [40, 90, 140, 180, 210],
-            "bars": [30, 90, 180, 280, 380],
+            "golf": [60, 120, 180, 230, 270],
+            "bars": [40, 120, 240, 360, 480],
         },
+        # Two marketing executives running 600 sampling promotions a year should
+        # drive better trial per outlet than a generic bootstrap. Set between the
+        # old bootstrap (28->45) and the fully funded plan (32->55). [EST]
         "rate_override": {
-            # Lower than the funded plan: less marketing, less merchandising
-            # support, fewer visits per outlet per quarter.
-            "golf": [28, 34, 38, 42, 45],
-            "bars": [16, 18, 20, 22, 24],
+            "golf": [32, 38, 43, 47, 50],
+            "bars": [16, 19, 22, 24, 26],
         },
-        "dtc_override": [200, 500, 900, 1_200, 1_500],
+        "dtc_override": [300, 900, 1_500, 2_000, 2_500],
         "distributor_share": [0.0, 0.0, 0.0, 0.0, 0.0],
         "no_listing_fees": True,
 
-        # Founder draws nothing in year 1 — Get Lucky pays the bills — then a
-        # modest draw. First and only rep in month 30, a second in month 48.
+        # Two founders, both drawing nothing in year 1. Draw rows step up rather
+        # than stack (see headcount_is_cumulative_draw).
         "headcount": [
-            (13, "Founder draw (part-time)",        15_000),
-            (25, "Founder draw",                    25_000),
-            (30, "Brand & trade rep — Gauteng",     25_000),
-            (37, "Founder draw (full)",             35_000),
-            (48, "Brand & trade rep — Cape",        28_000),
+            (13, "Johannes draw (part-time)",     15_000),
+            (13, "Andrew draw (part-time)",       15_000),
+            (25, "Johannes draw",                 25_000),
+            (25, "Andrew draw",                   25_000),
+            (30, "Brand & trade rep — Gauteng",   25_000),
+            (37, "Johannes draw (full)",          35_000),
+            (37, "Andrew draw (full)",            35_000),
+            (48, "Brand & trade rep — Cape",      28_000),
         ],
         "headcount_is_cumulative_draw": True,
 
+        # Two marketing executives make a rand go further. That advantage is
+        # modelled as HIGHER SELL-THROUGH FOR THE SAME SPEND (the rates above),
+        # not as a smaller budget -- claiming both would be double-counting.
         "marketing_y1_total": 60_000,
-        "marketing_pct": [None, 0.08, 0.08, 0.07, 0.07],
+        "marketing_pct": [None, 0.07, 0.07, 0.06, 0.06],
         "overhead_multiplier": 0.40,
         "npd_pct": [0.0, 0.0, 0.01, 0.015, 0.015],
 
-        # One licence, late and small. The brand is real but there is no
-        # marketing budget behind it, so this is an option rather than a plan.
-        "licensing": {5: {"signing_fees": 400_000, "licensee_net_sales": 0}},
+        # THE STRATEGY. Prove it in SA, then licence the brand territory by
+        # territory: a signing fee up front and a running royalty on the
+        # licensee's net sales, with no inventory, no COGS and no working
+        # capital on our side. Royalty rate is LICENSING_ROYALTY_PCT (6%).
+        # Licensee net sales are the licensee's, not ours. [EST]
+        "licensing": {
+            3: {"signing_fees": 300_000, "licensee_net_sales": 0},           # 1st territory signs, launches late
+            4: {"signing_fees": 600_000, "licensee_net_sales": 10_000_000},  # 3 territories live
+            5: {"signing_fees": 600_000, "licensee_net_sales": 28_000_000},  # 5 territories live
+        },
+        # Licensing is low-cost, not no-cost. Trademark filings per territory,
+        # agreements, licensee search, travel and quality audits. [EST]
+        "licensing_costs": {2: 120_000, 3: 180_000, 4: 240_000, 5: 280_000},
 
-        # Sized off the model's own unfunded peak deficit of ~R671k. Two
-        # tranches so the founder does not have to find it all at once, with
-        # the second landing in month 6 — before the production balance, duty
-        # and clearing all hit in the same quarter.
-        # The model's unfunded peak deficit is ~R671k, so R750k is the
-        # arithmetic floor — but it leaves only R79k of headroom at the tightest
-        # month, which is one late-paying golf club away from trouble. R850k is
-        # the number to actually raise: ~R159k of headroom for the same plan.
-        "funding_rounds": [
-            (1, "Founder capital", 500_000),
-            (6, "Founder top-up or small friends & family round", 350_000),
-        ],
+        # Branding, website and design cost nothing in cash: PJ Offner takes
+        # 10% equity for the identity and packaging, and the founders build the
+        # site and shoot the content themselves. What remains below are
+        # third-party fees that no amount of in-house skill removes.
         "setup_costs": [
             (1, "Company setup and banking",                     18_000),
             (1, "Trademark filing — SA classes 30 and 25",       22_000),
             (2, "Supplier samples, freight, tooling & plates",   25_000),
-            (2, "Pre-press, proofing & barcode registration",    15_000),
+            (2, "GS1 barcode registration & physical proofs",     8_000),
             (3, "Lab analysis, nutrition panel & R146 review",   32_000),
-            (4, "Website and Shopify — built lean",              15_000),
-            (4, "Product photography — shot in-house",           10_000),
             (6, "POS kit — counter units and display boxes",     20_000),
+        ],
+
+        # Trade finance against confirmed stock orders. The facility advances a
+        # share of each landed-stock payment and is repaid out of sale proceeds
+        # a few months later, at 17% p.a. [SOURCE: founders]
+        #
+        # It attacks the single biggest use of the raise -- inventory. But it
+        # only arrives in year 2, once there is traction to lend against
+        # [SOURCE: founders], and that timing is the whole shape of this plan:
+        # the raise has to carry the launch order and the first two reorders
+        # unaided, and the bank carries the stock from year two onward.
+        "trade_finance": {
+            "advance_pct": 0.70,      # [EST] typical import facility advance
+            "repay_months": 4,        # [EST] repaid out of sale proceeds
+            "rate_pa": 0.17,          # [SOURCE: founders]
+            "start_month": 13,        # year 2 [SOURCE: founders]
+        },
+
+        # With the facility switching on in month 13, the unfunded peak deficit
+        # is R619,243 and it falls in MONTH 12 -- the last month before the bank
+        # takes over the stock. R750k holds R130,757 at that trough.
+        "funding_rounds": [
+            (1, "Founder capital", 450_000),
+            (6, "Founder top-up or small friends & family round", 300_000),
         ],
     },
 
