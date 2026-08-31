@@ -236,6 +236,7 @@ def run(scenario: str = "base") -> Result:
         "opex_overheads", "opex_setup", "opex_npd", "opex_total",
         "ebitda", "finance_cost", "tax_charge", "net_profit",
         "cash_tf_draw", "cash_tf_repay", "tf_outstanding",
+        "cash_investor_repay", "investor_outstanding",
         "cash_in_sales", "cash_out_supplier", "cash_out_duty_clearing",
         "cash_out_opex", "cash_vat", "cash_tax", "cash_funding",
         "net_cashflow", "closing_cash",
@@ -265,6 +266,12 @@ def run(scenario: str = "base") -> Result:
     # payment and is repaid out of the sale proceeds a few months later.
     tf = sc.get("trade_finance")
     tf_book: list[tuple[int, float]] = []   # (repay_month, principal)
+
+    # Investor revenue share: a fixed rand amount per tin sold, paid until the
+    # agreed capital sum has been returned. It is a repayment of capital, not an
+    # operating cost, so it sits below EBITDA and hits cash only.
+    inv = sc.get("investor_repayment")
+    inv_repaid = 0.0
 
     for m in range(1, N + 1):
         y = year_of(m)
@@ -505,12 +512,22 @@ def run(scenario: str = "base") -> Result:
             tax_accrued_unpaid = 0.0
         R.rows["cash_tax"][i] = -tax_payment
 
+        # ---------------- investor revenue share ----------------
+        inv_pay = 0.0
+        if inv and m >= inv.get("start_month", A.FIRST_SALE_MONTH):
+            remaining = inv["total"] - inv_repaid
+            if remaining > 0:
+                inv_pay = min(units_sold * inv["per_tin"], remaining)
+                inv_repaid += inv_pay
+        R.rows["cash_investor_repay"][i] = -inv_pay
+        R.rows["investor_outstanding"][i] = (inv["total"] - inv_repaid) if inv else 0.0
+
         funding = sum(amt for mm, _lbl, amt in sc.get("funding_rounds", A.FUNDING_ROUNDS) if mm == m)
         R.rows["cash_funding"][i] = funding
 
         net_cf = (cash_in - supplier_out - duty_clearing - opex_cash
                   - vat_payment - tax_payment + funding
-                  + tf_draw - tf_repay - tf_interest)
+                  + tf_draw - tf_repay - tf_interest - inv_pay)
         R.rows["net_cashflow"][i] = net_cf
         cash += net_cf
         R.rows["closing_cash"][i] = cash

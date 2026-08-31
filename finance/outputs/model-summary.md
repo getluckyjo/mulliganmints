@@ -67,6 +67,7 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 | Tax paid | R0 | R-2,778 | R-65,290 | R-1.03m | R-3.40m |
 | Trade finance drawn | R0 | R0 | R0 | R0 | R0 |
 | Trade finance repaid | R0 | R0 | R0 | R0 | R0 |
+| Investor revenue share (R2/tin) | R0 | R0 | R0 | R0 | R0 |
 | Funding received | R3.50m | R12.00m | R0 | R0 | R0 |
 | **Net cashflow** | R1.46m | R10.58m | R-1.90m | R2.85m | R9.41m |
 | **Closing cash** | R1.46m | R12.04m | R10.15m | R13.00m | R22.41m |
@@ -87,10 +88,10 @@ Built 2026-08-31. All figures ZAR, excluding VAT unless stated.
 | Year 5 EBITDA margin | 38% | -1% | 29% | 37% |
 | Cumulative 5-yr EBITDA | R7.65m | R-5.92m | R16.65m | R43.82m |
 | First EBITDA-positive year | 2 | never | 3 | 2 |
-| Unfunded peak cash deficit | R619,243 | R8.60m | R5.57m | R3.36m |
-| Month of peak deficit | M12 | M50 | M33 | M33 |
-| Lowest funded cash balance | R130,757 | R1.21m | R573,601 | R629,994 |
-| Year 5 closing cash | R5.88m | R7.64m | R22.41m | R38.84m |
+| Unfunded peak cash deficit | R693,272 | R8.60m | R5.57m | R3.36m |
+| Month of peak deficit | M26 | M50 | M33 | M33 |
+| Lowest funded cash balance | R306,728 | R1.21m | R573,601 | R629,994 |
+| Year 5 closing cash | R5.13m | R7.64m | R22.41m | R38.84m |
 
 ## 5. Capital requirement
 

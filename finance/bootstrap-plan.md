@@ -8,17 +8,40 @@ scenario `bootstrap`. Rebuild with `cd finance/model && python3 build_outputs.py
 
 ## The answer, up front
 
-> ## Raise **R750,000**, in two tranches.
-> **R450,000 now. R300,000 in month 6.** Nothing after that.
+> ## Raise **R1,000,000**, once, at the start.
+>
+> **The deal:** R1m for **10% of the equity**, *plus* the R1m returned to the
+> investor out of **R2 from every tin sold**, until it is repaid in full.
 
-The model's unfunded peak deficit is **R619,243, and it lands in month 12** —
-the last month before trade finance switches on. R800k would be needed without
-that facility; R750,000 holds **R130,757** at the trough.
+Trade finance from year 2 carries the stock. The R1m carries year one and leaves
+a genuine buffer — the lowest cash balance across five years is **R306,728**,
+against R130,757 on a bare R750,000 raise.
 
-That timing is the whole shape of this plan. **The raise carries year one; the
-bank carries the stock from year two.** After that the business funds itself:
-**EBITDA-positive in year 2**, and **R7.65m of cumulative EBITDA** over five
-years without another rand of equity.
+From there the business funds itself: **EBITDA-positive in year 2**, and **R7.65m
+of cumulative EBITDA** over five years with no further equity.
+
+### What the deal costs
+
+| | |
+| --- | --- |
+| Cash in | R1,000,000, month 1 |
+| Equity given | **10%** — permanent |
+| Repayment | **R2 per tin sold** until R1m is returned |
+| Tins required to repay | **500,000** |
+| Repaid in full | **Month 50** (year 4.2) |
+| R2 as a share of net price (R24.25) | **8.2%** |
+| R2 as a share of contribution (R11.88) | **17%** |
+
+**Cap table after the round: founders 80%, PJ Offner 10%, investor 10%.**
+
+The investor gets their money back *and* keeps a tenth of the company. On a year-5
+EBITDA of R4.47m, that stake is worth **R2.7m at 6x** or **R3.6m at 8x** — an IRR
+of roughly **37–43% a year**. That is a good deal for them, and it is an expensive
+deal for you: the equity is effectively the interest on a four-year loan.
+
+**Whether it is worth it comes down to one thing** — R1m removes the month-12
+cliff entirely and gives you a real buffer through the scaling years. Cheaper
+capital that runs out is more expensive than expensive capital that does not.
 
 ## The strategy in one line
 
@@ -71,6 +94,9 @@ and design cost nothing in cash.**
 | Tax | (334) | (5,890) | (151,648) | (629,676) | (1,162,208) |
 | **Net profit** | **(233,022)** | **90,532** | **569,328** | **1,702,459** | **3,142,266** |
 
+*The R2-per-tin revenue share is a repayment of capital, not a cost, so it does
+not appear here. It appears in the cashflow below, where it bites.*
+
 ### Cashflow
 
 | ZAR | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
@@ -81,15 +107,24 @@ and design cost nothing in cash.**
 | Operating costs paid | (402,244) | (1,065,462) | (2,020,094) | (3,076,405) | (4,152,620) |
 | **Trade finance drawn** | — | **801,824** | **1,253,472** | **1,965,327** | **2,481,040** |
 | **Trade finance repaid** | — | **(465,297)** | **(1,095,094)** | **(1,751,091)** | **(2,284,684)** |
+| **Investor revenue share (R2/tin)** | **(21,520)** | **(143,960)** | **(291,060)** | **(457,270)** | **(86,190)** |
 | VAT settled | 80,516 | (80,974) | (245,683) | (476,738) | (737,367) |
-| Tax paid | (334) | (8,081) | (184,287) | (664,618) | (1,208,189) |
-| Founder capital | 750,000 | — | — | — | — |
-| **Net cashflow** | **130,757** | **115,249** | **633,542** | **1,641,348** | **3,357,806** |
-| **Closing cash** | **130,757** | **246,006** | **879,548** | **2,520,896** | **5,878,703** |
+| Tax paid | (334) | (5,890) | (151,648) | (629,676) | (1,162,208) |
+| Investor capital | 1,000,000 | — | — | — | — |
+| **Net cashflow** | **359,237** | **(28,711)** | **342,482** | **1,184,078** | **3,271,616** |
+| **Closing cash** | **359,237** | **330,526** | **673,008** | **1,857,086** | **5,128,703** |
 | *Trade finance outstanding (year end)* | — | *336,527* | *494,904* | *709,140* | *905,496* |
+| *Investor capital outstanding* | *978,480* | *834,520* | *543,460* | *86,190* | *nil* |
 
 **Cumulative five-year EBITDA: R7.65m**, and **R5.27m of net profit** after
-R428,714 of interest. Every rand after the initial R750,000 is self-funded.
+R428,714 of trade finance interest. Every rand after the initial R1,000,000 is
+self-funded.
+
+**Note where the revenue share lands.** It costs R21,520 in year 1 and R457,270 in
+year 4 — the year it bites hardest, because it scales with volume and the business
+is scaling. It is fully repaid in **month 50**, after which R457k a year of cash
+stops leaving. Year 5 keeps all but R86,190 of it, which is why year-5 cashflow
+jumps to R3.27m.
 
 ### The trade finance facility
 
@@ -108,12 +143,13 @@ Because it only arrives in year 2, the peak funding need moves from month 24 to
 **month 12** — the last unaided month — and only falls from R800k to R619k. The
 raise is sized by year one, not by the whole plan.
 
-## Where the R750,000 goes
+## Where the R1,000,000 goes
 
 | | ZAR |
 | --- | ---: |
 | First production order — 22,944 tins landed (FOB, freight, duty, clearing) | ~231,000 |
 | Second and third orders — year 1, before trade finance is available | ~317,000 |
+| Buffer through the scaling years — the reason to raise R1m not R750k | ~250,000 |
 | Company setup, banking, SA trademark (classes 30 and 25) | 40,000 |
 | Supplier samples, tooling, plates, physical proofs, GS1 barcodes | 33,000 |
 | Lab analysis, nutritional panel, R146 label review | 32,000 |
@@ -122,10 +158,10 @@ raise is sized by year one, not by the whole plan.
 | **Working capital and runway to month 12** | **balance** |
 | **Branding, packaging design, website, photography** | **nil — equity and in-house** |
 
-**Total hard setup: R125,000.** Everything else is stock and the runway to month
-12. Note what dominates the raise: it is not startup costs, it is **inventory** —
-specifically the three orders placed in year one, before the bank will lend
-against any of it.
+**Total hard setup: R125,000.** Everything else is stock, runway to month 12, and
+buffer. Note what dominates the raise: it is not startup costs, it is
+**inventory** — specifically the three orders placed in year one, before the bank
+will lend against any of it.
 
 ## What builds the volume
 
@@ -176,31 +212,35 @@ product specification, and documented sell-through by channel and by month.
 
 | | Bootstrap | Funded (base) |
 | --- | ---: | ---: |
-| **Equity raised** | **R750,000** | R15.5m |
+| **Equity raised** | **R1,000,000** | R15.5m |
 | Year 5 revenue | R11.92m | R43.63m |
 | Year 5 units | 313,600 | 1,790,588 |
 | Year 5 EBITDA | R4.47m | R12.59m |
 | Year 5 EBITDA margin | **38%** | 29% |
 | Cumulative 5-yr EBITDA | R7.65m | R16.65m |
 | First EBITDA-positive year | **Year 2** | Year 3 |
-| Year 5 closing cash | R5.88m | R22.41m |
-| Founder ownership | **~90%** | ~52% |
+| Year 5 closing cash | R5.13m | R22.41m |
+| Founder ownership | **80%** | ~52% |
 
-**Higher margin, a year earlier to profit, on under 5% of the equity** — and the
-founders keep nine tenths of the company. The funded plan wins on absolute scale
-and nothing else.
+**Higher margin, a year earlier to profit, on under 7% of the capital** — and the
+founders keep four fifths of the company rather than half. The funded plan wins on
+absolute scale and nothing else.
 
 ## Three things to know before committing
 
-**Month 12 is the pinch, not month 1.** The trough is R130,757 in month 12 — the
-last month before trade finance switches on, with three orders already bought and
-paid for out of equity. **Do not spend the month-6 tranche early**, and start the
-facility conversation with the bank in month 8, not month 12.
+**Month 26 is the pinch now, not month 12.** With R1m up front the year-one cliff
+is gone; the low point becomes **R306,728 in month 26**, when the revenue share is
+running at full tilt and stock is building ahead of 180 clubs. Comfortable, but
+not so comfortable that it can be ignored.
 
-**If the facility slips, the raise has to grow.** Every month trade finance is
-delayed past month 13 is another reorder funded from equity. If the bank says no
-until month 18, budget closer to R1m. Worth getting an indicative term sheet
-before committing to the R750,000 number.
+**Still start the trade finance conversation in month 8.** The R1m makes a
+delayed facility survivable rather than fatal, but every month it slips past
+month 13 is another reorder funded from equity that should be funded by the bank.
+
+**The revenue share is at its heaviest exactly when growth is.** R457,270 leaves
+in year 4 — 17% of contribution on every tin. If sell-through runs behind plan,
+repayment stretches past month 50 and that drag persists into year 5. Worth
+asking for a cap on the repayment period, or a step-down once 50% is repaid.
 
 **Growth is bought with stock.** A faster ramp needs more capital, not less —
 270 golf clubs need more tins on hand than 210 do. That is why the facility

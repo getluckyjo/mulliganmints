@@ -425,13 +425,17 @@ SCENARIOS = {
             "start_month": 13,        # year 2 [SOURCE: founders]
         },
 
-        # With the facility switching on in month 13, the unfunded peak deficit
-        # is R619,243 and it falls in MONTH 12 -- the last month before the bank
-        # takes over the stock. R750k holds R130,757 at that trough.
+        # R1m from an outside investor on a hybrid structure: 10% of the equity
+        # PLUS the R1m returned out of R2 from every tin sold, until repaid.
+        # See finance/bootstrap-plan.md for what that costs.
         "funding_rounds": [
-            (1, "Founder capital", 450_000),
-            (6, "Founder top-up or small friends & family round", 300_000),
+            (1, "Investor — R1m for 10% equity plus revenue share", 1_000_000),
         ],
+        "investor_repayment": {
+            "per_tin": 2.00,
+            "total": 1_000_000,
+            "start_month": FIRST_SALE_MONTH,   # payments begin with the first sale
+        },
     },
 
     "bear": {
