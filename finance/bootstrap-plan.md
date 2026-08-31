@@ -158,6 +158,52 @@ plan whose volumes are still assumptions. Three things follow:
    volume the balance runs past year 10. A longstop protects the investor; a cap
    on total repayment protects you. Ideally the agreement has both.
 
+### What the investor actually gets
+
+Three things, and the dividend stream is the smallest of them:
+
+| | Over five years |
+| --- | ---: |
+| Capital returned at R1 a tin | R770,505 (balance ~month 69) |
+| **10% of profits**, if distributed in full, after 20% dividends tax | **R440,367** |
+| 10% equity at exit — year-5 EBITDA R4.47m at 6–8x | R2.68m – R3.58m |
+| **Total back on R1,000,000** | **R3.68m – R5.02m** |
+| **IRR** | **34% – 43% a year** |
+
+| Dividend policy | IRR at 6x | IRR at 8x |
+| --- | ---: | ---: |
+| Retain everything | 34% | 40% |
+| Distribute 50% of profit | 35% | 41% |
+| Distribute 100% of profit | 37% | 43% |
+
+**The profit share is worth having but it is not what makes the deal.** Fully
+distributed it adds R440,367 and about **three points of IRR**. The equity stake
+at exit is worth six to eight times that. If an investor is pricing this deal on
+the dividend stream they are pricing it wrong — and so are we if we assume the
+profit share is what persuades them.
+
+### The dividend question this raises
+
+**This plan currently retains every rand of profit.** That is how it self-funds:
+year-5 closing cash of R5.36m is accumulated earnings, and it is what pays for
+stock, the second rep and the licensing push without another raise.
+
+Cumulative distributable profit across years 2–5 is **R5.50m**. So:
+
+- **Distribute 100%** and the business ends year 5 with roughly nothing in the
+  bank. The self-funding story disappears.
+- **Distribute 50%** and about R2.75m leaves, ending year 5 near R2.6m — still
+  workable, but it is no longer a business that can absorb a bad year.
+- **Retain everything** and the plan works exactly as modelled, with the
+  investor's return concentrated at exit.
+
+**You cannot both distribute profits and fund growth from retained earnings.**
+Worth settling the dividend policy in the shareholders agreement rather than
+discovering the disagreement in year three — a common formulation is no
+distributions until the capital is fully repaid, then a fixed share of
+distributable profit thereafter, with the board retaining discretion to fund
+working capital first.
+
 ### The trade finance facility
 
 Modelled as an import facility advancing **70% of each landed-stock payment**,
